@@ -7,10 +7,13 @@ public class Ingredient {
     private String name;
     private Double quantity;
 
-    public Ingredient (String name, Double quantity) {
+    private String unitOfMeasurement;
+
+    public Ingredient (String name, Double quantity, String unitOfMeasurement) {
         this.id = UUID.randomUUID();
         this.name = name;
         this.quantity = quantity;
+        this.unitOfMeasurement = unitOfMeasurement;
     }
 
     public UUID getId() {
@@ -31,5 +34,13 @@ public class Ingredient {
 
     public void setQuantity(Double quantity) {
         this.quantity = quantity;
+    }
+
+    public String getUnitOfMeasurement() {
+        return unitOfMeasurement;
+    }
+
+    public void setUnitOfMeasurement(String unitOfMeasurement) {
+        this.unitOfMeasurement = unitOfMeasurement;
     }
 }

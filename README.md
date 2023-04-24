@@ -3,7 +3,7 @@
 
 
 
-User Stories:
+## User Stories
 
 1) I've always wanted to bake a pineapple cake, but it needs so many exotic ingredients I don't know where to get from. There are tons of shops and I don't have time to go through all of them 'cause I'm busy taking care of my kids. I wish an app could tell me exactly where I would need to buy my ingredients from. - Busy mom with kids
 
@@ -14,3 +14,10 @@ User Stories:
 4) Lately, I've been changing my eating habits, but I get bored so easily of healthy foods. My nutritionits keeps suggesting I try this and that, but I don't wanna spend so much time preparing to cook. It feels like a chore to go shopping for ingredients to different shops to find what I need and it's so frustrating ignoring the fast foods. It'd make my health loss journey a breeze if I didn't have to search for the ingredients myself. - Young man trying to lose weight
 
 5) I've been watching a lot of Gordon Ramsey recently and I'm enamored with his cooking. Me and my husband have been planning to try some Mojo-marinated chicken quinoa bowl with spinach, but we're too overwhelmed by the assemble. We've been looking for cilantro leaves for weeks now and I so wish there was an app that could tell us where to get it from - Woman in her 30's passionate about Gordon Ramsey
+
+
+## UML Diagrams
+
+### Use case diagram
+
+![png 5](https://user-images.githubusercontent.com/101597846/234022638-9d2ba48c-49bc-40f6-9403-0a03b587c289.png)

@@ -31,7 +31,7 @@
 ***<p align= "right">- Jane, a college student who doesn't know how to cook</p>***
 
 
-7. I've gotten really into cooking recently. It has become a fun hobby for me, and I find myself constantly trying out new recipes and experimenting with different ingredients. Sometimes I have questions or feedback about the recipes I use and wish that the app would allow me to leave comments on recipes. It would be of great help if there were a comment section on each recipe page where I could leave a comment for the recipe author or other users to see. It would make it easier for me to connect with other cooking enthusiasts and share tips, advice, and feedback with each other.
+7. I've gotten really into cooking recently. It has become a fun hobby for me, and I find myself constantly trying out new recipes and experimenting with different ingredients. Sometimes I have questions or feedback about the recipes I use and wish that the app would allow me to leave comments on recipes. It would be of great help if there was a comment section on each recipe page where I could leave a comment for the recipe author or other users to see. It would make it easier for me to connect with other cooking enthusiasts and share tips, advice, and feedback with each other.
 
 ***<p align= "right">- Xavier, a passionate teenager experimenting with cooking as a hobby</p>***
 
@@ -39,7 +39,7 @@
 
 ***<p align= "right">- A business man who loves cooking in his free time</p>***
 
-9. As a cooking enthusiast, I often create my recipes and share them with others. However, sometimes I realize that I made a mistake or I want to make a change to a recipe I already posted on my profile. It would be really convenient if I could access my recipes and edit the ingredient list, cooking instructions, or other details. I would also appreciate the ability to delete recipes that I no longer want to share or have changed my mind about. I wish there was an app that would give me more control over my recipe collection and ensure that I am sharing accurate and updated versions of my creations. - Ben, a cooking enthusiast who loves creating their recipes.
+9. As a cooking enthusiast, I often create my recipes and share them with others. However, sometimes I realize that I made a mistake or I want to make a change to a recipe I already posted on my profile. It would be really convenient if I could access my recipes and edit the ingredient list, cooking instructions, or other details. I would also appreciate the ability to delete recipes that I no longer want to share or have changed my mind about. I wish there was an app that would give me more control over my recipe collection and ensure that I am sharing accurate and updated versions of my creations.
 
 ***<p align= "right">- Ben, cooking enthusiast that loves creating his own recipes</p>***
 

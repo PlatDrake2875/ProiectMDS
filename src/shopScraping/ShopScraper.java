@@ -15,7 +15,9 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,11 +58,16 @@ public class ShopScraper {
             LOGGER.log(Level.INFO, "nume: {0}", name.text());
             LOGGER.log(Level.INFO, "proprietati:");
 
-            for (Element element : properties) {
-                LOGGER.log(Level.INFO, element.attr("data-specification-name") + " " + element.attr("data-specification-value"));
-            }
+            List<Pair<String, String>> Properties = properties.stream()
+                    .map(elem -> Pair.with(
+                            elem.attr("data-specification-name"),
+                            elem.attr("data-specification-value")
+                    ))
+                    .toList();
+
+            Properties.forEach(elem -> LOGGER.log(Level.INFO, String.valueOf(elem)));
             return null;
-            // return new Quartet<>(category.text(), name.text(), Double.parseDouble(priceString), Double.parseDouble((properties.get(2).text())));
+
         } catch (IOException e) {
             return null;
         }

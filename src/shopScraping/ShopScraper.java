@@ -3,7 +3,6 @@ package shopScraping;
 
 import org.javatuples.Pair;
 import org.javatuples.Quartet;
-import org.javatuples.Triplet;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -17,18 +16,21 @@ import java.net.URL;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ShopScraper {
     private static final HashSet<String> visitedURLs = new HashSet<>();
+    private static final Logger LOGGER = Logger.getLogger(ShopScraper.class.getName());
 
     public static void main(String[] args) throws IOException {
         //String url = "https://www.auchan.ro/brutarie-cofetarie-gastro/c";
-       /* try {
+        /*try {
             getProductsAuchan();
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-        getProductAuchan("https://www.auchan.ro/iaurt-grecesc-olympus-150-g/p");
+        getProductAuchan("https://www.auchan.ro/paine-7-seminte-vel-pitar-700-g/p");
     }
 
     static boolean isValidURL(String url) {
@@ -43,16 +45,47 @@ public class ShopScraper {
     static Quartet<String, String, Double, Double> getProductAuchan(String urlProduct) {
         try {
             Document doc = Jsoup.connect(urlProduct).get();
-            Elements category = doc.select(".vtex-breadcrumb-1-x-link.vtex-breadcrumb-1-x-link--productBreadcrumb.vtex-breadcrumb-1-x-link--3.vtex-breadcrumb-1-x-link--productBreadcrumb--3.dib.pv1.link.ph2.c-muted-2.hover-c-link");
-            Elements price = doc.select(".vtex-product-price-1-x-currencyContainer--pdp").select("span");
-            String priceString = price.get(1).text() + "." + price.get(3).text();
-            Elements name = doc.select(".vtex-store-components-3-x-productBrand--productPage").select("span");
-            Elements properties = doc.select(".vtex-product-specifications-1-x-specificationValue.vtex-product-specifications-1-x-specificationValue--first.vtex-product-specifications-1-x-specificationValue--last");
-            return new Quartet<>(category.text(), name.text(), Double.parseDouble(priceString), Double.parseDouble((properties.get(3).text())));
+            Elements category = getAuchanProductCategory(doc);
+            Elements name = getAuchanProductName(doc);
+            Elements price = getAuchanProductPrice(doc);
+            String priceString = getAuchanProductPriceToString(price);
+            Elements properties = getAuchanProductProperties(doc);
+
+            LOGGER.log(Level.INFO, "categorie: {0}", category.text());
+            LOGGER.log(Level.INFO, "pret: {0}", priceString);
+            LOGGER.log(Level.INFO, "nume: {0}", name.text());
+            LOGGER.log(Level.INFO, "proprietati:");
+
+            for (Element element : properties) {
+                LOGGER.log(Level.INFO, element.attr("data-specification-name") + " " + element.attr("data-specification-value"));
+            }
+            return null;
+            // return new Quartet<>(category.text(), name.text(), Double.parseDouble(priceString), Double.parseDouble((properties.get(2).text())));
         } catch (IOException e) {
             return null;
         }
     }
+
+    public static Elements getAuchanProductCategory(Document doc) {
+        return doc.select(".vtex-breadcrumb-1-x-link.vtex-breadcrumb-1-x-link--productBreadcrumb.vtex-breadcrumb-1-x-link--3.vtex-breadcrumb-1-x-link--productBreadcrumb--3.dib.pv1.link.ph2.c-muted-2.hover-c-link");
+    }
+
+    public static Elements getAuchanProductName(Document doc) {
+        return doc.select(".vtex-store-components-3-x-productBrand--productPage").select("span");
+    }
+
+    public static Elements getAuchanProductPrice(Document doc) {
+        return doc.select(".vtex-product-price-1-x-currencyContainer--pdp").select("span");
+    }
+
+    public static String getAuchanProductPriceToString(Elements price) {
+        return price.get(1).text() + "." + price.get(3).text();
+    }
+
+    public static Elements getAuchanProductProperties(Document doc) {
+        return doc.select(".vtex-product-specifications-1-x-specificationValue.vtex-product-specifications-1-x-specificationValue--first.vtex-product-specifications-1-x-specificationValue--last");
+    }
+
 
     private static void getProductsAuchan() throws IOException {
         final String[] crawlingURLs = new String[]{"https://www.auchan.ro/brutarie-cofetarie-gastro/c", "https://www.auchan.ro/bauturi-si-tutun/c", "https://www.auchan.ro/bacanie/c", "https://www.auchan.ro/lactate-carne-mezeluri---peste/c", "https://www.auchan.ro/fructe-si-legume/c"};
@@ -81,6 +114,9 @@ public class ShopScraper {
 
                     if (isValidURL(absHref) && !visitedURLs.contains(absHref)) {
                         System.out.println(depthLevel + " " + absHref);
+                        if (absHref.endsWith("/p") || absHref.endsWith(("/p#"))) {
+                            getProductAuchan(absHref);
+                        }
                         crawledURLs.write(depthLevel + " " + absHref + '\n');
                         visitedURLs.add(absHref);
                         queue.add(new Pair<>(depthLevel + 1, absHref));

@@ -68,6 +68,31 @@ public class Product {
         this.proteins = proteins;
     }
 
+    /**
+     * Default constructor for a Product object.
+     */
+
+    public Product() {
+        this.id = 0;
+        this.name = null;
+        this.category = null;
+        this.price = BigDecimal.ZERO;
+        this.productType = null;
+        this.storageConditions = null;
+        this.weight = BigDecimal.ZERO;
+        this.shelfLife = null;
+        this.ingredients = null;
+        this.kcalPer100g = BigDecimal.ZERO;
+        this.kjPer100g = BigDecimal.ZERO;
+        this.fats = BigDecimal.ZERO;
+        this.saturatedFats = BigDecimal.ZERO;
+        this.carbohydrates = BigDecimal.ZERO;
+        this.sugars = BigDecimal.ZERO;
+        this.salt = BigDecimal.ZERO;
+        this.fiber = BigDecimal.ZERO;
+        this.proteins = BigDecimal.ZERO;
+    }
+
     // Getters and Setters
 
     public int getId() {
@@ -212,6 +237,27 @@ public class Product {
 
     public void setProteins(BigDecimal proteins) {
         this.proteins = proteins;
+    }
+
+    /**
+     * Adds the nutritional components of the given product to the current product.
+     * Assumes both products have the same units of measurement.
+     *
+     * @param other The other product to add nutritional information from
+     */
+    public void addNutritionalInfo(Product other) {
+        this.kcalPer100g = this.kcalPer100g.add(other.kcalPer100g);
+        this.kjPer100g = this.kjPer100g.add(other.kjPer100g);
+        this.fats = this.fats.add(other.fats);
+        this.saturatedFats = this.saturatedFats.add(other.saturatedFats);
+        this.carbohydrates = this.carbohydrates.add(other.carbohydrates);
+        this.sugars = this.sugars.add(other.sugars);
+        this.salt = this.salt.add(other.salt);
+        this.fiber = this.fiber.add(other.fiber);
+        this.proteins = this.proteins.add(other.proteins);
+        if (this.weight != null && other.weight != null) {
+            this.weight = this.weight.add(other.weight);
+        }
     }
 }
 

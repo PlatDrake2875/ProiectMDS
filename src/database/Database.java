@@ -1,11 +1,11 @@
 package database;
 
+import DataModel.Product;
+
 import java.math.BigDecimal;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -110,6 +110,7 @@ public class Database {
             LOGGER.log(Level.SEVERE, "Error updating product:", e);
         }
     }
+
     private void setProduct(String name, String category, BigDecimal price, String product_type, String storage_conditions, BigDecimal weight, String shelf_life, String ingredients, BigDecimal kcal_per_100g, BigDecimal kj_per_100g, BigDecimal fats, BigDecimal saturated_fats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins, PreparedStatement pstmt) throws SQLException {
         pstmt.setString(1, name);
         pstmt.setString(2, category);
@@ -128,6 +129,154 @@ public class Database {
         pstmt.setBigDecimal(15, salt);
         pstmt.setBigDecimal(16, fiber);
         pstmt.setBigDecimal(17, proteins);
+    }
+
+    public Product getProductByName(String name) {
+        String query = "SELECT * FROM products WHERE name = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, name);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                return getProduct(rs);
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting product by name:", e);
+        }
+        return null;
+    }
+
+    public void updateLastModificationTime(int id) {
+        String query = "UPDATE products SET last_modified = NOW() WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error updating last modification time:", e);
+        }
+    }
+
+
+    public void deleteProduct(int id) {
+        String query = "DELETE FROM products WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+            LOGGER.log(Level.INFO, "Product deleted successfully");
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error deleting product:", e);
+        }
+    }
+
+    public List<Product> getAllProducts() {
+        String query = "SELECT * FROM products";
+        List<Product> products = new ArrayList<>();
+        try (Statement stmt = connection.createStatement()) {
+            ResultSet rs = stmt.executeQuery(query);
+
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting all products:", e);
+        }
+        return products;
+    }
+
+    public List<Product> getProductsByCategory(String category) {
+        String query = "SELECT * FROM products WHERE category = ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, category);
+            ResultSet rs = pstmt.executeQuery();
+
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting products by category:", e);
+        }
+        return products;
+    }
+
+    private Product createProductFromResultSet(ResultSet rs) throws SQLException {
+        return getProduct(rs);
+    }
+
+    private Product getProduct(ResultSet rs) throws SQLException {
+        return new Product(rs.getInt("id"), rs.getString("name"), rs.getString("category"),
+                rs.getBigDecimal("price"), rs.getString("product_type"), rs.getString("storage_conditions"),
+                rs.getBigDecimal("weight"), rs.getString("shelf_life"), rs.getString("ingredients"),
+                rs.getBigDecimal("kcal_per_100g"), rs.getBigDecimal("kj_per_100g"), rs.getBigDecimal("fats"),
+                rs.getBigDecimal("saturated_fats"), rs.getBigDecimal("carbohydrates"), rs.getBigDecimal("sugars"),
+                rs.getBigDecimal("salt"), rs.getBigDecimal("fiber"), rs.getBigDecimal("proteins"));
+    }
+
+    private void addProduct(List<Product> products, ResultSet rs) throws SQLException {
+        while (rs.next()) {
+            products.add(createProductFromResultSet(rs));
+        }
+    }
+
+
+    public List<Product> getProductsByCategoryAndPrice(String category, BigDecimal price) {
+        String query = "SELECT * FROM products WHERE category = ? AND price <= ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, category);
+            pstmt.setBigDecimal(2, price);
+            ResultSet rs = pstmt.executeQuery();
+
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting products by category and price:", e);
+        }
+        return products;
+    }
+
+    public List<Product> getProductsByCategoryAndPriceAndWeight(String category, BigDecimal price, BigDecimal weight) {
+        String query = "SELECT * FROM products WHERE category = ? AND price <= ? AND weight <= ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, category);
+            pstmt.setBigDecimal(2, price);
+            pstmt.setBigDecimal(3, weight);
+            ResultSet rs = pstmt.executeQuery();
+
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting products by category and price and weight:", e);
+        }
+        return products;
+
+    }
+
+    public List<Product> getProductsByCategoryAndWeight(String category, BigDecimal weight) {
+        String query = "SELECT * FROM products WHERE category = ? AND weight <= ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, category);
+            pstmt.setBigDecimal(2, weight);
+            ResultSet rs = pstmt.executeQuery();
+
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting products by category and weight:", e);
+        }
+        return products;
+    }
+
+    public List<Product> getProductsByCategoryAndPriceAndWeightAndShelfLife(String category, BigDecimal price, BigDecimal weight, String shelfLife) {
+        String query = "SELECT * FROM products WHERE category = ? AND price <= ? AND weight <= ? AND shelf_life <= ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, category);
+            pstmt.setBigDecimal(2, price);
+            pstmt.setBigDecimal(3, weight);
+            pstmt.setString(4, shelfLife);
+            ResultSet rs = pstmt.executeQuery();
+
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting products by category and price and weight and shelf life:", e);
+        }
+        return products;
     }
 
 }

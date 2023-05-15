@@ -1,66 +1,88 @@
 package DataModel;
 
 import java.util.List;
-import java.util.UUID;
 
+/**
+ * The Recipe class represents a recipe with a list of products, cooking time,
+ * preparation time, and other relevant information.
+ */
 public class Recipe {
-    private UUID id;
-    private String name;
-    private String instructions;
-    private Integer servings;
-    private Integer time; // cooking time in minutes
-    private List<Ingredient> ingredients;
+    private String recipeName;
+    private String category;
+    private int estimatedCookingTime;
+    private int estimatedPreparationTime;
+    private int portionSize;
+    private List<Product> products;
 
-    public Recipe (String name, String instructions, Integer servings, Integer time, List<Ingredient> ingredients) {
-        this.id = UUID.randomUUID();
-        this.name = name;
-        this.instructions = instructions;
-        this.servings = servings;
-        this.time = time;
-        this.ingredients = ingredients;
+    public Recipe(String recipeName, String category, int estimatedCookingTime, int estimatedPreparationTime, int portionSize, List<Product> products) {
+        this.recipeName = recipeName;
+        this.category = category;
+        this.estimatedCookingTime = estimatedCookingTime;
+        this.estimatedPreparationTime = estimatedPreparationTime;
+        this.portionSize = portionSize;
+        this.products = products;
     }
 
-    public UUID getId() {
-        return id;
+    // Getters and setters
+    public String getRecipeName() {
+        return recipeName;
     }
 
-    public String getName() {
-        return name;
+    public void setRecipeName(String recipeName) {
+        this.recipeName = recipeName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getCategory() {
+        return category;
     }
 
-    public String getInstructions() {
-        return instructions;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public void setInstructions(String instructions) {
-        this.instructions = instructions;
+    public int getEstimatedCookingTime() {
+        return estimatedCookingTime;
     }
 
-    public Integer getServings() {
-        return servings;
+    public void setEstimatedCookingTime(int estimatedCookingTime) {
+        this.estimatedCookingTime = estimatedCookingTime;
     }
 
-    public void setServings(Integer servings) {
-        this.servings = servings;
+    public int getEstimatedPreparationTime() {
+        return estimatedPreparationTime;
     }
 
-    public Integer getTime() {
-        return time;
+    public void setEstimatedPreparationTime(int estimatedPreparationTime) {
+        this.estimatedPreparationTime = estimatedPreparationTime;
     }
 
-    public void setTime(Integer time) {
-        this.time = time;
+    public int getPortionSize() {
+        return portionSize;
     }
 
-    public List<Ingredient> getIngredients() {
-        return ingredients;
+    public void setPortionSize(int portionSize) {
+        this.portionSize = portionSize;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    /**
+     * Returns a Product object that represents the sum of all relevant nutritional
+     * components in the recipe.
+     *
+     * @return a Product object with the total nutritional information
+     */
+    public Product getTotalNutritionalInfo() {
+        Product totalNutrition = new Product();
+        for (Product product : products) {
+            totalNutrition.addNutritionalInfo(product);
+        }
+        return totalNutrition;
     }
 }

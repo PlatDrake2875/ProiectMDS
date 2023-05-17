@@ -12,15 +12,17 @@ public class Recipe {
     private int estimatedCookingTime;
     private int estimatedPreparationTime;
     private int portionSize;
+    private List<Ingredient> ingredients;
     private List<Product> products;
 
-    public Recipe(String recipeName, String category, int estimatedCookingTime, int estimatedPreparationTime, int portionSize, List<Product> products) {
+    public Recipe(String recipeName, String category, int estimatedCookingTime, int estimatedPreparationTime, int portionSize, List<Product> products, List<Ingredient> ingredients) {
         this.recipeName = recipeName;
         this.category = category;
         this.estimatedCookingTime = estimatedCookingTime;
         this.estimatedPreparationTime = estimatedPreparationTime;
         this.portionSize = portionSize;
         this.products = products;
+        this.ingredients = ingredients;
     }
 
     // Getters and setters

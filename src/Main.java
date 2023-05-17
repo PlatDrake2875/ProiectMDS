@@ -25,7 +25,7 @@ public class Main {
         sarmale.add(new Ingredient("paprika", 1D, "piece"));
         sarmale.add(new Ingredient("salt", 1D, "piece"));
 
-        recipes.add(new Recipe("Sarmale", "", 50, 150, sarmale));
+        recipes.add(new Recipe("Sarmale", "", 50, 150, 50, null, sarmale));
 
         List<Ingredient> snowWhite = new ArrayList<>();
 
@@ -41,7 +41,7 @@ public class Main {
         snowWhite.add(new Ingredient("corn starch", 130D, "grams"));
         snowWhite.add(new Ingredient("vanilla bean", 1D, "piece"));
 
-        recipes.add(new Recipe("Romanian lemon cake", "", 16, 120, snowWhite));
+        recipes.add(new Recipe("Romanian lemon cake", "", 16, 120, 20, null, snowWhite));
 
         List<Ingredient> cheesecake = new ArrayList<>();
         cheesecake.add(new Ingredient("digestive biscuits", 350D, "grams"));
@@ -53,7 +53,7 @@ public class Main {
         cheesecake.add(new Ingredient("dark chocolate 70%", 200D, "grams"));
         cheesecake.add(new Ingredient("white chocolate", 100D, "grams"));
 
-        recipes.add(new Recipe("Chocolate cheesecake", "", 16, 60, cheesecake));
+        recipes.add(new Recipe("Chocolate cheesecake", "", 16, 60, 10, null, cheesecake));
 
         List<Ingredient> tomatoSoup = new ArrayList<>();
         tomatoSoup.add(new Ingredient("olive oil", 60D, "milliliter"));
@@ -68,7 +68,7 @@ public class Main {
         tomatoSoup.add(new Ingredient("chopped parsley", 16D, "grams"));
         tomatoSoup.add(new Ingredient("sour cream", 60D, "grams"));
 
-        recipes.add(new Recipe("Tomato soup", "", 3, 30, tomatoSoup));
+        recipes.add(new Recipe("Tomato soup", "", 3, 30, 4, null, tomatoSoup));
 
         List<Ingredient> icecream = new ArrayList<>();
         icecream.add(new Ingredient("egg yolk", 8D, "piece"));
@@ -77,7 +77,7 @@ public class Main {
         icecream.add(new Ingredient("salt", 2D, "grams"));
         icecream.add(new Ingredient("vanilla extract", 30D, "milliliter"));
 
-        recipes.add(new Recipe("Vanilla ice cream", "", 2, 45, icecream));
+        recipes.add(new Recipe("Vanilla ice cream", "", 2, 45, 2, null, icecream));
 
 /*
         for(int i = 0; i < recipes.size(); i++){

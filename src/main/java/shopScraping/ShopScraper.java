@@ -1,6 +1,6 @@
 package main.java.shopScraping;
 
-import database.Database;
+//import database.Database;
 import org.javatuples.Pair;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

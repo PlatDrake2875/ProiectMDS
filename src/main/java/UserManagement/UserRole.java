@@ -1,4 +1,4 @@
-package main.java.UserManagement;
+package UserManagement;
 
 public enum UserRole {
     ADMIN,

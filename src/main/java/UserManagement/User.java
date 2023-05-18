@@ -1,4 +1,4 @@
-package main.java.UserManagement;
+package UserManagement;
 
 import java.util.UUID;
 

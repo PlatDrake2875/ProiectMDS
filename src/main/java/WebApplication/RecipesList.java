@@ -1,3 +1,5 @@
+package WebApplication;
+
 import DataModel.Ingredient;
 import DataModel.Recipe;
 

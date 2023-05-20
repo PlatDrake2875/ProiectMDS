@@ -177,6 +177,35 @@ public class Database {
     }
 
     /**
+     * Converts a ResultSet to a Product object.
+     * @param rs the ResultSet to convert
+     * @return a Product
+     * */
+    private Product buildProduct(ResultSet rs) throws SQLException {
+        return new Product.Builder()
+                .id(rs.getInt("id"))
+                .name(rs.getString("name"))
+                .category(rs.getString("category"))
+                .price(rs.getBigDecimal("price"))
+                .productType(rs.getString("product_type"))
+                .storageConditions(rs.getString("storage_conditions"))
+                .weight(rs.getBigDecimal("weight"))
+                .shelfLife(rs.getString("shelf_life"))
+                .ingredients(rs.getString("ingredients"))
+                .kcalPer100g(rs.getBigDecimal("kcal_per_100g"))
+                .kjPer100g(rs.getBigDecimal("kj_per_100g"))
+                .fats(rs.getBigDecimal("fats"))
+                .saturatedFats(rs.getBigDecimal("saturated_fats"))
+                .carbohydrates(rs.getBigDecimal("carbohydrates"))
+                .sugars(rs.getBigDecimal("sugars"))
+                .salt(rs.getBigDecimal("salt"))
+                .fiber(rs.getBigDecimal("fiber"))
+                .proteins(rs.getBigDecimal("proteins"))
+                .lastModified(rs.getTimestamp("last_modified").toLocalDateTime())
+                .build();
+    }
+
+    /**
      * This private method is used to set the parameters of the PreparedStatement used in 'insertProduct' and 'updateProduct' methods.
      *
      * @param name               the name of the product
@@ -231,7 +260,7 @@ public class Database {
             pstmt.setString(1, name);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
-                return getProduct(rs);
+                return buildProduct(rs);
             }
         } catch (SQLException e) {
             LOGGER.log(Level.SEVERE, "Error getting product by name:", e);
@@ -281,39 +310,11 @@ public class Database {
         List<Product> products = new ArrayList<>();
         try (Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
-
             addProduct(products, rs);
         } catch (SQLException e) {
             LOGGER.log(Level.SEVERE, "Error getting all products:", e);
         }
         return products;
-    }
-
-    /**
-     * Converts a ResultSet to a Product object.
-     *
-     * @param rs the ResultSet to convert
-     * @return the Product object converted from the ResultSet
-     * @throws SQLException If there is an error reading the ResultSet.
-     */
-    private Product createProductFromResultSet(ResultSet rs) throws SQLException {
-        return getProduct(rs);
-    }
-
-    /**
-     * Converts a ResultSet to a Product object.
-     *
-     * @param rs the ResultSet to convert
-     * @return the Product object converted from the ResultSet
-     * @throws SQLException If there is an error reading the ResultSet.
-     */
-    private Product getProduct(ResultSet rs) throws SQLException {
-        return new Product(rs.getInt("id"), rs.getString("name"), rs.getString("category"),
-                rs.getBigDecimal("price"), rs.getString("product_type"), rs.getString("storage_conditions"),
-                rs.getBigDecimal("weight"), rs.getString("shelf_life"), rs.getString("ingredients"),
-                rs.getBigDecimal("kcal_per_100g"), rs.getBigDecimal("kj_per_100g"), rs.getBigDecimal("fats"),
-                rs.getBigDecimal("saturated_fats"), rs.getBigDecimal("carbohydrates"), rs.getBigDecimal("sugars"),
-                rs.getBigDecimal("salt"), rs.getBigDecimal("fiber"), rs.getBigDecimal("proteins"), rs.getTimestamp("last_modified").toLocalDateTime());
     }
 
     /**
@@ -325,7 +326,7 @@ public class Database {
      */
     private void addProduct(List<Product> products, ResultSet rs) throws SQLException {
         while (rs.next()) {
-            products.add(createProductFromResultSet(rs));
+            products.add(buildProduct(rs));
         }
     }
 
@@ -373,48 +374,11 @@ public class Database {
 
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                products.add(resultSetToProduct(rs));
+                products.add(buildProduct(rs));
             }
         }
-
         return products;
     }
 
-    /**
-     * This method converts a ResultSet from a SQL query into a Product object.
-     * It's a helper method used in the 'getProductByName', 'getAllProducts', 'getProductsByCategory', and 'getProductsByFilter' methods.
-     *
-     * @param rs The ResultSet from the SQL query.
-     * @return A Product object built from the data in the ResultSet.
-     * @throws SQLException If there is an error reading from the ResultSet.
-     */
-    private Product resultSetToProduct(ResultSet rs) throws SQLException {
-        int id = rs.getInt("id");
-        String name = rs.getString("name");
-        String category = rs.getString("category");
-        BigDecimal price = rs.getBigDecimal("price");
-        String productType = rs.getString("product_type");
-        String storageConditions = rs.getString("storage_conditions");
-        BigDecimal weight = rs.getBigDecimal("weight");
-        String shelfLife = rs.getString("shelf_life");
-        String ingredients = rs.getString("ingredients");
-        BigDecimal kcalPer100g = rs.getBigDecimal("kcal_per_100g");
-        BigDecimal kjPer100g = rs.getBigDecimal("kj_per_100g");
-        BigDecimal fats = rs.getBigDecimal("fats");
-        BigDecimal saturatedFats = rs.getBigDecimal("saturated_fats");
-        BigDecimal carbohydrates = rs.getBigDecimal("carbohydrates");
-        BigDecimal sugars = rs.getBigDecimal("sugars");
-        BigDecimal salt = rs.getBigDecimal("salt");
-        BigDecimal fiber = rs.getBigDecimal("fiber");
-        BigDecimal proteins = rs.getBigDecimal("proteins");
-        LocalDateTime lastModified = rs.getObject("last_modified", LocalDateTime.class);
-
-        Product product = new Product(id, name, category, price, productType, storageConditions, weight,
-                shelfLife, ingredients, kcalPer100g, kjPer100g, fats, saturatedFats, carbohydrates, sugars,
-                salt, fiber, proteins, lastModified);
-        product.setLastModified(lastModified);
-
-        return product;
-    }
 
 }

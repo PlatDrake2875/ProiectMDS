@@ -29,49 +29,30 @@ public class Product {
 
 
     /**
-     * Constructor for a Product object.
-     *
-     * @param id                The product ID.
-     * @param name              The product name.
-     * @param category          The product category.
-     * @param price             The product price.
-     * @param productType       The product type.
-     * @param storageConditions The product storage conditions.
-     * @param weight            The product weight.
-     * @param shelfLife         The product shelf life.
-     * @param ingredients       The product ingredients.
-     * @param kcalPer100g       The product kcal per 100g.
-     * @param kjPer100g         The product kj per 100g.
-     * @param fats              The product fats.
-     * @param saturatedFats     The product saturated fats.
-     * @param carbohydrates     The product carbohydrates.
-     * @param sugars            The product sugars.
-     * @param salt              The product salt.
-     * @param fiber             The product fiber.
-     * @param proteins          The product proteins.
-     * @param lastModified      The product last modified date.
+     * Builder class for a Product object.
      */
-    public Product(int id, String name, String category, BigDecimal price, String productType, String storageConditions, BigDecimal weight, String shelfLife, String ingredients, BigDecimal kcalPer100g, BigDecimal kjPer100g, BigDecimal fats, BigDecimal saturatedFats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins, LocalDateTime lastModified) {
-        this.id = id;
-        this.name = name;
-        this.category = category;
-        this.price = price;
-        this.productType = productType;
-        this.storageConditions = storageConditions;
-        this.weight = weight;
-        this.shelfLife = shelfLife;
-        this.ingredients = ingredients;
-        this.kcalPer100g = kcalPer100g;
-        this.kjPer100g = kjPer100g;
-        this.fats = fats;
-        this.saturatedFats = saturatedFats;
-        this.carbohydrates = carbohydrates;
-        this.sugars = sugars;
-        this.salt = salt;
-        this.fiber = fiber;
-        this.proteins = proteins;
-        this.lastModified = lastModified;
+    private Product(Builder builder) {
+        this.id = builder.id;
+        this.name = builder.name;
+        this.category = builder.category;
+        this.price = builder.price;
+        this.productType = builder.productType;
+        this.storageConditions = builder.storageConditions;
+        this.weight = builder.weight;
+        this.shelfLife = builder.shelfLife;
+        this.ingredients = builder.ingredients;
+        this.kcalPer100g = builder.kcalPer100g;
+        this.kjPer100g = builder.kjPer100g;
+        this.fats = builder.fats;
+        this.saturatedFats = builder.saturatedFats;
+        this.carbohydrates = builder.carbohydrates;
+        this.sugars = builder.sugars;
+        this.salt = builder.salt;
+        this.fiber = builder.fiber;
+        this.proteins = builder.proteins;
+        this.lastModified = builder.lastModified;
     }
+
 
     /**
      * Default constructor for a Product object.
@@ -270,6 +251,126 @@ public class Product {
         this.proteins = this.proteins.add(other.proteins);
         if (this.weight != null && other.weight != null) {
             this.weight = this.weight.add(other.weight);
+        }
+    }
+    public static class Builder {
+        private int id;
+        private String name;
+        private String category;
+        private BigDecimal price;
+        private String productType;
+        private String storageConditions;
+        private BigDecimal weight;
+        private String shelfLife;
+        private String ingredients;
+        private BigDecimal kcalPer100g;
+        private BigDecimal kjPer100g;
+        private BigDecimal fats;
+        private BigDecimal saturatedFats;
+        private BigDecimal carbohydrates;
+        private BigDecimal sugars;
+        private BigDecimal salt;
+        private BigDecimal fiber;
+        private BigDecimal proteins;
+        private LocalDateTime lastModified;
+
+        public Builder id(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder category(String category) {
+            this.category = category;
+            return this;
+        }
+
+        public Builder price(BigDecimal price) {
+            this.price = price;
+            return this;
+        }
+
+        public Builder productType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+
+        public Builder storageConditions(String storageConditions) {
+            this.storageConditions = storageConditions;
+            return this;
+        }
+
+        public Builder weight(BigDecimal weight) {
+            this.weight = weight;
+            return this;
+        }
+
+        public Builder shelfLife(String shelfLife) {
+            this.shelfLife = shelfLife;
+            return this;
+        }
+
+        public Builder ingredients(String ingredients) {
+            this.ingredients = ingredients;
+            return this;
+        }
+
+        public Builder kcalPer100g(BigDecimal kcalPer100g) {
+            this.kcalPer100g = kcalPer100g;
+            return this;
+        }
+
+        public Builder kjPer100g(BigDecimal kjPer100g) {
+            this.kjPer100g = kjPer100g;
+            return this;
+        }
+
+        public Builder fats(BigDecimal fats) {
+            this.fats = fats;
+            return this;
+        }
+
+        public Builder saturatedFats(BigDecimal saturatedFats) {
+            this.saturatedFats = saturatedFats;
+            return this;
+        }
+
+        public Builder carbohydrates(BigDecimal carbohydrates) {
+            this.carbohydrates = carbohydrates;
+            return this;
+        }
+
+        public Builder sugars(BigDecimal sugars) {
+            this.sugars = sugars;
+            return this;
+        }
+
+        public Builder salt(BigDecimal salt) {
+            this.salt = salt;
+            return this;
+        }
+
+        public Builder fiber(BigDecimal fiber) {
+            this.fiber = fiber;
+            return this;
+        }
+
+        public Builder proteins(BigDecimal proteins) {
+            this.proteins = proteins;
+            return this;
+        }
+
+        public Builder lastModified(LocalDateTime lastModified) {
+            this.lastModified = lastModified;
+            return this;
+        }
+
+        public Product build() {
+            return new Product(this);
         }
     }
 }

@@ -4,7 +4,9 @@ import DataModel.Product;
 
 import java.math.BigDecimal;
 import java.sql.*;
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -381,4 +383,35 @@ public class Database {
     }
 
 
+    public void updateProductIf24HoursPassed(Product product) {
+        String sql = "SELECT last_modified FROM products WHERE id = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+
+            pstmt.setInt(1, product.getId());
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                LocalDateTime lastModified = rs.getTimestamp("last_modified").toLocalDateTime();
+                LocalDateTime now = LocalDateTime.now(ZoneId.of("ECT"));
+
+                if (Duration.between(lastModified, now).toHours() >= 24) {
+                    String updateSql = "UPDATE products SET name = ?, category = ?, price = ?, product_type = ?, " +
+                            "storage_conditions = ?, weight = ?, shelf_life = ?, ingredients = ?, kcal_per_100g = ?, " +
+                            "kj_per_100g = ?, fats = ?, saturated_fats = ?, carbohydrates = ?, sugars = ?, " +
+                            "salt = ?, fiber = ?, proteins = ?, last_modified = ? WHERE id = ?";
+                    try (PreparedStatement updatePstmt = connection.prepareStatement(updateSql)) {
+                        // assuming you have a method to set the parameters from the product
+                        setProductParameters(updatePstmt, product);
+                        updatePstmt.executeUpdate();
+                    }
+                } else {
+                    LOGGER.log(Level.INFO, "It has not been 24 hours since the product was last modified");
+                }
+            }
+
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Update check failed", e);
+        }
+    }
 }

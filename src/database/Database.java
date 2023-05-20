@@ -79,7 +79,8 @@ public class Database {
                     sugars DECIMAL(10, 2),
                     salt DECIMAL(10, 2),
                     fiber DECIMAL(10, 2),
-                    proteins DECIMAL(10, 2)
+                    proteins DECIMAL(10, 2),
+                    last_modified DATETIME
                 );
 
                 """;
@@ -380,17 +381,40 @@ public class Database {
     }
 
     /**
-     * Helper method to convert a ResultSet to a Product object.
+     * This method converts a ResultSet from a SQL query into a Product object.
+     * It's a helper method used in the 'getProductByName', 'getAllProducts', 'getProductsByCategory', and 'getProductsByFilter' methods.
      *
-     * @param rs The ResultSet to convert.
-     * @return The Product object.
-     * @throws SQLException If there is an error reading the ResultSet.
+     * @param rs The ResultSet from the SQL query.
+     * @return A Product object built from the data in the ResultSet.
+     * @throws SQLException If there is an error reading from the ResultSet.
      */
     private Product resultSetToProduct(ResultSet rs) throws SQLException {
-
+        int id = rs.getInt("id");
+        String name = rs.getString("name");
+        String category = rs.getString("category");
+        BigDecimal price = rs.getBigDecimal("price");
+        String productType = rs.getString("product_type");
+        String storageConditions = rs.getString("storage_conditions");
+        BigDecimal weight = rs.getBigDecimal("weight");
+        String shelfLife = rs.getString("shelf_life");
+        String ingredients = rs.getString("ingredients");
+        BigDecimal kcalPer100g = rs.getBigDecimal("kcal_per_100g");
+        BigDecimal kjPer100g = rs.getBigDecimal("kj_per_100g");
+        BigDecimal fats = rs.getBigDecimal("fats");
+        BigDecimal saturatedFats = rs.getBigDecimal("saturated_fats");
+        BigDecimal carbohydrates = rs.getBigDecimal("carbohydrates");
+        BigDecimal sugars = rs.getBigDecimal("sugars");
+        BigDecimal salt = rs.getBigDecimal("salt");
+        BigDecimal fiber = rs.getBigDecimal("fiber");
+        BigDecimal proteins = rs.getBigDecimal("proteins");
         LocalDateTime lastModified = rs.getObject("last_modified", LocalDateTime.class);
+
+        Product product = new Product(id, name, category, price, productType, storageConditions, weight,
+                shelfLife, ingredients, kcalPer100g, kjPer100g, fats, saturatedFats, carbohydrates, sugars,
+                salt, fiber, proteins, lastModified);
         product.setLastModified(lastModified);
 
         return product;
     }
+
 }

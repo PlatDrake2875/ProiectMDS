@@ -1,6 +1,7 @@
 package DataModel;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * Represents a product in the products table.
@@ -24,6 +25,8 @@ public class Product {
     private BigDecimal salt;
     private BigDecimal fiber;
     private BigDecimal proteins;
+    private LocalDateTime lastModified;
+
 
     /**
      * Constructor for a Product object.
@@ -46,8 +49,9 @@ public class Product {
      * @param salt              The product salt.
      * @param fiber             The product fiber.
      * @param proteins          The product proteins.
+     * @param lastModified      The product last modified date.
      */
-    public Product(int id, String name, String category, BigDecimal price, String productType, String storageConditions, BigDecimal weight, String shelfLife, String ingredients, BigDecimal kcalPer100g, BigDecimal kjPer100g, BigDecimal fats, BigDecimal saturatedFats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins) {
+    public Product(int id, String name, String category, BigDecimal price, String productType, String storageConditions, BigDecimal weight, String shelfLife, String ingredients, BigDecimal kcalPer100g, BigDecimal kjPer100g, BigDecimal fats, BigDecimal saturatedFats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins, LocalDateTime lastModified) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -66,6 +70,7 @@ public class Product {
         this.salt = salt;
         this.fiber = fiber;
         this.proteins = proteins;
+        this.lastModified = lastModified;
     }
 
     /**
@@ -91,6 +96,7 @@ public class Product {
         this.salt = BigDecimal.ZERO;
         this.fiber = BigDecimal.ZERO;
         this.proteins = BigDecimal.ZERO;
+        this.lastModified = LocalDateTime.now();
     }
 
     // Getters and Setters
@@ -233,6 +239,13 @@ public class Product {
 
     public BigDecimal getProteins() {
         return proteins;
+    }
+    public LocalDateTime getLastModified() {
+        return lastModified;
+    }
+
+    public void setLastModified(LocalDateTime lastModified) {
+        this.lastModified = lastModified;
     }
 
     public void setProteins(BigDecimal proteins) {

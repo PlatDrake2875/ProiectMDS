@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class ProductStatistics {
 
-    private List<Product> products;
+    private final List<Product> products;
 
     /**
      * Constructs a new ProductStatistics object with the given list of products.

@@ -3,7 +3,7 @@ package UserManagement;
 import java.util.UUID;
 
 public class User {
-    private UUID id;
+    private final UUID id;
     private String username;
     private String password;
     private String email;

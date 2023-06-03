@@ -221,16 +221,17 @@ public class Product {
     public BigDecimal getProteins() {
         return proteins;
     }
+
+    public void setProteins(BigDecimal proteins) {
+        this.proteins = proteins;
+    }
+
     public LocalDateTime getLastModified() {
         return lastModified;
     }
 
     public void setLastModified(LocalDateTime lastModified) {
         this.lastModified = lastModified;
-    }
-
-    public void setProteins(BigDecimal proteins) {
-        this.proteins = proteins;
     }
 
     /**
@@ -253,6 +254,7 @@ public class Product {
             this.weight = this.weight.add(other.weight);
         }
     }
+
     public static class Builder {
         private int id;
         private String name;

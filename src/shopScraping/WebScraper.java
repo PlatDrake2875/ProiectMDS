@@ -5,9 +5,10 @@ import org.jsoup.Jsoup;
 
 import javax.lang.model.util.Elements;
 import javax.swing.text.Document;
+import java.io.IOException;
 import java.util.logging.Logger;
 
-public class WebScraper {
+public class WebScraper extends ShopScraper {
 
     private static final Logger LOGGER = Logger.getLogger(WebScraper.class.getName());
 
@@ -28,5 +29,4 @@ public class WebScraper {
         return product;
     }
 
-    // The remaining helper methods...
 }

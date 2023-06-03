@@ -57,7 +57,6 @@ public class Database {
         }
     }
 
-
     /**
      * Creates a new table in the database called 'products'.
      */
@@ -96,27 +95,25 @@ public class Database {
     }
 
     /**
-     * Inserts a new product into the 'products' table.
+     * This method is used to insert a new Product into the 'products' database.
+     * The Product object is parsed and its data is prepared and executed in an SQL INSERT statement.
      *
-     * @param name               the name of the product
-     * @param category           the category of the product
-     * @param price              the price of the product
-     * @param product_type       the type of the product
-     * @param storage_conditions the storage conditions of the product
-     * @param weight             the weight of the product
-     * @param shelf_life         the shelf life of the product
-     * @param ingredients        the ingredients of the product
-     * @param kcal_per_100g      the kcal_per_100g of the product
-     * @param kj_per_100g        the kj_per_100g of the product
-     * @param fats               the fats of the product
-     * @param saturated_fats     the saturated fats of the product
-     * @param carbohydrates      the carbohydrates of the product
-     * @param sugars             the sugars of the product
-     * @param salt               the salt of the product
-     * @param fiber              the fiber of the product
-     * @param proteins           the proteins of the product
+     * @param product The Product object containing the product's details that needs to be added into the database.
+     *
+     * Usage:
+     *    Product newProduct = new Product("Product Name", "Category", new BigDecimal("10.00"), ...);
+     *    Database db = new Database();
+     *    db.insertProduct(newProduct); // Inserts the newProduct object into the database.
+     *
+     * Note:
+     * 1. It prepares an SQL INSERT statement with the help of a PreparedStatement to prevent SQL injection attacks.
+     * 2. The data of the Product object is set in the SQL statement using the setProduct() method.
+     * 3. After the execution of the SQL statement, a log message is written indicating the successful insertion of the product.
+     * 4. If an SQLException occurs during the execution of the SQL statement, it is caught and logged at a severe level.
+     *
+     * @throws SQLException If there is an error with SQL handling, it throws an SQLException. It's recommended to use proper exception handling while using this method.
      */
-    public void insertProduct(String name, String category, BigDecimal price, String product_type, String storage_conditions, BigDecimal weight, String shelf_life, String ingredients, BigDecimal kcal_per_100g, BigDecimal kj_per_100g, BigDecimal fats, BigDecimal saturated_fats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins) {
+    public void insertProduct(Product product) {
         String insertSQL = """
                 INSERT INTO products (name, category, price,
                 product_type, storage_conditions, weight,
@@ -126,7 +123,7 @@ public class Database {
                 fiber, proteins) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
                 """;
         try (PreparedStatement pstmt = connection.prepareStatement(insertSQL)) {
-            setProduct(name, category, price, product_type, storage_conditions, weight, shelf_life, ingredients, kcal_per_100g, kj_per_100g, fats, saturated_fats, carbohydrates, sugars, salt, fiber, proteins, pstmt);
+            setProduct(product, pstmt);
 
             pstmt.executeUpdate();
             LOGGER.log(Level.INFO, "Product inserted successfully");
@@ -136,28 +133,14 @@ public class Database {
     }
 
     /**
-     * Updates an existing product in the 'products' table by its id.
+     * This method is used to update a product in the database.
+     * It takes as input a Product object and updates the corresponding product in the database.
+     * If the product is successfully updated, it logs an informational message.
+     * If an SQL error occurs, it logs a severe error message.
      *
-     * @param id                 the id of the product
-     * @param name               the name of the product
-     * @param category           the category of the product
-     * @param price              the price of the product
-     * @param product_type       the type of the product
-     * @param storage_conditions the storage conditions of the product
-     * @param weight             the weight of the product
-     * @param shelf_life         the shelf life of the product
-     * @param ingredients        the ingredients of the product
-     * @param kcal_per_100g      the kcal_per_100g of the product
-     * @param kj_per_100g        the kj_per_100g of the product
-     * @param fats               the fats of the product
-     * @param saturated_fats     the saturated fats of the product
-     * @param carbohydrates      the carbohydrates of the product
-     * @param sugars             the sugars of the product
-     * @param salt               the salt of the product
-     * @param fiber              the fiber of the product
-     * @param proteins           the proteins of the product
+     * @param product The Product object containing the updated information of the product.
      */
-    public void updateProduct(int id, String name, String category, BigDecimal price, String product_type, String storage_conditions, BigDecimal weight, String shelf_life, String ingredients, BigDecimal kcal_per_100g, BigDecimal kj_per_100g, BigDecimal fats, BigDecimal saturated_fats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins) {
+    public void updateProduct(Product product) {
         String updateSQL = """
                 UPDATE products SET
                 name = ?, category = ?, price = ?,
@@ -168,8 +151,8 @@ public class Database {
                  fiber = ?, proteins = ? WHERE id = ?;
                 """;
         try (PreparedStatement pstmt = connection.prepareStatement(updateSQL)) {
-            setProduct(name, category, price, product_type, storage_conditions, weight, shelf_life, ingredients, kcal_per_100g, kj_per_100g, fats, saturated_fats, carbohydrates, sugars, salt, fiber, proteins, pstmt);
-            pstmt.setInt(18, id);
+            setProduct(product, pstmt);
+            pstmt.setInt(18, product.getId());
 
             pstmt.executeUpdate();
             LOGGER.log(Level.INFO, "Product updated successfully");
@@ -177,12 +160,87 @@ public class Database {
             LOGGER.log(Level.SEVERE, "Error updating product:", e);
         }
     }
+    /**
+     * This method updates the last_modified field for a specified product in the database.
+     * The last_modified field is updated to the current time.
+     *
+     * @param id The id of the product for which the last_modified time is to be updated.
+     *
+     * Usage:
+     *    Database db = new Database();
+     *    db.updateLastModificationTime(1); // Updates the last modification time for the product with id 1.
+     *
+     * Note:
+     * 1. This method uses the SQL NOW() function to get the current time. The time is based on the system clock of the database server.
+     * 2. It prepares a SQL statement with the help of a PreparedStatement to prevent SQL injection attacks.
+     * 3. If an SQLException occurs during the execution of the SQL statement, it is caught and logged at a severe level.
+     *
+     * @throws SQLException If there is an error with SQL handling, it throws an SQLException. It's recommended to use proper exception handling while using this method.
+     */
+    public void updateLastModificationTime(int id) {
+        String query = "UPDATE products SET last_modified = NOW() WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error updating last modification time:", e);
+        }
+    }
 
     /**
-     * Converts a ResultSet to a Product object.
-     * @param rs the ResultSet to convert
-     * @return a Product
-     * */
+     * This method is used to update the price of a product in the database.
+     * It takes as input a Product object and updates the price of the corresponding product in the database.
+     * If the price is successfully updated, it logs an informational message.
+     * If an SQL error occurs, it logs a severe error message.
+     *
+     * @param product The Product object containing the updated price of the product.
+     */
+    public void updateProductPrice(Product product) {
+        String updateSQL = "UPDATE products SET price = ? WHERE id = ?;";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(updateSQL)) {
+            pstmt.setBigDecimal(1, product.getPrice());
+            pstmt.setInt(2, product.getId());
+
+            pstmt.executeUpdate();
+            LOGGER.log(Level.INFO, "Product price updated successfully");
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error updating product price:", e);
+        }
+    }
+
+    /**
+     * Deletes a product from the 'products' table by its id.
+     *
+     * @param id the id of the product
+     */
+    public void deleteProduct(int id) {
+        String query = "DELETE FROM products WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+            LOGGER.log(Level.INFO, "Product deleted successfully");
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error deleting product:", e);
+        }
+    }
+
+    /**
+     * This private method is used to build a Product object from a ResultSet.
+     * It uses a Builder pattern to incrementally create a Product object from the database query result set.
+     * This method is typically used internally by the class to handle data fetched from the database.
+     *
+     * @param rs The ResultSet object obtained from executing a SQL statement. It contains the product's details fetched from the database.
+     * @return Returns a Product object built from the ResultSet.
+     *
+     * Note:
+     * 1. Each field of the Product object is set by extracting the respective field's data from the ResultSet using the appropriate getter method (getInt, getString, getBigDecimal, etc.).
+     * 2. This method expects the ResultSet to have all fields that are used in the Product object. If the ResultSet does not have a required field, it may throw an SQLException.
+     * 3. The last modification time is converted to a LocalDateTime object before being set in the Product object.
+     *
+     * @throws SQLException If there is an error while handling the ResultSet, it throws an SQLException.
+     *                      It's recommended to handle this exception properly while using methods that could use this method.
+     */
     private Product buildProduct(ResultSet rs) throws SQLException {
         return new Product.Builder()
                 .id(rs.getInt("id"))
@@ -208,46 +266,48 @@ public class Database {
     }
 
     /**
-     * This private method is used to set the parameters of the PreparedStatement used in 'insertProduct' and 'updateProduct' methods.
+     * This helper method is used to set the PreparedStatement parameters from a given Product object.
+     * It is used by the updateProduct method to reduce redundancy and improve code organization.
      *
-     * @param name               the name of the product
-     * @param category           the category of the product
-     * @param price              the price of the product
-     * @param product_type       the type of the product
-     * @param storage_conditions the storage conditions of the product
-     * @param weight             the weight of the product
-     * @param shelf_life         the shelf life of the product
-     * @param ingredients        the ingredients of the product
-     * @param kcal_per_100g      the kilocalories per 100 grams of the product
-     * @param kj_per_100g        the kilojoules per 100 grams of the product
-     * @param fats               the fats of the product
-     * @param saturated_fats     the saturated fats of the product
-     * @param carbohydrates      the carbohydrates of the product
-     * @param sugars             the sugars of the product
-     * @param salt               the salt of the product
-     * @param fiber              the fiber of the product
-     * @param proteins           the proteins of the product
-     * @param pstmt              the PreparedStatement to set the parameters on
-     * @throws SQLException If there is an error setting the PreparedStatement parameters.
+     * @param product The Product object from which the PreparedStatement parameters are to be set.
+     * @param pstmt   The PreparedStatement whose parameters are to be set.
+     * @throws SQLException If an error occurs while setting the PreparedStatement parameters.
      */
-    private void setProduct(String name, String category, BigDecimal price, String product_type, String storage_conditions, BigDecimal weight, String shelf_life, String ingredients, BigDecimal kcal_per_100g, BigDecimal kj_per_100g, BigDecimal fats, BigDecimal saturated_fats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins, PreparedStatement pstmt) throws SQLException {
-        pstmt.setString(1, name);
-        pstmt.setString(2, category);
-        pstmt.setBigDecimal(3, price);
-        pstmt.setString(4, product_type);
-        pstmt.setString(5, storage_conditions);
-        pstmt.setBigDecimal(6, weight);
-        pstmt.setString(7, shelf_life);
-        pstmt.setString(8, ingredients);
-        pstmt.setBigDecimal(9, kcal_per_100g);
-        pstmt.setBigDecimal(10, kj_per_100g);
-        pstmt.setBigDecimal(11, fats);
-        pstmt.setBigDecimal(12, saturated_fats);
-        pstmt.setBigDecimal(13, carbohydrates);
-        pstmt.setBigDecimal(14, sugars);
-        pstmt.setBigDecimal(15, salt);
-        pstmt.setBigDecimal(16, fiber);
-        pstmt.setBigDecimal(17, proteins);
+    private void setProduct(Product product, PreparedStatement pstmt) throws SQLException {
+        pstmt.setString(1, product.getName());
+        pstmt.setString(2, product.getCategory());
+        pstmt.setBigDecimal(3, product.getPrice());
+        pstmt.setString(4, product.getProductType());
+        pstmt.setString(5, product.getStorageConditions());
+        pstmt.setBigDecimal(6, product.getWeight());
+        pstmt.setString(7, product.getShelfLife());
+        pstmt.setString(8, product.getIngredients());
+        pstmt.setBigDecimal(9, product.getKcalPer100g());
+        pstmt.setBigDecimal(10, product.getKjPer100g());
+        pstmt.setBigDecimal(11, product.getFats());
+        pstmt.setBigDecimal(12, product.getSaturatedFats());
+        pstmt.setBigDecimal(13, product.getCarbohydrates());
+        pstmt.setBigDecimal(14, product.getSugars());
+        pstmt.setBigDecimal(15, product.getSalt());
+        pstmt.setBigDecimal(16, product.getFiber());
+        pstmt.setBigDecimal(17, product.getProteins());
+    }
+
+    /**
+     * Retrieves all products from the 'products' table.
+     *
+     * @return a list of all Product objects in the 'products' table
+     */
+    public List<Product> getAllProducts() {
+        String query = "SELECT * FROM products";
+        List<Product> products = new ArrayList<>();
+        try (Statement stmt = connection.createStatement()) {
+            ResultSet rs = stmt.executeQuery(query);
+            addProduct(products, rs);
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error getting all products:", e);
+        }
+        return products;
     }
 
     /**
@@ -268,55 +328,6 @@ public class Database {
             LOGGER.log(Level.SEVERE, "Error getting product by name:", e);
         }
         return null;
-    }
-
-    /**
-     * Updates the last modification time of a product in the 'products' table by its id.
-     *
-     * @param id the id of the product
-     */
-    public void updateLastModificationTime(int id) {
-        String query = "UPDATE products SET last_modified = NOW() WHERE id = ?";
-        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
-            pstmt.setInt(1, id);
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Error updating last modification time:", e);
-        }
-    }
-
-
-    /**
-     * Deletes a product from the 'products' table by its id.
-     *
-     * @param id the id of the product
-     */
-    public void deleteProduct(int id) {
-        String query = "DELETE FROM products WHERE id = ?";
-        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
-            pstmt.setInt(1, id);
-            pstmt.executeUpdate();
-            LOGGER.log(Level.INFO, "Product deleted successfully");
-        } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Error deleting product:", e);
-        }
-    }
-
-    /**
-     * Retrieves all products from the 'products' table.
-     *
-     * @return a list of all Product objects in the 'products' table
-     */
-    public List<Product> getAllProducts() {
-        String query = "SELECT * FROM products";
-        List<Product> products = new ArrayList<>();
-        try (Statement stmt = connection.createStatement()) {
-            ResultSet rs = stmt.executeQuery(query);
-            addProduct(products, rs);
-        } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Error getting all products:", e);
-        }
-        return products;
     }
 
     /**
@@ -382,13 +393,30 @@ public class Database {
         return products;
     }
 
-
+    /**
+     * This method attempts to update a product in the database, but only if it has been at least 24 hours
+     * since the product was last modified. It first retrieves the last modification time from the database.
+     * If 24 hours have passed, it will proceed to update the product.
+     *
+     * @param product The Product object that needs to be updated. The Product's id is used to fetch
+     *                the current version of the product from the database.
+     *
+     * Note:
+     * 1. The last modified timestamp is fetched from the database and converted into LocalDateTime format.
+     * 2. The method uses Java's Duration class to calculate the difference between the current time and
+     *    the last modification time. It uses "ECT" timezone to calculate the current time.
+     * 3. If it has been less than 24 hours since the last modification, a log message is created and the update is not performed.
+     * 4. If an SQLException is encountered while executing the method, an error message is logged.
+     *
+     * @throws SQLException If there is an error while handling the database operation, it throws an SQLException.
+     *                      It's recommended to handle this exception properly when using this method.
+     */
     public void updateProductIf24HoursPassed(Product product) {
         String sql = "SELECT last_modified FROM products WHERE id = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
-
-            pstmt.setInt(1, product.getId());
+            int id = product.getId();
+            pstmt.setInt(1, id);
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
@@ -396,20 +424,11 @@ public class Database {
                 LocalDateTime now = LocalDateTime.now(ZoneId.of("ECT"));
 
                 if (Duration.between(lastModified, now).toHours() >= 24) {
-                    String updateSql = "UPDATE products SET name = ?, category = ?, price = ?, product_type = ?, " +
-                            "storage_conditions = ?, weight = ?, shelf_life = ?, ingredients = ?, kcal_per_100g = ?, " +
-                            "kj_per_100g = ?, fats = ?, saturated_fats = ?, carbohydrates = ?, sugars = ?, " +
-                            "salt = ?, fiber = ?, proteins = ?, last_modified = ? WHERE id = ?";
-                    try (PreparedStatement updatePstmt = connection.prepareStatement(updateSql)) {
-                        // assuming you have a method to set the parameters from the product
-                        setProductParameters(updatePstmt, product);
-                        updatePstmt.executeUpdate();
-                    }
+                    updateProduct(product);
                 } else {
                     LOGGER.log(Level.INFO, "It has not been 24 hours since the product was last modified");
                 }
             }
-
         } catch (SQLException e) {
             LOGGER.log(Level.SEVERE, "Update check failed", e);
         }

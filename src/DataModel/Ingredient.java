@@ -3,7 +3,7 @@ package DataModel;
 import java.util.UUID;
 
 public class Ingredient {
-    private UUID id;
+    private final UUID id;
     private String name;
     private Double quantity;
 

@@ -1,14 +1,28 @@
 package DataModel;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
+import java.util.UUID;
 
 /**
  * Represents a product in the products table.
  */
 
 
+@Data
+@Entity
+@Table(name="products")
+@Builder
+//@NoArgsConstructor
 public class Product {
-    private int id;
+    @Id
+    private UUID id;
     private String name;
     private String category;
     private BigDecimal price;
@@ -49,8 +63,8 @@ public class Product {
      * @param fiber             The product fiber.
      * @param proteins          The product proteins.
      */
-    public Product(int id, String name, String category, BigDecimal price, String productType, String storageConditions, BigDecimal weight, String shelfLife, String ingredients, BigDecimal kcalPer100g, BigDecimal kjPer100g, BigDecimal fats, BigDecimal saturatedFats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins) {
-        this.id = id;
+    public Product(UUID id, String name, String category, BigDecimal price, String productType, String storageConditions, BigDecimal weight, String shelfLife, String ingredients, BigDecimal kcalPer100g, BigDecimal kjPer100g, BigDecimal fats, BigDecimal saturatedFats, BigDecimal carbohydrates, BigDecimal sugars, BigDecimal salt, BigDecimal fiber, BigDecimal proteins) {
+        this.id = UUID.randomUUID();
         this.name = name;
         this.category = category;
         this.price = price;
@@ -75,7 +89,7 @@ public class Product {
      */
 
     public Product() {
-        this.id = 0;
+        this.id = UUID.randomUUID();
         this.name = null;
         this.category = null;
         this.price = BigDecimal.ZERO;
@@ -97,11 +111,11 @@ public class Product {
 
     // Getters and Setters
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

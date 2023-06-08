@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 /**
  * Represents a product in the products table.
  */
+
+
 public class Product {
     private int id;
     private String name;

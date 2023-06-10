@@ -10,7 +10,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**

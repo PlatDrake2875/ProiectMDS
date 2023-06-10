@@ -1,5 +1,6 @@
 package src;
 
+import DataModel.Product;
 import shopScraping.ProductScraper;
 import shopScraping.ShopScraper;
 
@@ -11,12 +12,8 @@ public class Main {
         ShopScraper shop = new ShopScraper();
         ProductScraper auchan = new ProductScraper();
 
-        Map<String, String> product = auchan.getProductDetails(shop, "https://www.auchan.ro/branza-de-vaca-cottage-light-olympus-2-grasime-180-g/p");
+        Product product = auchan.getProductDetails(shop, "https://www.auchan.ro/branza-de-vaca-cottage-light-olympus-2-grasime-180-g/p");
 
-        for(Map.Entry<String,String> entry : product.entrySet())
-        {
-            System.out.println(entry.getKey() + " ||||| " + entry.getValue());
-        }
-
+        System.out.println(product);
     }
 }

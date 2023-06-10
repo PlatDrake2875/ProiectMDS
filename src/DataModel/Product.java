@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
  * Represents a product in the products table.
  */
 public class Product {
+
     private int id;
     private String name;
     private String category;
@@ -26,6 +27,7 @@ public class Product {
     private BigDecimal fiber;
     private BigDecimal proteins;
     private LocalDateTime lastModified;
+    private String speciality;
 
 
     /**
@@ -51,6 +53,7 @@ public class Product {
         this.fiber = builder.fiber;
         this.proteins = builder.proteins;
         this.lastModified = builder.lastModified;
+        this.speciality = builder.speciality;
     }
 
 
@@ -78,6 +81,7 @@ public class Product {
         this.fiber = BigDecimal.ZERO;
         this.proteins = BigDecimal.ZERO;
         this.lastModified = LocalDateTime.now();
+        this.speciality = null;
     }
 
     // Getters and Setters
@@ -234,6 +238,14 @@ public class Product {
         this.lastModified = lastModified;
     }
 
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
     /**
      * Adds the nutritional components of the given product to the current product.
      * Assumes both products have the same units of measurement.
@@ -253,6 +265,32 @@ public class Product {
         if (this.weight != null && other.weight != null) {
             this.weight = this.weight.add(other.weight);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                ", productType='" + productType + '\'' +
+                ", storageConditions='" + storageConditions + '\'' +
+                ", weight=" + weight +
+                ", shelfLife='" + shelfLife + '\'' +
+                ", ingredients='" + ingredients + '\'' +
+                ", kcalPer100g=" + kcalPer100g +
+                ", kjPer100g=" + kjPer100g +
+                ", fats=" + fats +
+                ", saturatedFats=" + saturatedFats +
+                ", carbohydrates=" + carbohydrates +
+                ", sugars=" + sugars +
+                ", salt=" + salt +
+                ", fiber=" + fiber +
+                ", proteins=" + proteins +
+                ", lastModified=" + lastModified +
+                ", speciality=" + speciality +
+                '}';
     }
 
     public static class Builder {
@@ -275,6 +313,7 @@ public class Product {
         private BigDecimal fiber;
         private BigDecimal proteins;
         private LocalDateTime lastModified;
+        private String speciality;
 
         public Builder id(int id) {
             this.id = id;
@@ -371,9 +410,17 @@ public class Product {
             return this;
         }
 
+        public Builder speciality(String speciality) {
+            this.speciality = speciality;
+            return this;
+        }
+
         public Product build() {
             return new Product(this);
         }
+
+
     }
+
 }
 

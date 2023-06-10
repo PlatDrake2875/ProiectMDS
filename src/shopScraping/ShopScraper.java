@@ -8,17 +8,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.logging.Logger;
 
 /**
  * ShopScraper is responsible for connecting to a URL and scraping product data from it.
  */
 public class ShopScraper {
-    private static final Set<String> visitedURLs = new HashSet<>();
-    private static final Logger LOGGER = Logger.getLogger(ShopScraper.class.getName());
-
     /**
      * Checks if the given url is a valid URL.
      *
@@ -32,17 +26,6 @@ public class ShopScraper {
         } catch (MalformedURLException | URISyntaxException e) {
             return false;
         }
-    }
-
-    /**
-     * Connects to the provided URL and retrieves the HTML document.
-     *
-     * @param urlProduct the URL to connect to
-     * @return the HTML document retrieved from the URL
-     * @throws IOException if an error occurs during connection
-     */
-    Document connectToURL(String urlProduct) throws IOException {
-        return Jsoup.connect(urlProduct).get();
     }
 
     /**
@@ -93,5 +76,16 @@ public class ShopScraper {
      */
     static Elements getAuchanProductProperties(Document doc) {
         return doc.select(".vtex-product-specifications-1-x-specificationValue.vtex-product-specifications-1-x-specificationValue--first.vtex-product-specifications-1-x-specificationValue--last");
+    }
+
+    /**
+     * Connects to the provided URL and retrieves the HTML document.
+     *
+     * @param urlProduct the URL to connect to
+     * @return the HTML document retrieved from the URL
+     * @throws IOException if an error occurs during connection
+     */
+    Document connectToURL(String urlProduct) throws IOException {
+        return Jsoup.connect(urlProduct).get();
     }
 }

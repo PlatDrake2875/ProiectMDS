@@ -10,21 +10,22 @@ import org.jsoup.select.Elements;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 /**
  * Class responsible for crawling through webpages to retrieve product data.
  */
 public class ProductCrawler {
     private static final Set<String> visitedURLs = new HashSet<>();
-    private static final Logger LOGGER = Logger.getLogger(ProductCrawler.class.getName());
+    private static final Logger LOGGER = new AppLogger(ProductCrawler.class).getLogger();
+
     private static final String[] crawlingURLs = new String[]{"https://www.auchan.ro/brutarie-cofetarie-gastro/c", "https://www.auchan.ro/bauturi-si-tutun/c", "https://www.auchan.ro/bacanie/c", "https://www.auchan.ro/lactate-carne-mezeluri---peste/c", "https://www.auchan.ro/fructe-si-legume/c"};
 
     private final ShopScraper shopScraper;

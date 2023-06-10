@@ -2,6 +2,9 @@ package shopScraping;
 
 import org.jsoup.select.Elements;
 
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -9,7 +12,7 @@ import java.util.logging.Logger;
  * LogProductDetails class is responsible for logging the details of a product.
  */
 public class LogProductDetails {
-    private static final Logger LOGGER = Logger.getLogger(LogProductDetails.class.getName());
+    private static final Logger LOGGER = new AppLogger(LogProductDetails.class).getLogger();
 
     /**
      * Logs the product details which include category, name, price, and properties of the product.

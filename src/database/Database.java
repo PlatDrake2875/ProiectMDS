@@ -1,14 +1,18 @@
 package database;
 
 import DataModel.Product;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
-import java.math.BigDecimal;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.sql.*;
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,6 +62,21 @@ public class Database {
             fiber = ?, proteins = ?, last_modified = NOW() WHERE id = ?;
             """;
 
+    static {
+        try {
+            FileHandler fh = new FileHandler("CrawlerLogs.log", true);  // Set true to append.
+
+            // Remove the default console handler.
+            for (Handler h : LOGGER.getHandlers()) {
+                LOGGER.removeHandler(h);
+            }
+
+            LOGGER.addHandler(fh);
+        } catch (SecurityException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private Connection connection;
     private Statement stmt;
 
@@ -101,18 +120,17 @@ public class Database {
      * The Product object is parsed and its data is prepared and executed in an SQL INSERT statement.
      *
      * @param product The Product object containing the product's details that needs to be added into the database.
-     *
-     * Usage:
-     *    Product newProduct = new Product("Product Name", "Category", new BigDecimal("10.00"), ...);
-     *    Database db = new Database();
-     *    db.insertProduct(newProduct); // Inserts the newProduct object into the database.
-     *
-     * Note:
-     * 1. It prepares an SQL INSERT statement with the help of a PreparedStatement to prevent SQL injection attacks.
-     * 2. The data of the Product object is set in the SQL statement using the setProduct() method.
-     * 3. After the execution of the SQL statement, a log message is written indicating the successful insertion of the product.
-     * 4. If an SQLException occurs during the execution of the SQL statement, it is caught and logged at a severe level.
-     *
+     *                <p>
+     *                Usage:
+     *                Product newProduct = new Product("Product Name", "Category", new BigDecimal("10.00"), ...);
+     *                Database db = new Database();
+     *                db.insertProduct(newProduct); // Inserts the newProduct object into the database.
+     *                <p>
+     *                Note:
+     *                1. It prepares an SQL INSERT statement with the help of a PreparedStatement to prevent SQL injection attacks.
+     *                2. The data of the Product object is set in the SQL statement using the setProduct() method.
+     *                3. After the execution of the SQL statement, a log message is written indicating the successful insertion of the product.
+     *                4. If an SQLException occurs during the execution of the SQL statement, it is caught and logged at a severe level.
      * @throws SQLException If there is an error with SQL handling, it throws an SQLException. It's recommended to use proper exception handling while using this method.
      */
     public void insertProduct(Product product) {
@@ -130,12 +148,13 @@ public class Database {
     public void updateProduct(Product product) {
         executeUpdate(UPDATE_SQL, product, true);
     }
+
     /**
      * Executes an INSERT or UPDATE operation on the 'products' table.
      *
-     * @param sql       The SQL string for the operation. Requires placeholders ('?') for parameters.
-     * @param product   The Product object with details to be inserted/updated.
-     * @param isUpdate  A boolean flag indicating if the operation is an UPDATE (true) or INSERT (false).
+     * @param sql      The SQL string for the operation. Requires placeholders ('?') for parameters.
+     * @param product  The Product object with details to be inserted/updated.
+     * @param isUpdate A boolean flag indicating if the operation is an UPDATE (true) or INSERT (false).
      */
     private void executeUpdate(String sql, Product product, boolean isUpdate) {
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -154,16 +173,15 @@ public class Database {
      * The last_modified field is updated to the current time.
      *
      * @param id The id of the product for which the last_modified time is to be updated. <p>
-     *
-     * Usage:
-     *    Database db = new Database();
-     *    db.updateLastModificationTime(1); // Updates the last modification time for the product with id 1.
-     * <p>
-     * Note: <p>
-     * 1. This method uses the SQL NOW() function to get the current time. The time is based on the system clock of the database server. <p>
-     * 2. It prepares a SQL statement with the help of a PreparedStatement to prevent SQL injection attacks. <p>
-     * 3. If an SQLException occurs during the execution of the SQL statement, it is caught and logged at a severe level. <p>
-     *
+     *           <p>
+     *           Usage:
+     *           Database db = new Database();
+     *           db.updateLastModificationTime(1); // Updates the last modification time for the product with id 1.
+     *           <p>
+     *           Note: <p>
+     *           1. This method uses the SQL NOW() function to get the current time. The time is based on the system clock of the database server. <p>
+     *           2. It prepares a SQL statement with the help of a PreparedStatement to prevent SQL injection attacks. <p>
+     *           3. If an SQLException occurs during the execution of the SQL statement, it is caught and logged at a severe level. <p>
      * @throws SQLException If there is an error with SQL handling, it throws an SQLException. It's recommended to use proper exception handling while using this method.
      */
     public void updateLastModificationTime(int id) {
@@ -221,12 +239,11 @@ public class Database {
      *
      * @param rs The ResultSet object obtained from executing a SQL statement. It contains the product's details fetched from the database.
      * @return Returns a Product object built from the ResultSet.
-     *
+     * <p>
      * Note:
      * 1. Each field of the Product object is set by extracting the respective field's data from the ResultSet using the appropriate getter method (getInt, getString, getBigDecimal, etc.).
      * 2. This method expects the ResultSet to have all fields that are used in the Product object. If the ResultSet does not have a required field, it may throw an SQLException.
      * 3. The last modification time is converted to a LocalDateTime object before being set in the Product object.
-     *
      * @throws SQLException If there is an error while handling the ResultSet, it throws an SQLException.
      *                      It's recommended to handle this exception properly while using methods that could use this method.
      */
@@ -284,6 +301,7 @@ public class Database {
             pstmt.setInt(18, product.getId());
         }
     }
+
     /**
      * Prints all the products in the database.
      */
@@ -291,6 +309,7 @@ public class Database {
         String query = "SELECT * FROM Products";
         executeAndPrintQuery(query);
     }
+
     /**
      * Prints the products that match a specific criteria.
      * The criteria is specified as a SQL WHERE clause.
@@ -321,7 +340,7 @@ public class Database {
      *
      * @param name Name of the Product.
      * @return a Product with that name.
-     * */
+     */
     public Product getProductByName(String name) {
         String query = "SELECT * FROM products WHERE name = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(query)) {
@@ -334,6 +353,80 @@ public class Database {
             LOGGER.log(Level.SEVERE, "Error retrieving product by name:", e);
         }
         return null;
+    }
+
+    /**
+     * This method fetches all products from the database and exports them to a JSON file.
+     *
+     * @param filename Name of the JSON file where the data will be exported.
+     */
+    public void exportProductsToJson(String filename) {
+        List<Product> products = getAllProducts();
+        if (products.isEmpty()) {
+            LOGGER.log(Level.INFO, "No products to export");
+            return;
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        // Configure the mapper to produce pretty-printed JSON
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        try {
+            // Serialize the list of products to a JSON file
+            mapper.writeValue(Paths.get(filename).toFile(), products);
+            LOGGER.log(Level.INFO, "Products exported successfully to " + filename);
+        } catch (IOException e) {
+            LOGGER.log(Level.SEVERE, "Error exporting products to JSON:", e);
+        }
+    }
+
+    /**
+     * This method fetches all products from the database.
+     *
+     * @return a List of Product objects
+     */
+    private List<Product> getAllProducts() {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT * FROM products";
+
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+
+            while (rs.next()) {
+                products.add(buildProduct(rs));
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error retrieving all products:", e);
+        }
+        return products;
+    }
+
+    /**
+     * Imports products from a JSON file and inserts/updates them to the database.
+     *
+     * @param filename the name of the JSON file
+     */
+    public void importProductsFromJson(String filename) {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(filename);
+
+        try {
+            List<Product> products = mapper.readValue(file, new TypeReference<List<Product>>() {
+            });
+
+            for (Product product : products) {
+                Product existingProduct = getProductByName(product.getName());
+
+                if (existingProduct == null) {
+                    insertProduct(product);
+                } else {
+                    product.setId(existingProduct.getId());
+                    updateProduct(product);
+                }
+            }
+        } catch (IOException e) {
+            LOGGER.log(Level.SEVERE, "Error reading products from JSON file:", e);
+        }
     }
 
 }

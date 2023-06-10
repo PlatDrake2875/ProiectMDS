@@ -7,16 +7,16 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 /**
  * ProductScraper is responsible for scraping product details from a given URL. It employs JSoup library
  * for HTML parsing and extraction of elements.
- *
+ * <p>
  * It makes use of {@link ShopScraper} to connect to the URL and retrieve the HTML document. It then
  * parses the document to extract the product details and uses the {@link Product.Builder} to construct
  * a Product instance which encapsulates the product details.
@@ -26,8 +26,10 @@ import java.util.logging.Logger;
  * @since 2023-06-10
  */
 public class ProductScraper {
-    private static final Logger LOGGER = Logger.getLogger(ProductScraper.class.getName());
+    private static final Logger LOGGER = new AppLogger(ProductScraper.class).getLogger();
+
     private static final Map<String, BiConsumer<Product.Builder, String>> propertySetters = new HashMap<>();
+
 
     // This static block initializes the propertySetters map with corresponding BiConsumer instances.
     static {
@@ -51,10 +53,9 @@ public class ProductScraper {
      * Connects to the provided URL using the given ShopScraper and retrieves product details such as category, name,
      * price, and other properties. These details are then stored in a Product object and returned.
      *
-     * @param scraper the ShopScraper used to connect to the URL and retrieve the HTML document
+     * @param scraper    the ShopScraper used to connect to the URL and retrieve the HTML document
      * @param urlProduct the URL of the product to scrape details from
      * @return a Product containing the product's details
-     *
      * @throws IOException if an error occurs during connection
      */
     public Product getProductDetails(ShopScraper scraper, String urlProduct) throws IOException {

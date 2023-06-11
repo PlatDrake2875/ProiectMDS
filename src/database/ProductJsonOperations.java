@@ -4,6 +4,7 @@ import DataModel.Product;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,9 +16,12 @@ import java.util.logging.Logger;
 /**
  * This class handles operations related to the product JSON file.
  */
+
+
 public class ProductJsonOperations {
     private static final Logger LOGGER = Logger.getLogger(ProductJsonOperations.class.getName());
     private final ProductTableOperations pto;
+
 
     /**
      * Constructor for the class. Requires a ProductTableOperations object.
@@ -50,16 +54,18 @@ public class ProductJsonOperations {
      */
     private List<Product> readProductsFromJson(String filename) {
         ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JavaTimeModule());
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         File file = new File(filename);
 
         try {
-            return mapper.readValue(file, new TypeReference<List<Product>>() {
-            });
+            return mapper.readValue(file, new TypeReference<List<Product>>() {});
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Error reading products from JSON file:", e);
             return null;
         }
     }
+
 
     /**
      * Handles the import of a single product.
@@ -100,6 +106,8 @@ public class ProductJsonOperations {
      */
     private void writeProductsToJson(String filename, List<Product> products) {
         ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JavaTimeModule());
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         try {
@@ -109,4 +117,5 @@ public class ProductJsonOperations {
             LOGGER.log(Level.SEVERE, "Error exporting products to JSON:", e);
         }
     }
+
 }

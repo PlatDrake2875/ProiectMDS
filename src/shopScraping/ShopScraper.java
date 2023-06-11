@@ -2,11 +2,13 @@ package shopScraping;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.List;
 
 /**
  * ShopScraper is responsible for connecting to a URL and scraping product data from it.
@@ -19,6 +21,8 @@ public class ShopScraper {
     private static final String AUCHAN_PRODUCT_NAME_SELECTOR = ".vtex-store-components-3-x-productBrand--productPage span".trim();
     private static final String AUCHAN_PRODUCT_PRICE_SELECTOR = ".vtex-product-price-1-x-currencyContainer--pdp span";
     private static final String AUCHAN_PRODUCT_PROPERTIES_SELECTOR = ".vtex-product-specifications-1-x-specificationValue.vtex-product-specifications-1-x-specificationValue--first.vtex-product-specifications-1-x-specificationValue--last";
+    private static final String TARGET_A_TAG_SELECTOR = "a.vtex-breadcrumb-1-x-link.vtex-breadcrumb-1-x-link--productBreadcrumb.vtex-breadcrumb-1-x-link--1.vtex-breadcrumb-1-x-link--productBreadcrumb--1.dib.pv1.link.ph2.c-muted-2.hover-c-link";
+    private static final List<String> targetHrefs = List.of("/brutarie,-cofetarie,-gastro/d", "/bacanie/d", "/lactate,-carne,-mezeluri-&-peste/d", "/fructe-si-legume/d");
 
     /**
      * Validates the given URL.
@@ -32,12 +36,13 @@ public class ShopScraper {
             URI uri = new URI(url);
             // URL should start with http:// or https://
             if (uri.getScheme() == null) return false;
-            return uri.getScheme().equals("http") || uri.getScheme().equals("https");
+            return uri.getScheme().startsWith("http");
         } catch (URISyntaxException e) {
             // if URL is not properly formed
             return false;
         }
     }
+
 
     /**
      * Retrieves the category of a product from an Auchan product page.
@@ -82,6 +87,7 @@ public class ShopScraper {
         // format the price string
         return price.text().replaceAll("[^0-9.]", "").trim();
     }
+
     /**
      * Retrieves the properties of a product from an Auchan product page.
      *
@@ -94,13 +100,40 @@ public class ShopScraper {
     }
 
     /**
+     * Checks if the given href contains any of the target hrefs.
+     *
+     * @param href the href to check
+     * @return true if the href contains any of the target hrefs, false otherwise
+     */
+    public static boolean containsTargetHref(String href) {
+        return targetHrefs.stream().anyMatch(href::contains);
+    }
+
+    // New method to check if the 'a' elements contain any target href
+    public static boolean checkATagsForHref(Document doc) {
+        return classContainsHref(doc);
+    }
+
+
+    static boolean classContainsHref(Document doc) {
+        Elements elements = doc.select(ShopScraper.TARGET_A_TAG_SELECTOR);
+
+        for (Element element : elements) {
+            if (containsTargetHref(element.attr("href"))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Connects to the provided URL and retrieves the HTML document.
      *
      * @param urlProduct the URL to connect to
      * @return the HTML document retrieved from the URL
      * @throws IOException if an error occurs during connection
      */
-    Document connectToURL(String urlProduct) throws IOException {
+    public static Document connectToURL(String urlProduct) throws IOException {
         // connect to the url and retrieve the document
         return Jsoup.connect(urlProduct).get();
     }

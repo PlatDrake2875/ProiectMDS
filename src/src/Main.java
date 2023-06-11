@@ -4,6 +4,7 @@ import DataModel.Product;
 import database.Database;
 import database.ProductJsonOperations;
 import database.ProductTableOperations;
+import org.jsoup.nodes.Document;
 import shopScraping.ProductCrawler;
 import shopScraping.ProductScraper;
 import shopScraping.ShopScraper;
@@ -12,6 +13,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+
         ShopScraper shop = new ShopScraper();
         ProductScraper auchan = new ProductScraper();
 
@@ -31,6 +33,6 @@ public class Main {
         ProductJsonOperations pjo = new ProductJsonOperations(pto);
         pjo.exportProductsToJson("products.json");
 
-        pto.printProductsByCriteria("WHERE price < 12.5");
+        pto.printProductsByCriteria(" price < 12.5");
     }
 }

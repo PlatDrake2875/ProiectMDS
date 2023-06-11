@@ -7,16 +7,19 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,9 +27,10 @@ import java.util.logging.Logger;
  * Class responsible for crawling through webpages to retrieve product data.
  */
 public class ProductCrawler {
-    private static final Set<String> visitedURLs = new HashSet<>();
+
+    private static final Set<String> visitedURLs = ConcurrentHashMap.newKeySet();
     private static final Logger LOGGER = new AppLogger(ProductCrawler.class).getLogger();
-    private static final String[] crawlingURLs = new String[]{"https://www.auchan.ro/brutarie-cofetarie-gastro/c", "https://www.auchan.ro/bauturi-si-tutun/c", "https://www.auchan.ro/bacanie/c", "https://www.auchan.ro/lactate-carne-mezeluri---peste/c", "https://www.auchan.ro/fructe-si-legume/c"};
+    private static final String[] crawlingURLs = new String[]{"https://www.auchan.ro/brutarie-cofetarie-gastro/c", "https://www.auchan.ro/bacanie/c", "https://www.auchan.ro/lactate-carne-mezeluri---peste/c", "https://www.auchan.ro/fructe-si-legume/c"};
 
     private final ShopScraper shopScraper;
     private final ProductScraper productScraper;
@@ -75,11 +79,13 @@ public class ProductCrawler {
     private void startCrawling(Queue<Pair<Integer, String>> queue) {
         while (!queue.isEmpty()) {
             Pair<Integer, String> urlPair = queue.poll();
+            visitedURLs.add(urlPair.getValue1());
             if (urlPair.getValue0() < 5) {
                 processURL(queue, urlPair);
             }
         }
     }
+
 
     /**
      * Connects to the URL, gets the document and processes all the links.
@@ -90,13 +96,19 @@ public class ProductCrawler {
     private void processURL(Queue<Pair<Integer, String>> queue, Pair<Integer, String> urlPair) {
         try {
             String url = urlPair.getValue1();
-            Document doc = shopScraper.connectToURL(url);
-            Elements links = doc.select("a[href]");
-            processLinks(queue, urlPair.getValue0(), links);
-        } catch (IOException | InterruptedException e) {
+            if (ShopScraper.isValidURL(url)) {
+                Document doc = ShopScraper.connectToURL(url);
+                Elements links = doc.select("a[href]");
+                processLinks(queue, urlPair.getValue0(), links);
+            }
+        } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "An error occurred while connecting to URL: {0}", e.getMessage());
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            LOGGER.log(Level.SEVERE, "The processURL operation was interrupted: {0}", e.getMessage());
         }
     }
+
 
     /**
      * Processes a collection of links concurrently, determining if each link is a product page
@@ -107,12 +119,16 @@ public class ProductCrawler {
      * @param links      The collection of links to process.
      * @throws InterruptedException if there is an interruption while waiting for tasks to finish.
      */
-    private void processLinks(Queue<Pair<Integer, String>> queue, int depthLevel, Elements links) throws InterruptedException {
+    private void processLinks(Queue<Pair<Integer, String>> queue, int depthLevel, Elements links) throws InterruptedException, IOException {
         List<Callable<Void>> tasks = new ArrayList<>();
 
         for (Element link : links) {
             String absHref = link.attr("abs:href");
+
+            System.out.println(absHref);
+
             if (shouldProcessLink(absHref)) {
+                visitedURLs.add(absHref);
                 tasks.add(() -> {
                     processLink(queue, depthLevel, absHref);
                     return null;
@@ -131,24 +147,56 @@ public class ProductCrawler {
 
 
     /**
-     * Processes a single link, logging the link, checking if it's a product page,
-     * processing the product if it is, and adding the link to the visited URLs and the queue.
+     * Processes a link by logging it, checking if it leads to a product page, and adding it to the visited URLs.
      *
-     * @param queue      The queue of URLs yet to be processed.
-     * @param depthLevel The depth level of the crawl.
-     * @param absHref    The absolute URL to process.
-     * @throws IOException if there is an issue with processing the product.
+     * @param queue The queue to which the link will be added.
+     * @param depthLevel The depth level of the link in the crawl hierarchy.
+     * @param absHref The absolute URL of the link.
+     * @throws IOException If an I/O error occurs.
      */
     private void processLink(Queue<Pair<Integer, String>> queue, int depthLevel, String absHref) throws IOException {
+        visitedURLs.add(absHref);
         logLink(depthLevel, absHref);
+        processIfProductPage(absHref);
+        addVisitedURL(queue, depthLevel, absHref);
+    }
 
-        if (isProductPage(absHref)) {
-            processProduct(absHref);
+
+    /**
+     * Connects to a URL if it leads to a product page and processes it as such.
+     *
+     * @param absHref The absolute URL of the link.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void processIfProductPage(String absHref) throws IOException {
+        if (!isProductPage(absHref)) {
+            return;
         }
 
-        visitedURLs.add(absHref);
-        queue.add(new Pair<>(depthLevel + 1, absHref));
+        Document doc = ShopScraper.connectToURL(absHref);
+        if (!ShopScraper.checkATagsForHref(doc)) {
+            return;
+        }
+
+        System.out.println("Product found !!! " + absHref);
+        processProduct(absHref);
     }
+
+
+    /**
+     * Adds a URL to the list of visited URLs and to the crawl queue.
+     *
+     * @param queue The queue to which the link will be added.
+     * @param depthLevel The depth level of the link in the crawl hierarchy.
+     * @param absHref The absolute URL of the link.
+     */
+    private void addVisitedURL(Queue<Pair<Integer, String>> queue, int depthLevel, String absHref) {
+        if (!visitedURLs.contains(absHref)) {
+            queue.add(new Pair<>(depthLevel + 1, absHref));
+        }
+    }
+
+
 
 
     /**
@@ -160,6 +208,7 @@ public class ProductCrawler {
     private boolean shouldProcessLink(String absHref) {
         return ShopScraper.isValidURL(absHref) && !visitedURLs.contains(absHref);
     }
+
 
     /**
      * Logs the depth level and URL of the link being processed.

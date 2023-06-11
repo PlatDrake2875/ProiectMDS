@@ -7,11 +7,12 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.BiConsumer;
-import java.util.logging.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * ProductScraper is responsible for scraping product details from a given URL. It employs JSoup library
@@ -58,8 +59,8 @@ public class ProductScraper {
      * @return a Product containing the product's details
      * @throws IOException if an error occurs during connection
      */
-    public Product getProductDetails(ShopScraper scraper, String urlProduct) throws IOException {
-        Product product = new Product.Builder().build();
+    public Optional<Product> getProductDetails(ShopScraper scraper, String urlProduct) throws IOException {
+        Optional<Product> optionalProduct = Optional.empty();
         try {
             Document doc = scraper.connectToURL(urlProduct);
             Elements category = ShopScraper.getAuchanProductCategory(doc);
@@ -67,6 +68,16 @@ public class ProductScraper {
             Elements price = ShopScraper.getAuchanProductPrice(doc);
             String priceString = ShopScraper.getAuchanProductPriceToString(price);
             Elements properties = ShopScraper.getAuchanProductProperties(doc);
+
+            // Added price check
+            if (priceString == null || priceString.isEmpty()) {
+                LOGGER.log(Level.WARNING, "No price found for product at URL: " + urlProduct);
+                return optionalProduct;
+            }
+
+            if (name.isEmpty()) {
+                throw new RuntimeException("No name element found for product at URL: " + urlProduct);
+            }
 
             Product.Builder builder = new Product.Builder()
                     .name(name.get(0).text())
@@ -82,7 +93,7 @@ public class ProductScraper {
                 }
             }
 
-            product = builder.build();
+            optionalProduct = Optional.of(builder.build());
 
             LogProductDetails.logDetails(category, name, priceString, properties);
 
@@ -90,6 +101,6 @@ public class ProductScraper {
             LOGGER.log(Level.SEVERE, e.getMessage());
         }
 
-        return product;
+        return optionalProduct;
     }
 }

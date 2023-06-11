@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+
 import java.util.Comparator;
 import java.util.Date;
 import java.util.logging.*;
@@ -71,7 +71,7 @@ public class AppLogger {
         try {
             var logFiles = getSortedLogFiles();
 
-            for (int i = MAX_LOG_FILES; i < logFiles.length; i++) {
+            for (int i = MAX_LOG_FILES - 1; i < logFiles.length; i++) {
                 Files.delete(logFiles[i]);
             }
         } catch (IOException e) {

@@ -1,7 +1,7 @@
 package shopScraping;
 
 import DataModel.Product;
-import database.Database;
+import database.ProductTableOperations;
 import org.javatuples.Pair;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,14 +10,15 @@ import org.jsoup.select.Elements;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
-import java.util.logging.*;
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Class responsible for crawling through webpages to retrieve product data.
@@ -25,17 +26,16 @@ import java.util.logging.*;
 public class ProductCrawler {
     private static final Set<String> visitedURLs = new HashSet<>();
     private static final Logger LOGGER = new AppLogger(ProductCrawler.class).getLogger();
-
     private static final String[] crawlingURLs = new String[]{"https://www.auchan.ro/brutarie-cofetarie-gastro/c", "https://www.auchan.ro/bauturi-si-tutun/c", "https://www.auchan.ro/bacanie/c", "https://www.auchan.ro/lactate-carne-mezeluri---peste/c", "https://www.auchan.ro/fructe-si-legume/c"};
 
     private final ShopScraper shopScraper;
     private final ProductScraper productScraper;
-    private final Database db;
+    private final ProductTableOperations pto;
 
-    public ProductCrawler(ShopScraper shopScraper, ProductScraper productScraper, Database db) {
+    public ProductCrawler(ShopScraper shopScraper, ProductScraper productScraper, ProductTableOperations pto) {
         this.shopScraper = shopScraper;
         this.productScraper = productScraper;
-        this.db = db;
+        this.pto = pto;
     }
 
     /**
@@ -93,36 +93,63 @@ public class ProductCrawler {
             Document doc = shopScraper.connectToURL(url);
             Elements links = doc.select("a[href]");
             processLinks(queue, urlPair.getValue0(), links);
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             LOGGER.log(Level.SEVERE, "An error occurred while connecting to URL: {0}", e.getMessage());
         }
     }
 
     /**
-     * Processes a collection of links, determining if each link is a product page
+     * Processes a collection of links concurrently, determining if each link is a product page
      * and either updating the existing product or inserting a new one to the database.
      *
      * @param queue      The queue of URLs yet to be processed.
      * @param depthLevel The depth level of the crawl.
      * @param links      The collection of links to process.
-     * @throws IOException if there is an issue with fetching the product details.
+     * @throws InterruptedException if there is an interruption while waiting for tasks to finish.
      */
-    private void processLinks(Queue<Pair<Integer, String>> queue, int depthLevel, Elements links) throws IOException {
+    private void processLinks(Queue<Pair<Integer, String>> queue, int depthLevel, Elements links) throws InterruptedException {
+        List<Callable<Void>> tasks = new ArrayList<>();
+
         for (Element link : links) {
             String absHref = link.attr("abs:href");
-
             if (shouldProcessLink(absHref)) {
-                logLink(depthLevel, absHref);
+                tasks.add(() -> {
+                    processLink(queue, depthLevel, absHref);
+                    return null;
+                });
+            }
+        }
 
-                if (isProductPage(absHref)) {
-                    processProduct(absHref);
-                }
-
-                visitedURLs.add(absHref);
-                queue.add(new Pair<>(depthLevel + 1, absHref));
+        try (ExecutorService executorService = Executors.newFixedThreadPool(12)) {
+            executorService.invokeAll(tasks);
+            executorService.shutdown();
+            if (!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
+                executorService.shutdownNow();
             }
         }
     }
+
+
+    /**
+     * Processes a single link, logging the link, checking if it's a product page,
+     * processing the product if it is, and adding the link to the visited URLs and the queue.
+     *
+     * @param queue      The queue of URLs yet to be processed.
+     * @param depthLevel The depth level of the crawl.
+     * @param absHref    The absolute URL to process.
+     * @throws IOException if there is an issue with processing the product.
+     */
+    private void processLink(Queue<Pair<Integer, String>> queue, int depthLevel, String absHref) throws IOException {
+        logLink(depthLevel, absHref);
+
+        if (isProductPage(absHref)) {
+            processProduct(absHref);
+        }
+
+        visitedURLs.add(absHref);
+        queue.add(new Pair<>(depthLevel + 1, absHref));
+    }
+
 
     /**
      * Determines if a URL should be processed based on its validity and visited status.
@@ -161,14 +188,18 @@ public class ProductCrawler {
      * @param absHref The absolute URL of the product page.
      */
     private void processProduct(String absHref) throws IOException {
-        Product product = productScraper.getProductDetails(shopScraper, absHref);
-        Product existingProduct = db.getProductByName(product.getName());
+        Optional<Product> optionalProduct = productScraper.getProductDetails(shopScraper, absHref);
 
-        if (existingProduct != null) {
-            processExistingProduct(product, existingProduct);
-        } else {
-            insertNewProduct(product);
-        }
+        // Check if the product is not null before processing
+        optionalProduct.ifPresent(product -> {
+            Product existingProduct = pto.getProductByName(product.getName());
+
+            if (existingProduct != null) {
+                processExistingProduct(product, existingProduct);
+            } else {
+                insertNewProduct(product);
+            }
+        });
     }
 
     /**
@@ -179,7 +210,7 @@ public class ProductCrawler {
      */
     private void processExistingProduct(Product product, Product existingProduct) {
         LocalDateTime lastModified = existingProduct.getLastModified();
-        LocalDateTime now = LocalDateTime.now(ZoneId.of("ECT"));
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("Europe/Paris"));
         long hoursElapsed = Duration.between(lastModified, now).toHours();
 
         if (hoursElapsed >= 12) {
@@ -195,7 +226,7 @@ public class ProductCrawler {
      * @param product The product to be inserted.
      */
     private void insertNewProduct(Product product) {
-        db.insertProduct(product);
+        pto.insertProduct(product);
         LogProductDetails.logProductInsertion(product.getName());
     }
 
@@ -205,7 +236,7 @@ public class ProductCrawler {
      * @param product The product to be updated.
      */
     private void updateProduct(Product product) {
-        db.updateProduct(product);
+        pto.updateProduct(product);
         LogProductDetails.logProductUpdate(product.getName());
     }
 }

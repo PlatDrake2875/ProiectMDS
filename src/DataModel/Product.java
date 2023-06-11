@@ -1,6 +1,9 @@
 package DataModel;
 
 import java.math.BigDecimal;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 
 /**
@@ -246,6 +249,53 @@ public class Product {
         this.speciality = speciality;
     }
 
+    public void setProduct(PreparedStatement pstmt, boolean isUpdate) throws SQLException {
+        pstmt.setString(1, this.getName());
+        pstmt.setString(2, this.getCategory());
+        pstmt.setBigDecimal(3, this.getPrice());
+        pstmt.setString(4, this.getProductType());
+        pstmt.setString(5, this.getStorageConditions());
+        pstmt.setBigDecimal(6, this.getWeight());
+        pstmt.setString(7, this.getShelfLife());
+        pstmt.setString(8, this.getIngredients());
+        pstmt.setBigDecimal(9, this.getKcalPer100g());
+        pstmt.setBigDecimal(10, this.getKjPer100g());
+        pstmt.setBigDecimal(11, this.getFats());
+        pstmt.setBigDecimal(12, this.getSaturatedFats());
+        pstmt.setBigDecimal(13, this.getCarbohydrates());
+        pstmt.setBigDecimal(14, this.getSugars());
+        pstmt.setBigDecimal(15, this.getSalt());
+        pstmt.setBigDecimal(16, this.getFiber());
+        pstmt.setBigDecimal(17, this.getProteins());
+        if (isUpdate) {
+            pstmt.setInt(18, this.getId());
+        }
+    }
+
+    public static Product buildProduct(ResultSet rs) throws SQLException {
+        return new Product.Builder()
+                .id(rs.getInt("id"))
+                .name(rs.getString("name"))
+                .category(rs.getString("category"))
+                .price(rs.getBigDecimal("price"))
+                .productType(rs.getString("product_type"))
+                .storageConditions(rs.getString("storage_conditions"))
+                .weight(rs.getBigDecimal("weight"))
+                .shelfLife(rs.getString("shelf_life"))
+                .ingredients(rs.getString("ingredients"))
+                .kcalPer100g(rs.getBigDecimal("kcal_per_100g"))
+                .kjPer100g(rs.getBigDecimal("kj_per_100g"))
+                .fats(rs.getBigDecimal("fats"))
+                .saturatedFats(rs.getBigDecimal("saturated_fats"))
+                .carbohydrates(rs.getBigDecimal("carbohydrates"))
+                .sugars(rs.getBigDecimal("sugars"))
+                .salt(rs.getBigDecimal("salt"))
+                .fiber(rs.getBigDecimal("fiber"))
+                .proteins(rs.getBigDecimal("proteins"))
+                .lastModified(rs.getTimestamp("last_modified").toLocalDateTime())
+                .build();
+    }
+
     /**
      * Adds the nutritional components of the given product to the current product.
      * Assumes both products have the same units of measurement.
@@ -418,8 +468,6 @@ public class Product {
         public Product build() {
             return new Product(this);
         }
-
-
     }
 
 }

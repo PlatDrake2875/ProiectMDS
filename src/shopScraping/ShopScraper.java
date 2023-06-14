@@ -10,6 +10,8 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * ShopScraper is responsible for connecting to a URL and scraping product data from it.
@@ -24,6 +26,7 @@ public class ShopScraper {
     private static final String AUCHAN_PRODUCT_PROPERTIES_SELECTOR = ".vtex-product-specifications-1-x-specificationValue.vtex-product-specifications-1-x-specificationValue--first.vtex-product-specifications-1-x-specificationValue--last";
     private static final String TARGET_A_TAG_SELECTOR = "a.vtex-breadcrumb-1-x-link.vtex-breadcrumb-1-x-link--productBreadcrumb.vtex-breadcrumb-1-x-link--1.vtex-breadcrumb-1-x-link--productBreadcrumb--1.dib.pv1.link.ph2.c-muted-2.hover-c-link";
     private static final List<String> targetHrefs = List.of("/brutarie,-cofetarie,-gastro/d", "/bacanie/d", "/lactate,-carne,-mezeluri-&-peste/d", "/fructe-si-legume/d");
+    private static final Pattern pattern = Pattern.compile("(\\d+),(\\d+)(\\s*)lei");
 
     /**
      * Validates the given URL.
@@ -72,21 +75,32 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's price as a string
      */
-    static Elements getAuchanProductPrice(Document doc) {
+    public static Elements getAuchanProductPrice(Document doc) {
         // use the price selector to extract the price from the document
         return doc.select(AUCHAN_PRODUCT_PRICE_SELECTOR);
     }
 
-    /***
+    /**
      * Retrieves and formats the price of a product from an Auchan product page.
      *
      * @param price the price element from the product page
      * @return the product's price as a string
      */
-    static String getAuchanProductPriceToString(Elements price) {
-        // Remove the thousands separator and replace the decimal separator
-        return price.text().replace(".", "").replace(",", ".").replaceAll("[^0-9.]", "").trim();
+    public static String getAuchanProductPriceToString(Elements price) {
+        StringBuilder priceBuilder = new StringBuilder();
+
+        for (Element element : price) {
+            String text = element.text();
+            if (text.matches("[0-9,]+")) {
+                priceBuilder.append(text.replace(",", "."));
+            } else {
+                break;
+            }
+        }
+
+        return priceBuilder.toString();
     }
+
 
 
     /**

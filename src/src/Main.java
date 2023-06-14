@@ -3,6 +3,7 @@ package src;
 import database.Database;
 import database.ProductJsonOperations;
 import database.ProductTableOperations;
+import org.jsoup.nodes.Document;
 import shopScraping.ProductCrawler;
 import shopScraping.ProductScraper;
 import shopScraping.ShopScraper;
@@ -22,14 +23,17 @@ public class Main {
     public static void demo(ShopScraper shop, ProductScraper auchan, Database db) throws IOException {
         ProductTableOperations pto = new ProductTableOperations(db);
         ProductCrawler crawler = new ProductCrawler(shop, auchan, pto);
-        XMLCrawler xmlCrawler = new XMLCrawler(shop, auchan, pto);
-        xmlCrawler.getAllLocLinks().forEach(System.out::println);
+
+        Document doc = ShopScraper.connectToURL("https://www.auchan.ro/vin-alb-sec-vartely-feteasca-regala-riesling-0-75-l/p");
+
+        //System.out.println(ShopScraper.getAuchanProductPrice(doc));
+        //System.out.println(ShopScraper.getAuchanProductPriceToString(ShopScraper.getAuchanProductPrice(doc)));
 
         //crawlProducts(crawler);
         //exportProductsToJson(pto);
 
-        crawlXMLFiles(shop, auchan, pto);
-        printProductsByCriteria(pto);
+        //crawlXMLFiles(shop, auchan, pto);
+        //printProductsByCriteria(pto);
     }
 
     private static void crawlProducts(ProductCrawler crawler) {

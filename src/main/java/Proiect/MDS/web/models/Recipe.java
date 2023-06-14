@@ -1,17 +1,34 @@
 package Proiect.MDS.web.models;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name="recipes")
+
 public class Recipe {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //makes sure each recipe has a unique id
+    private int id;
+    private String photoURL;
     private String recipeName;
-    private String category;
     private int estimatedCookingTime;
     private int estimatedPreparationTime;
     private int portionSize;
-    private List<Product> products;
+    private String products; //contains id's of products
 
-    public Recipe(String recipeName, String category, int estimatedCookingTime, int estimatedPreparationTime, int portionSize, List<Product> products) {
+    public Recipe(String recipeName, String photoURL, int estimatedCookingTime, int estimatedPreparationTime, int portionSize, String products) {
         this.recipeName = recipeName;
-        this.category = category;
+        this.photoURL = photoURL;
         this.estimatedCookingTime = estimatedCookingTime;
         this.estimatedPreparationTime = estimatedPreparationTime;
         this.portionSize = portionSize;
@@ -25,14 +42,6 @@ public class Recipe {
 
     public void setRecipeName(String recipeName) {
         this.recipeName = recipeName;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public int getEstimatedCookingTime() {
@@ -51,6 +60,18 @@ public class Recipe {
         this.estimatedPreparationTime = estimatedPreparationTime;
     }
 
+    public String getPhotoURL() {
+        return photoURL;
+    }
+
+    public void setPhotoURL(String photoURL) {
+        this.photoURL = photoURL;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getPortionSize() {
         return portionSize;
     }
@@ -59,11 +80,11 @@ public class Recipe {
         this.portionSize = portionSize;
     }
 
-    public List<Product> getProducts() {
+    public String getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(String products) {
         this.products = products;
     }
 
@@ -73,11 +94,11 @@ public class Recipe {
      *
      * @return a Product object with the total nutritional information
      */
-    public Product getTotalNutritionalInfo() {
-        Product totalNutrition = new Product();
-        for (Product product : products) {
-            totalNutrition.addNutritionalInfo(product);
-        }
-        return totalNutrition;
-    }
+//    public Product getTotalNutritionalInfo() {
+//        Product totalNutrition = new Product();
+//        for (Product product : products) {
+//            totalNutrition.addNutritionalInfo(product);
+//        }
+//        return totalNutrition;
+//    }
 }

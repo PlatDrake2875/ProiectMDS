@@ -14,6 +14,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+
+
         ShopScraper shop = new ShopScraper();
         ProductScraper auchan = new ProductScraper();
         Database db = new Database("jdbc:mysql://localhost/dbProducts", "ioana", "ioana7");

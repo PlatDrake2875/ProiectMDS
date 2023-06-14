@@ -10,11 +10,11 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -27,24 +27,35 @@ import java.util.stream.Stream;
 public class XMLCrawler extends ProductCrawler {
     private static final Logger LOGGER = new AppLogger(XMLCrawler.class).getLogger();
     private static final Map<String, List<String>> xmlCache = new ConcurrentHashMap<>();
-    private final List<String> visitedURLs = new ArrayList<>();
+    private final Set<String> visitedURLs = ConcurrentHashMap.newKeySet();
+    private static final ExecutorService executor = Executors.newCachedThreadPool();
 
+    // Limit the number of concurrent requests to 10 (Auchan's servers are slow and we don't wanna bully them)
+    private static final Semaphore SEMAPHORE = new Semaphore(10);
+
+
+    /**
+     * Constructs a new instance of XMLCrawler.
+     * @param shopScraper An instance of ShopScraper which is used to scrape data from online shops.
+     * @param productScraper An instance of ProductScraper which is used to scrape data about products.
+     * @param pto An instance of ProductTableOperations which provides methods to perform operations on the product database table.
+     */
     public XMLCrawler(ShopScraper shopScraper, ProductScraper productScraper, ProductTableOperations pto) {
         super(shopScraper, productScraper, pto);
     }
 
     /**
-     * Method to start the product crawling process.
+     * Starts the process of retrieving product data from Auchan by processing a list of XML files.
      */
     @Override
     public void getProductsAuchan() {
-        processXMLFiles(generateXMLFileURLs());
+        var xmlFileURLs = generateXMLFileURLs();
+        xmlFileURLs.parallelStream().forEach(this::processXMLFile);
     }
 
     /**
-     * Generates the list of XML file URLs.
-     *
-     * @return a List containing the XML file URLs
+     * Generates URLs for a set of XML files.
+     * @return A list of URLs for the XML files.
      */
     private List<String> generateXMLFileURLs() {
         return IntStream.rangeClosed(0, 11)
@@ -52,19 +63,10 @@ public class XMLCrawler extends ProductCrawler {
                 .toList();
     }
 
-    /**
-     * Process each XML file.
-     *
-     * @param xmlFileURLs the URLs of XML files to process
-     */
-    private void processXMLFiles(List<String> xmlFileURLs) {
-        xmlFileURLs.forEach(this::processXMLFile);
-    }
 
     /**
-     * Process a single XML file.
-     *
-     * @param xmlFileURL the URL of XML file to process
+     * Processes a single XML file to extract product data.
+     * @param xmlFileURL The URL of the XML file to be processed.
      */
     private void processXMLFile(String xmlFileURL) {
         try {
@@ -79,11 +81,10 @@ public class XMLCrawler extends ProductCrawler {
     }
 
     /**
-     * Retrieves all nodes from an XML file.
-     *
-     * @param xmlFileURL the URL of XML file to process
-     * @return NodeList containing all nodes from the XML file
-     * @throws Exception if any error occurs during XML file processing
+     * Retrieves all 'loc' nodes from an XML file.
+     * @param xmlFileURL The URL of the XML file to be processed.
+     * @return A NodeList containing all 'loc' nodes from the XML file.
+     * @throws Exception if any error occurs during XML file processing.
      */
     private NodeList getXMLFileNodes(String xmlFileURL) throws Exception {
         org.w3c.dom.Document xmlDoc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(xmlFileURL);
@@ -92,9 +93,8 @@ public class XMLCrawler extends ProductCrawler {
     }
 
     /**
-     * Process all nodes from a NodeList.
-     *
-     * @param nList NodeList to process
+     * Processes all nodes from a NodeList.
+     * @param nList NodeList to be processed.
      */
     private void processNodes(NodeList nList) {
         IntStream.range(0, nList.getLength())
@@ -105,10 +105,10 @@ public class XMLCrawler extends ProductCrawler {
                 .forEach(this::processProductUrl);
     }
 
-    /***
-     * Checks if a URL has not been visited yet.
-     * @param url the URL to check
-     * @return true if the URL has not been visited yet, false otherwise
+    /**
+     * Checks if a URL has already been visited.
+     * @param url The URL to check.
+     * @return A boolean value indicating whether the URL has been visited or not.
      */
     private boolean isUrlNotVisited(String url) {
         return !visitedURLs.contains(url);
@@ -116,9 +116,8 @@ public class XMLCrawler extends ProductCrawler {
 
     /**
      * Retrieves the text content of a Node.
-     *
-     * @param node Node to get the text content from
-     * @return String containing the text content of the Node
+     * @param node The Node from which to retrieve the text content.
+     * @return A string containing the text content of the Node.
      */
     private String getNodeTextContent(Node node) {
         Element eElement = (Element) node;
@@ -126,52 +125,56 @@ public class XMLCrawler extends ProductCrawler {
     }
 
     /**
-     * Processes a product URL.
-     *
-     * @param productUrl the URL to process
+     * Processes a product URL. This method attempts to acquire a semaphore permit before submitting the task for execution.
+     * @param productUrl The URL of the product to be processed.
      */
     private void processProductUrl(String productUrl) {
-        try {
-            Document doc = ShopScraper.connectToURL(productUrl);
-            visitedURLs.add(productUrl);
-            if (ShopScraper.checkATagsForHref(doc)) {
-                processProduct(productUrl);
-            }
-        } catch (IOException e) {
-            handleException(e);
+        if (SEMAPHORE.tryAcquire()) {  // Sumbit a task only if a semaphore permit is available!
+            executor.submit(() -> {
+                try {
+                    Document doc = ShopScraper.connectToURL(productUrl);
+                    visitedURLs.add(productUrl);
+                    if (ShopScraper.checkATagsForHref(doc)) {
+                        processProduct(productUrl);
+                    }
+                } catch (IOException e) {
+                    handleException(e);
+                } finally {
+                    SEMAPHORE.release();
+                }
+            });
+        } else {
+            LOGGER.log(Level.WARNING, "Could not acquire semaphore permit for URL: {0}", productUrl);
         }
     }
 
 
+
     /**
-     * Method to retrieve all "loc" links from all XML files.
-     *
-     * @return a List of all "loc" links from all XML files.
+     * Retrieves all 'loc' links from all XML files.
+     * @return A list of all 'loc' links from all XML files.
      */
     public List<String> getAllLocLinks() {
-        List<String> xmlFileURLs = generateXMLFileURLs();
-        return xmlFileURLs.parallelStream()
+        return generateXMLFileURLs().parallelStream()
                 .flatMap(this::getLocLinksFromXML)
                 .toList();
     }
 
 
     /**
-     * Gets all "loc" links from a single XML file.
-     *
-     * @param xmlFileURL The URL of the XML file to get "loc" links from.
-     * @return a Stream of "loc" links from the XML file.
+     * Retrieves all 'loc' links from a single XML file.
+     * @param xmlFileURL The URL of the XML file from which to retrieve 'loc' links.
+     * @return A Stream of 'loc' links from the XML file.
      */
     private Stream<String> getLocLinksFromXML(String xmlFileURL) {
         return xmlCache.computeIfAbsent(xmlFileURL, this::fetchAndParseXML)
-                .stream();
+                .parallelStream();
     }
 
     /**
-     * Fetches and parses the XML file to get "loc" links.
-     *
-     * @param xmlFileURL The URL of the XML file to fetch and parse.
-     * @return a List of "loc" links from the XML file.
+     * Fetches an XML file and parses it to get 'loc' links.
+     * @param xmlFileURL The URL of the XML file to be fetched and parsed.
+     * @return A list of 'loc' links from the XML file.
      */
     private List<String> fetchAndParseXML(String xmlFileURL) {
         try {
@@ -184,16 +187,16 @@ public class XMLCrawler extends ProductCrawler {
     }
 
     /**
-     * Gets all "loc" links from a NodeList.
-     * @param nList The NodeList to get "loc" links from.
-     * @return a List of "loc" links from the NodeList.
+     * Retrieves all 'loc' links from a NodeList.
+     * @param nList The NodeList from which to retrieve 'loc' links.
+     * @return A list of 'loc' links from the NodeList.
      */
     private List<String> getLocLinks(NodeList nList) {
-        return IntStream.range(0, nList.getLength())
-                .mapToObj(nList::item)
+        return IntStream.range(0, nList.getLength()).boxed().parallel()
+                .map(nList::item)
                 .filter(node -> node.getNodeType() == Node.ELEMENT_NODE)
                 .map(this::getNodeTextContent)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     /**

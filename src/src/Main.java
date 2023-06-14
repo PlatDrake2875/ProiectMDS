@@ -30,10 +30,10 @@ public class Main {
         //System.out.println(ShopScraper.getAuchanProductPriceToString(ShopScraper.getAuchanProductPrice(doc)));
 
         //crawlProducts(crawler);
-        //exportProductsToJson(pto);
 
-        //crawlXMLFiles(shop, auchan, pto);
-        //printProductsByCriteria(pto);
+        crawlXMLFiles(shop, auchan, pto);
+        printProductsByCriteria(pto);
+        exportProductsToJson(pto);
     }
 
     private static void crawlProducts(ProductCrawler crawler) {

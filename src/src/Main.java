@@ -1,38 +1,52 @@
 package src;
 
-import DataModel.Product;
 import database.Database;
 import database.ProductJsonOperations;
 import database.ProductTableOperations;
-import org.jsoup.nodes.Document;
 import shopScraping.ProductCrawler;
 import shopScraping.ProductScraper;
 import shopScraping.ShopScraper;
+import shopScraping.XMLCrawler;
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
         ShopScraper shop = new ShopScraper();
         ProductScraper auchan = new ProductScraper();
-
-        // Get product details
-        Product product = auchan.getProductDetails(shop, "https://www.auchan.ro/branza-de-vaca-cottage-light-olympus-2-grasime-180-g/p").orElseThrow();
-
-        System.out.println(product);
-
         Database db = new Database("jdbc:mysql://localhost/dbProducts", "root", "2875");
 
+        demo(shop, auchan, db);
+    }
+
+    public static void demo(ShopScraper shop, ProductScraper auchan, Database db) throws IOException {
         ProductTableOperations pto = new ProductTableOperations(db);
-
         ProductCrawler crawler = new ProductCrawler(shop, auchan, pto);
+        XMLCrawler xmlCrawler = new XMLCrawler(shop, auchan, pto);
+        xmlCrawler.getAllLocLinks().forEach(System.out::println);
 
+        //crawlProducts(crawler);
+        //exportProductsToJson(pto);
+
+        crawlXMLFiles(shop, auchan, pto);
+        printProductsByCriteria(pto);
+    }
+
+    private static void crawlProducts(ProductCrawler crawler) {
         crawler.getProductsAuchan();
+    }
 
+    private static void exportProductsToJson(ProductTableOperations pto) {
         ProductJsonOperations pjo = new ProductJsonOperations(pto);
         pjo.exportProductsToJson("products.json");
+    }
 
-        pto.printProductsByCriteria(" price < 12.5");
+    private static void printProductsByCriteria(ProductTableOperations pto) {
+        pto.printProductsByCriteria("price < 12.5");
+    }
+
+    private static void crawlXMLFiles(ShopScraper shop, ProductScraper auchan, ProductTableOperations pto) {
+        XMLCrawler xmlCrawler = new XMLCrawler(shop, auchan, pto);
+        xmlCrawler.getProductsAuchan();
     }
 }

@@ -69,6 +69,7 @@ public class ProductTableOperations {
         this.database = database;
     }
 
+
     /**
      * Inserts a new product into the products table.
      * This method logs a message when a product is successfully inserted and logs an error if insertion fails.
@@ -115,16 +116,29 @@ public class ProductTableOperations {
         }
     }
 
+    /**
+     * Prints all products from the products table.
+     */
     public void printAllProducts() {
         String query = "SELECT * FROM Products";
         executeAndPrintQuery(query);
     }
 
+    /**
+     * Prints products from the products table that match the given criteria.
+     *
+     * @param whereClause The criteria for selecting products.
+     */
     public void printProductsByCriteria(String whereClause) {
         String query = "SELECT * FROM Products WHERE " + whereClause;
         executeAndPrintQuery(query);
     }
 
+    /**
+     * Executes the provided query and prints the resulting products.
+     *
+     * @param query The query to be executed.
+     */
     private void executeAndPrintQuery(String query) {
         try (Statement stmt = database.connection.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
@@ -138,7 +152,12 @@ public class ProductTableOperations {
         }
     }
 
-
+    /**
+     * Returns a product that matches the given name.
+     *
+     * @param name The name of the product to be retrieved.
+     * @return A product that matches the given name, or null if no such product exists.
+     */
     public Product getProductByName(String name) {
         String query = "SELECT * FROM products WHERE name = ?";
         try (PreparedStatement pstmt = database.connection.prepareStatement(query)) {
@@ -153,7 +172,32 @@ public class ProductTableOperations {
         return null;
     }
 
+    /**
+     * Returns a product that matches the given column name and value.
+     *
+     * @param columnName The name of the column in the product table.
+     * @param value      The value in the column to be matched.
+     * @return A product that matches the given column name and value, or null if no such product exists.
+     */
+    public Product getProductByColumnValue(String columnName, String value) {
+        String query = "SELECT * FROM products WHERE " + columnName + " = ?";
+        try (PreparedStatement pstmt = database.connection.prepareStatement(query)) {
+            pstmt.setString(1, value);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return buildProduct(rs);
+            }
+        } catch (SQLException e) {
+            LOGGER.logRetrieveError("getProductByColumnValue", e);
+        }
+        return null;
+    }
 
+    /**
+     * Retrieves all products from the products table.
+     *
+     * @return A list of all products in the products table.
+     */
     List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
         String query = "SELECT * FROM products";

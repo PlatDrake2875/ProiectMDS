@@ -1,6 +1,7 @@
 package shopScraping;
 
 import DataModel.Product;
+
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,7 +32,6 @@ public class ProductScraper {
     private static final Logger LOGGER = new AppLogger(ProductScraper.class).getLogger();
 
     private static final Map<String, BiConsumer<Product.Builder, String>> propertySetters = new HashMap<>();
-
 
     // This static block initializes the propertySetters map with corresponding BiConsumer instances.
     static {
@@ -59,24 +60,17 @@ public class ProductScraper {
      * @return a Product containing the product's details
      * @throws IOException if an error occurs during connection
      */
-    public Optional<Product> getProductDetails(ShopScraper scraper, String urlProduct) throws IOException {
-        Optional<Product> optionalProduct = Optional.empty();
+    public Optional<Product> getProductDetails(ShopScraper scraper, String urlProduct) {
         try {
             Document doc = scraper.connectToURL(urlProduct);
             Elements category = ShopScraper.getAuchanProductCategory(doc);
             Elements name = ShopScraper.getAuchanProductName(doc);
-            Elements price = ShopScraper.getAuchanProductPrice(doc);
-            String priceString = ShopScraper.getAuchanProductPriceToString(price);
+            String priceString = ShopScraper.getAuchanProductPriceToString(ShopScraper.getAuchanProductPrice(doc));
             Elements properties = ShopScraper.getAuchanProductProperties(doc);
 
-            // Added price check
-            if (priceString == null || priceString.isEmpty()) {
-                LOGGER.log(Level.WARNING, "No price found for product at URL: " + urlProduct);
-                return optionalProduct;
-            }
-
-            if (name.isEmpty()) {
-                throw new RuntimeException("No name element found for product at URL: " + urlProduct);
+            if (name.isEmpty() || priceString.isEmpty()) {
+                LOGGER.log(Level.WARNING, "No name or price found for product at URL: " + urlProduct);
+                return Optional.empty();
             }
 
             Product.Builder builder = new Product.Builder()
@@ -93,14 +87,11 @@ public class ProductScraper {
                 }
             }
 
-            optionalProduct = Optional.of(builder.build());
-
-            LogProductDetails.logDetails(category, name, priceString, properties);
-
+            return Optional.of(builder.build());
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, e.getMessage());
+            return Optional.empty();
         }
-
-        return optionalProduct;
     }
+
 }

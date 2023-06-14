@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,7 +39,6 @@ public class ShopScraper {
             if (uri.getScheme() == null) return false;
             return uri.getScheme().startsWith("http");
         } catch (URISyntaxException e) {
-            // if URL is not properly formed
             return false;
         }
     }
@@ -84,9 +84,10 @@ public class ShopScraper {
      * @return the product's price as a string
      */
     static String getAuchanProductPriceToString(Elements price) {
-        // format the price string
-        return price.text().replaceAll("[^0-9.]", "").trim();
+        // Remove the thousands separator and replace the decimal separator
+        return price.text().replace(".", "").replace(",", ".").replaceAll("[^0-9.]", "").trim();
     }
+
 
     /**
      * Retrieves the properties of a product from an Auchan product page.

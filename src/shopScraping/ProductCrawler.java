@@ -4,22 +4,13 @@ import DataModel.Product;
 import database.ProductTableOperations;
 import org.javatuples.Pair;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.security.SecureRandom;
-import java.security.cert.X509Certificate;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
-import java.util.concurrent.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,14 +18,14 @@ import java.util.logging.Logger;
  * Class responsible for crawling through webpages to retrieve product data.
  */
 public class ProductCrawler {
-
-    private static final Set<String> visitedURLs = ConcurrentHashMap.newKeySet();
+    private static final Set<String> visitedURLs = new HashSet<>();
     private static final Logger LOGGER = new AppLogger(ProductCrawler.class).getLogger();
     private static final String[] crawlingURLs = new String[]{"https://www.auchan.ro/brutarie-cofetarie-gastro/c", "https://www.auchan.ro/bacanie/c", "https://www.auchan.ro/lactate-carne-mezeluri---peste/c", "https://www.auchan.ro/fructe-si-legume/c"};
 
     private final ShopScraper shopScraper;
     private final ProductScraper productScraper;
     private final ProductTableOperations pto;
+
 
     public ProductCrawler(ShopScraper shopScraper, ProductScraper productScraper, ProductTableOperations pto) {
         this.shopScraper = shopScraper;
@@ -44,17 +35,12 @@ public class ProductCrawler {
 
     /**
      * Method to start the product crawling process.
-     *
-     * @throws IOException if an I/O error occurs during file writing
      */
-    public void getProductsAuchan() throws IOException {
-        try (FileWriter crawledURLs = new FileWriter("CrawledURLS.txt")) {
-            Queue<Pair<Integer, String>> queue = initializeURLQueue();
-            startCrawling(queue);
-        } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "An error occurred while crawling URLs: {0}", e.getMessage());
-        }
+    public void getProductsAuchan() {
+        Queue<Pair<Integer, String>> queue = initializeURLQueue();
+        startCrawling(queue);
     }
+
 
     /**
      * Initializes the URL queue with the start URLs.
@@ -63,10 +49,10 @@ public class ProductCrawler {
      */
     private Queue<Pair<Integer, String>> initializeURLQueue() {
         Queue<Pair<Integer, String>> queue = new LinkedList<>();
-        for (String url : crawlingURLs) {
+        Arrays.stream(crawlingURLs).forEach(url -> {
             queue.add(new Pair<>(1, url));
             visitedURLs.add(url);
-        }
+        });
         return queue;
     }
 
@@ -80,9 +66,7 @@ public class ProductCrawler {
         while (!queue.isEmpty()) {
             Pair<Integer, String> urlPair = queue.poll();
             visitedURLs.add(urlPair.getValue1());
-            if (urlPair.getValue0() < 5) {
-                processURL(queue, urlPair);
-            }
+            processURL(queue, urlPair);
         }
     }
 
@@ -95,17 +79,37 @@ public class ProductCrawler {
      */
     private void processURL(Queue<Pair<Integer, String>> queue, Pair<Integer, String> urlPair) {
         try {
-            String url = urlPair.getValue1();
-            if (ShopScraper.isValidURL(url)) {
-                Document doc = ShopScraper.connectToURL(url);
-                Elements links = doc.select("a[href]");
-                processLinks(queue, urlPair.getValue0(), links);
-            }
+            System.out.println("Processing URL: " + urlPair.getValue1());
+            processValidURL(queue, urlPair);
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "An error occurred while connecting to URL: {0}", e.getMessage());
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            LOGGER.log(Level.SEVERE, "The processURL operation was interrupted: {0}", e.getMessage());
+            handleIOException(e);
+        }
+    }
+
+    /**
+     * Handles an IOException by logging the error.
+     *
+     * @param e the IOException that occurred
+     */
+    private void handleIOException(IOException e) {
+        // Log the error
+        LOGGER.log(Level.SEVERE, "An error occurred while trying to write to the file: {0}", e.getMessage());
+    }
+
+    /**
+     * Connects to a valid URL, gets the document, and processes the links.
+     *
+     * @param queue   URL queue
+     * @param urlPair the URL and depth level
+     * @throws IOException if an I/O error occurs
+     */
+    private void processValidURL(Queue<Pair<Integer, String>> queue, Pair<Integer, String> urlPair) throws IOException {
+        String url = urlPair.getValue1();
+        if (ShopScraper.isValidURL(url)) {
+            System.out.println("Processing valid URL: " + urlPair.getValue1());
+            Document doc = ShopScraper.connectToURL(url);
+            Elements links = doc.select("a[href]");
+            processLinks(queue, urlPair.getValue0(), links);
         }
     }
 
@@ -117,50 +121,34 @@ public class ProductCrawler {
      * @param queue      The queue of URLs yet to be processed.
      * @param depthLevel The depth level of the crawl.
      * @param links      The collection of links to process.
-     * @throws InterruptedException if there is an interruption while waiting for tasks to finish.
      */
-    private void processLinks(Queue<Pair<Integer, String>> queue, int depthLevel, Elements links) throws InterruptedException, IOException {
-        List<Callable<Void>> tasks = new ArrayList<>();
-
-        for (Element link : links) {
-            String absHref = link.attr("abs:href");
-
-            System.out.println(absHref);
-
+    private void processLinks(Queue<Pair<Integer, String>> queue, int depthLevel, Elements links) throws IOException {
+        for (String absHref : links.stream().map(link -> link.attr("abs:href")).toList()) {
             if (shouldProcessLink(absHref)) {
-                visitedURLs.add(absHref);
-                tasks.add(() -> {
-                    processLink(queue, depthLevel, absHref);
-                    return null;
-                });
+                processLink(queue, depthLevel, absHref);
             }
         }
-
-        try (ExecutorService executorService = Executors.newFixedThreadPool(12)) {
-            executorService.invokeAll(tasks);
-            executorService.shutdown();
-            if (!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
-                executorService.shutdownNow();
-            }
-        }
+        System.out.println("Queue size: " + queue.size());
+        queue.forEach(pair -> System.out.println("Key: " + pair.getValue0() + ", Value: " + pair.getValue1()));
     }
 
 
     /**
      * Processes a link by logging it, checking if it leads to a product page, and adding it to the visited URLs.
      *
-     * @param queue The queue to which the link will be added.
+     * @param queue      The queue to which the link will be added.
      * @param depthLevel The depth level of the link in the crawl hierarchy.
-     * @param absHref The absolute URL of the link.
+     * @param absHref    The absolute URL of the link.
      * @throws IOException If an I/O error occurs.
      */
     private void processLink(Queue<Pair<Integer, String>> queue, int depthLevel, String absHref) throws IOException {
-        visitedURLs.add(absHref);
-        logLink(depthLevel, absHref);
-        processIfProductPage(absHref);
-        addVisitedURL(queue, depthLevel, absHref);
+        System.out.println("Processing link: " + absHref);
+        //logLink(depthLevel, absHref);
+        if (processIfProductPage(absHref)) {
+            processProduct(absHref);
+            queue.add(new Pair<>(depthLevel + 1, absHref));
+        }
     }
-
 
     /**
      * Connects to a URL if it leads to a product page and processes it as such.
@@ -168,35 +156,21 @@ public class ProductCrawler {
      * @param absHref The absolute URL of the link.
      * @throws IOException If an I/O error occurs.
      */
-    private void processIfProductPage(String absHref) throws IOException {
+    private boolean processIfProductPage(String absHref) throws IOException {
+        System.out.println("Checking if product page: " + absHref);
         if (!isProductPage(absHref)) {
-            return;
+            System.out.println("Not a product page: " + absHref);
+            return false;
         }
-
+        System.out.println("Product page found: " + absHref);
         Document doc = ShopScraper.connectToURL(absHref);
         if (!ShopScraper.checkATagsForHref(doc)) {
-            return;
+            System.out.println("Useless product: " + absHref);
+            return false;
         }
-
         System.out.println("Product found !!! " + absHref);
-        processProduct(absHref);
+        return true;
     }
-
-
-    /**
-     * Adds a URL to the list of visited URLs and to the crawl queue.
-     *
-     * @param queue The queue to which the link will be added.
-     * @param depthLevel The depth level of the link in the crawl hierarchy.
-     * @param absHref The absolute URL of the link.
-     */
-    private void addVisitedURL(Queue<Pair<Integer, String>> queue, int depthLevel, String absHref) {
-        if (!visitedURLs.contains(absHref)) {
-            queue.add(new Pair<>(depthLevel + 1, absHref));
-        }
-    }
-
-
 
 
     /**
@@ -206,7 +180,9 @@ public class ProductCrawler {
      * @return true if the URL is valid and has not been visited; false otherwise.
      */
     private boolean shouldProcessLink(String absHref) {
-        return ShopScraper.isValidURL(absHref) && !visitedURLs.contains(absHref);
+        boolean shouldProcess = ShopScraper.isValidURL(absHref) && !visitedURLs.contains(absHref);
+        visitedURLs.add(absHref);
+        return shouldProcess;
     }
 
 
@@ -220,7 +196,6 @@ public class ProductCrawler {
         LOGGER.log(Level.INFO, "{0} {1} ", new String[]{String.valueOf(depthLevel), absHref});
     }
 
-
     /**
      * Determines if a URL is a product page.
      *
@@ -228,7 +203,7 @@ public class ProductCrawler {
      * @return true if the URL is a product page; false otherwise.
      */
     private boolean isProductPage(String absHref) {
-        return absHref.endsWith("/p") || absHref.endsWith("/p#");
+        return absHref.matches(".*/p#?$");
     }
 
     /**
@@ -236,19 +211,22 @@ public class ProductCrawler {
      *
      * @param absHref The absolute URL of the product page.
      */
-    private void processProduct(String absHref) throws IOException {
-        Optional<Product> optionalProduct = productScraper.getProductDetails(shopScraper, absHref);
+    void processProduct(String absHref) {
+        try {
+            Optional<Product> optionalProduct = productScraper.getProductDetails(shopScraper, absHref);
+            if (optionalProduct.isPresent()) {
+                Product product = optionalProduct.get();
+                Product existingProduct = pto.getProductByName(product.getName());
 
-        // Check if the product is not null before processing
-        optionalProduct.ifPresent(product -> {
-            Product existingProduct = pto.getProductByName(product.getName());
-
-            if (existingProduct != null) {
-                processExistingProduct(product, existingProduct);
-            } else {
-                insertNewProduct(product);
+                if (existingProduct != null) {
+                    processExistingProduct(product, existingProduct);
+                } else {
+                    insertNewProduct(product);
+                }
             }
-        });
+        } catch (Exception ex) {
+            LOGGER.log(Level.SEVERE, ex, () -> "An error occurred while processing the product: " + absHref);
+        }
     }
 
     /**
@@ -258,14 +236,18 @@ public class ProductCrawler {
      * @param existingProduct The product fetched from the database.
      */
     private void processExistingProduct(Product product, Product existingProduct) {
-        LocalDateTime lastModified = existingProduct.getLastModified();
-        LocalDateTime now = LocalDateTime.now(ZoneId.of("Europe/Paris"));
-        long hoursElapsed = Duration.between(lastModified, now).toHours();
+        try {
+            LocalDateTime lastModified = existingProduct.getLastModified();
+            LocalDateTime now = LocalDateTime.now(ZoneId.of("Europe/Paris"));
+            long hoursElapsed = Duration.between(lastModified, now).toHours();
 
-        if (hoursElapsed >= 12) {
-            updateProduct(product);
-        } else {
-            LogProductDetails.logProductNotEligibleForUpdate(product.getName());
+            if (hoursElapsed >= 12) {
+                updateProduct(product);
+            } else {
+                LogProductDetails.logProductNotEligibleForUpdate(product.getName());
+            }
+        } catch (Exception ex) {
+            LOGGER.log(Level.SEVERE, ex, () -> "An error occurred while processing an existing product: " + product.getName());
         }
     }
 
@@ -275,8 +257,12 @@ public class ProductCrawler {
      * @param product The product to be inserted.
      */
     private void insertNewProduct(Product product) {
-        pto.insertProduct(product);
-        LogProductDetails.logProductInsertion(product.getName());
+        try {
+            pto.insertProduct(product);
+            LogProductDetails.logProductInsertion(product.getName());
+        } catch (Exception ex) {
+            LOGGER.log(Level.SEVERE, ex, () -> "An error occurred while inserting a new product: " + product.getName());
+        }
     }
 
     /**
@@ -285,7 +271,11 @@ public class ProductCrawler {
      * @param product The product to be updated.
      */
     private void updateProduct(Product product) {
-        pto.updateProduct(product);
-        LogProductDetails.logProductUpdate(product.getName());
+        try {
+            pto.updateProduct(product);
+            LogProductDetails.logProductUpdate(product.getName());
+        } catch (Exception ex) {
+            LOGGER.log(Level.SEVERE, ex, () -> "An error occurred while updating a product: " + product.getName());
+        }
     }
 }

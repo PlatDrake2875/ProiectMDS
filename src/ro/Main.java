@@ -1,4 +1,4 @@
-package src;
+package ro;
 
 import database.Database;
 import database.ProductJsonOperations;

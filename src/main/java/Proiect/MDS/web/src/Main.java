@@ -49,15 +49,6 @@ public class Main {
     private static void performRecipeDemo(Database db) throws SQLException {
         RecipeTableOperations rto = new RecipeTableOperations(db);
 
-
-        /**
-         *
-         *
-         * 1,40,10,https://i.pinimg.com/564x/29/84/2d/29842d65620c3d3ab14bc81eea9fe3ea.jpg,2,Lapte Faina Oua Zahar,Clatite
-         * 2,60,10,https://i.pinimg.com/564x/87/5c/ff/875cff184bc8833778a04de8af527406.jpg,3,Orez Morcovi Ceapa,Curry cu legume
-         * 3,45,15,https://i.pinimg.com/564x/a0/de/dc/a0dedca226bcbdaadb82958136d48dd5.jpg,2,Lapte Zahar Vanilie,Inghetata
-         * 4,50,15,https://i.pinimg.com/564x/09/79/c3/0979c344423e73d805f1ad841fe0b50c.jpg,4,Pui Morcovi Apa Sare,Supa de pui
-         */
         Recipe reteta0 = new Recipe.Builder()
                 .id(1)
                 .photoURL("https://i.pinimg.com/564x/09/79/c3/0979c344423e73d805f1ad841fe0b50c.jpg")

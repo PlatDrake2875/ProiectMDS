@@ -53,7 +53,7 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's category
      */
-    static Elements getAuchanProductCategory(Document doc) {
+    public static Elements getAuchanProductCategory(Document doc) {
         // use the category selector to extract the category from the document
         return doc.select(AUCHAN_PRODUCT_CATEGORY_SELECTOR);
     }
@@ -64,7 +64,7 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's name
      */
-    static Elements getAuchanProductName(Document doc) {
+    public static Elements getAuchanProductName(Document doc) {
         // Somehow the select doesn't work if I use constants.
         return doc.select(".vtex-store-components-3-x-productBrand--productPage").select("span");
     }
@@ -109,7 +109,7 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's properties
      */
-    static Elements getAuchanProductProperties(Document doc) {
+    public static Elements getAuchanProductProperties(Document doc) {
         // use the properties selector to extract the product properties from the document
         return doc.select(AUCHAN_PRODUCT_PROPERTIES_SELECTOR);
     }

@@ -1,5 +1,3 @@
-[App Demo](https://youtu.be/9i6kbwM2uY0)
-
 # Contents
 
 
@@ -13,6 +11,8 @@
 * [Source Control](#floppy_disk-source-control)
 * [Refactored Code](#wrench-refactored-code)
 * [Design Patterns](#jigsaw-design-patterns)
+
+[App Demo](https://youtu.be/9i6kbwM2uY0)
 
 
 ## Recipe App

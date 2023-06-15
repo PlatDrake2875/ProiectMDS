@@ -214,4 +214,28 @@ public class ProductTableOperations {
         }
         return products;
     }
+
+    /**
+     * Returns a product that matches the given id.
+     *
+     * @param ingredient The name of the product to be retrieved.
+     * @return A product that matches the given id, or null if no such product exists.
+     */
+    public Product getProductByCriteria(String ingredient) {
+
+        String query = "SELECT * FROM products WHERE lower(name) like lower('" + ingredient + "%') ORDER BY price ASC LIMIT 1;";
+        Product product = new Product();
+
+        try(Statement stmt = database.connection.createStatement();
+            ResultSet rs = stmt.executeQuery(query)) {
+
+            while(rs.next()) {
+                product = buildProduct(rs);
+            }
+        } catch (SQLException e) {
+            LOGGER.logQueryError(query, e);
+        }
+
+        return product;
+    }
 }

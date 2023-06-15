@@ -49,17 +49,61 @@ public class Main {
     private static void performRecipeDemo(Database db) throws SQLException {
         RecipeTableOperations rto = new RecipeTableOperations(db);
 
-        Recipe newRecipe = new Recipe.Builder()
+
+        /**
+         *
+         *
+         * 1,40,10,https://i.pinimg.com/564x/29/84/2d/29842d65620c3d3ab14bc81eea9fe3ea.jpg,2,Lapte Faina Oua Zahar,Clatite
+         * 2,60,10,https://i.pinimg.com/564x/87/5c/ff/875cff184bc8833778a04de8af527406.jpg,3,Orez Morcovi Ceapa,Curry cu legume
+         * 3,45,15,https://i.pinimg.com/564x/a0/de/dc/a0dedca226bcbdaadb82958136d48dd5.jpg,2,Lapte Zahar Vanilie,Inghetata
+         * 4,50,15,https://i.pinimg.com/564x/09/79/c3/0979c344423e73d805f1ad841fe0b50c.jpg,4,Pui Morcovi Apa Sare,Supa de pui
+         */
+        Recipe reteta0 = new Recipe.Builder()
                 .id(1)
-                .photoURL("https://example.com/photo.jpg")
-                .recipeName("Ciorba de burta")
-                .estimatedCookingTime(120)
-                .estimatedPreparationTime(30)
-                .portionSize(4)
-                .products("1,2,3,4,5")
+                .photoURL("https://i.pinimg.com/564x/09/79/c3/0979c344423e73d805f1ad841fe0b50c.jpg")
+                .recipeName("Supa de pui")
+                .estimatedCookingTime(40)
+                .estimatedPreparationTime(10)
+                .portionSize(8)
+                .products("Pui, Morcovi, Apa, Sare")
                 .build();
 
-        rto.insertRecipe(newRecipe);
+        Recipe reteta1 = new Recipe.Builder()
+                .id(1)
+                .photoURL("https://i.pinimg.com/564x/29/84/2d/29842d65620c3d3ab14bc81eea9fe3ea.jpg")
+                .recipeName("Clatite")
+                .estimatedCookingTime(40)
+                .estimatedPreparationTime(10)
+                .portionSize(8)
+                .products("Lapte, Faina, Oua, Zahar")
+                .build();
+
+        Recipe reteta2 = new Recipe.Builder()
+                .id(2)
+                .photoURL("https://i.pinimg.com/564x/87/5c/ff/875cff184bc8833778a04de8af527406.jpg")
+                .recipeName("Curry cu legume")
+                .estimatedCookingTime(60)
+                .estimatedPreparationTime(10)
+                .portionSize(4)
+                .products("Orez, Morcovi, Ceapa")
+                .build();
+
+        Recipe reteta3 = new Recipe.Builder()
+                .id(3)
+                .photoURL("https://i.pinimg.com/564x/a0/de/dc/a0dedca226bcbdaadb82958136d48dd5.jpg")
+                .recipeName("Inghetata")
+                .estimatedCookingTime(45)
+                .estimatedPreparationTime(10)
+                .portionSize(6)
+                .products("Lapte, Zahar, Vanilie")
+                .build();
+
+
+        rto.insertRecipe(reteta0);
+        rto.insertRecipe(reteta1);
+        rto.insertRecipe(reteta2);
+        rto.insertRecipe(reteta3);
+
         List<Recipe> recipes = rto.getAllRecipes();
         for (Recipe recipe : recipes) {
             System.out.println(recipe);

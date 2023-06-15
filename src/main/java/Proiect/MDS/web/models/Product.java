@@ -296,6 +296,14 @@ public class Product {
                 .build();
     }
 
+
+    public String toHTMLString() {
+        String format = "<p><strong>Product:</strong> %s <br/>" +
+                "<strong>Price:</strong> %s lei<br/>" +
+                "<strong>Quantity:</strong> %s</p>";
+        return String.format(format, this.name, this.price, this.weight);
+    }
+
     /**
      * Adds the nutritional components of the given product to the current product.
      * Assumes both products have the same units of measurement.

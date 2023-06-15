@@ -1,11 +1,23 @@
 # Contents
 
+
+* [Recipe App](#recipe-app)
 * [User stories](#user-stories)
 * [UML diagrams](#uml-diagrams)
 * [Using an AI tool in the development process](#AI-tool)
 * [Backlog](#backlog)
+* [Testing](#testing)
+* [Bug reporting](#bug-reporting)
+* [Source control](#source-control)
+* [Refactored code](#refactored-code)
+* [Demo](#demo)
 
 
+## Recipe App
+Project for the Software Development course.
+
+### Description
+We have created a recipe web application using the Spring Boot and Thymeleaf frameworks in Java. The main purpose of the application is to display recipes and calculate the minimum price of a basket of ingredients required to prepare each recipe. We have implemented web scraping to gather ingredient data from an online market and mapped them into our database.
 
 ## User Stories
 
@@ -75,4 +87,21 @@ We have used ChatGPT to generate some user stories ideas, which we later elabora
 ### Frontend
 ![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/14a05c1f-dcdb-4e56-8590-92f7a14a7ad1)
 
+## Testing
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/9ad2fbbe-0806-40af-a901-e167f5679642)
+
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/e169fce3-93a3-4e75-8fd6-b295bcd8399f)
+
+## Bug reporting
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/e722083f-0013-4df2-9ffa-4f5aed73da03)
+
+## Source control
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/c3331426-302a-4354-98e8-9cc955714eb1)
+
+## Refactored code
+### Before
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/528938f2-973a-410e-9121-157baa4181e0)
+
+### After
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/875a474a-640a-4f84-b80a-b9b5ae9ac963)
 

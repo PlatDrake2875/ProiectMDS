@@ -3,14 +3,14 @@
 
 * [Recipe App](#recipe-app)
 * [User stories](#user-stories)
-* [UML diagrams](#uml-diagrams)
-* [Using an AI tool in the development process](#AI-tool)
-* [Backlog](#backlog)
-* [Testing](#testing)
-* [Bug reporting](#bug-reporting)
-* [Source control](#source-control)
-* [Refactored code](#refactored-code)
-* [Demo](#demo)
+* [UML Diagrams](#art-uml-diagrams)
+* [AI Tool](#robot-ai-tool)
+* [Backlog](#clipboard-backlog)
+* [Testing](#microscope-testing)
+* [Bug Reporting](#beetle-bug-reporting)
+* [Source Control](#floppy_disk-source-control)
+* [Refactored Code](#wrench-refactored-code)
+* [Design Patterns](#jigsaw-design-patterns)
 
 
 ## Recipe App
@@ -66,42 +66,72 @@ We have created a recipe web application using the Spring Boot and Thymeleaf fra
 
 
 
-## UML Diagrams
+# Project Documentation :book:
 
-### Use case diagram
+This document covers key aspects of our project including UML diagrams, backlog, testing, bug reporting, source control, refactored code, and design patterns.
+
+---
+
+## :art: UML Diagrams 
+
+### :bulb: Use case diagram
+![Use Case Diagram](https://user-images.githubusercontent.com/101597846/234022638-9d2ba48c-49bc-40f6-9403-0a03b587c289.png)
+
+---
+
+## :robot: AI tool
+
+We've used ChatGPT to generate some creative user story ideas, which we further elaborated on.
+
+![ChatGPT](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/1d2c75b8-2c09-41f5-a8f8-92e6cc242fbd)
+
+---
+
+## :clipboard: Backlog
+
+### :globe_with_meridians: Backend
+
+![Backend](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/111dc8e5-6c21-4fca-8dd2-38667faebad9)
+
+### :computer: Frontend
+
+![Frontend](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/14a05c1f-dcdb-4e56-8590-92f7a14a7ad1)
+
+---
+
+## :microscope: Testing
+
+![Testing](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/9ad2fbbe-0806-40af-a901-e167f5679642)
+
+---
+
+## :beetle: Bug reporting
+
+![Bug Reporting](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/e722083f-0013-4df2-9ffa-4f5aed73da03)
+
+---
+
+## :floppy_disk: Source control
+
+![Source Control](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/c3331426-302a-4354-98e8-9cc955714eb1)
+
+---
+
+## :wrench: Refactored code
+
+### :hourglass_flowing_sand: Before
+![Before Refactoring](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/528938f2-973a-410e-9121-157baa4181e0)
+
+### :rocket: After
+![After Refactoring](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/875a474a-640a-4f84-b80a-b9b5ae9ac963)
+
+---
+
+## :jigsaw: Design patterns!
+
+1. :construction_worker: Builders, _lots of them_. We had to handle classes with lots of attributes (Product and Recipe, for example, have about 18 and 7 attributes each) and we didn't want to exacerbate our collective tendinitis by writing so many constructors. They are pleasing to the eye, easy to maintain, and extremely handy!
+
+2. :factory: Factory. For added flexibility and control when creating the logging classes (which might seem needless, but made debugging a breeze), we went for this pattern. Having a pool of loggers to choose from enhances code readability by keeping everything centralized.
 
 
-![png 5](https://user-images.githubusercontent.com/101597846/234022638-9d2ba48c-49bc-40f6-9403-0a03b587c289.png)
-
-
-## AI tool
-We have used ChatGPT to generate some user stories ideas, which we later elaborated on.
-
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/1d2c75b8-2c09-41f5-a8f8-92e6cc242fbd)
-
-## Backlog
-
-### Backend
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/111dc8e5-6c21-4fca-8dd2-38667faebad9)
-
-### Frontend
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/14a05c1f-dcdb-4e56-8590-92f7a14a7ad1)
-
-## Testing
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/9ad2fbbe-0806-40af-a901-e167f5679642)
-
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/e169fce3-93a3-4e75-8fd6-b295bcd8399f)
-
-## Bug reporting
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/e722083f-0013-4df2-9ffa-4f5aed73da03)
-
-## Source control
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/c3331426-302a-4354-98e8-9cc955714eb1)
-
-## Refactored code
-### Before
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/528938f2-973a-410e-9121-157baa4181e0)
-
-### After
-![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/875a474a-640a-4f84-b80a-b9b5ae9ac963)
 

@@ -24,7 +24,9 @@ public class Main {
         ProductScraper auchan = new ProductScraper();
 
         // Perform the product demo
-        //performProductDemo(shop, auchan, db);
+        performProductDemo(shop, auchan, db);
+
+        //
 
         // Perform the recipe demo
         performRecipeDemo(db);

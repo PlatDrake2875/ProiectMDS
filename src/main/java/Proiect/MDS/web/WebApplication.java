@@ -18,5 +18,4 @@ public class WebApplication {
 	public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> webServerFactoryCustomizer() {
 		return factory -> factory.setPort(8080);
 	}
-
 }

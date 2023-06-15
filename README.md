@@ -129,7 +129,7 @@ We've used ChatGPT to generate some creative user story ideas, which we further 
 
 ## :jigsaw: Design patterns!
 
-1. :construction_worker: Builders, _lots of them_. We had to handle classes with lots of attributes (Product and Recipe, for example, have about 18 and 7 attributes each) and we didn't want to exacerbate our collective tendinitis by writing so many constructors. They are pleasing to the eye, easy to maintain, and extremely handy!
+1. :construction_worker: Builders, _lots of them_. We had to handle classes with lots of attributes (Product and Recipe, for example, have about 18 and 7 attributes each) and we didn't want to exacerbate our collective tendinitis by writing so many constructors. They are pleasing almost eyecandy, easy to maintain, and extremely handy!
 
 2. :factory: Factory. For added flexibility and control when creating the logging classes (which might seem needless, but made debugging a breeze), we went for this pattern. Having a pool of loggers to choose from enhances code readability by keeping everything centralized.
 

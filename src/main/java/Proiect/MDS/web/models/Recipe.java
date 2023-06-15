@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name="recipes")
+@Table(name = "recipes")
 
 public class Recipe {
     @Id

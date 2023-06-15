@@ -18,7 +18,7 @@ public class Main {
 
         ShopScraper shop = new ShopScraper();
         ProductScraper auchan = new ProductScraper();
-        Database db = new Database("jdbc:mysql://localhost/dbProducts", "ioana", "ioana7");
+        Database db = new Database("jdbc:mysql://localhost/dbProducts", "root", "root");
 
         demo(shop, auchan, db);
     }

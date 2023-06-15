@@ -13,11 +13,12 @@ import java.util.stream.Collectors;
 @Service
 public class RecipeServiceImpl implements RecipeService {
     private final RecipeRepository repository;
+
     public RecipeServiceImpl(RecipeRepository repository) {
         this.repository = repository;
     }
 
-    private RecipeDto RecipeToDto(Recipe recipe) {
+    public RecipeDto RecipeToDto(Recipe recipe) {
         RecipeDto recipeDto = RecipeDto.builder()
                 .id(recipe.getId())
                 .photoURL(recipe.getPhotoURL())

@@ -2,7 +2,8 @@
 
 * [User stories](#user-stories)
 * [UML diagrams](#uml-diagrams)
-* [Using and AI tool in the development process](#AI-tool)
+* [Using an AI tool in the development process](#AI-tool)
+* [Backlog](#backlog)
 
 
 
@@ -65,4 +66,13 @@
 We have used ChatGPT to generate some user stories ideas, which we later elaborated on.
 
 ![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/1d2c75b8-2c09-41f5-a8f8-92e6cc242fbd)
+
+## Backlog
+
+### Backend
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/111dc8e5-6c21-4fca-8dd2-38667faebad9)
+
+### Frontend
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/14a05c1f-dcdb-4e56-8590-92f7a14a7ad1)
+
 

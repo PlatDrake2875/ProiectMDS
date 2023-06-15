@@ -17,7 +17,6 @@ import java.util.logging.Logger;
  * This class handles operations related to the product JSON file.
  */
 
-
 public class ProductJsonOperations {
     private static final Logger LOGGER = Logger.getLogger(ProductJsonOperations.class.getName());
     private final ProductTableOperations pto;

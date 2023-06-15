@@ -6,6 +6,9 @@ import lombok.*;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object for transferring Recipe data between different parts of the application.
+ */
 @Data
 @Builder
 @Setter
@@ -13,12 +16,38 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RecipeDto {
+    /**
+     * The unique ID of the Recipe.
+     */
     private int id;
-    private String photoURL;
-    private String recipeName;
-    private int estimatedCookingTime;
-    private int estimatedPreparationTime;
-    private int portionSize;
-    private String products;
 
+    /**
+     * URL of the Recipe photo.
+     */
+    private String photoURL;
+
+    /**
+     * The name of the Recipe.
+     */
+    private String recipeName;
+
+    /**
+     * Estimated cooking time for the Recipe in minutes.
+     */
+    private int estimatedCookingTime;
+
+    /**
+     * Estimated preparation time for the Recipe in minutes.
+     */
+    private int estimatedPreparationTime;
+
+    /**
+     * The number of portions that the Recipe produces.
+     */
+    private int portionSize;
+
+    /**
+     * The products (ingredients) needed for the Recipe.
+     */
+    private String products;
 }

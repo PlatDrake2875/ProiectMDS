@@ -3,8 +3,10 @@ package Proiect.MDS.web.dto;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
+/**
+ * Data Transfer Object for transferring Product data between different parts of the application.
+ */
 @Builder
 @Data
 @Setter
@@ -12,8 +14,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductDto {
+    /**
+     * The unique ID of the Product.
+     */
     private int id;
-    private String name;
-    private BigDecimal price;
 
+    /**
+     * The name of the Product.
+     */
+    private String name;
+
+    /**
+     * The price of the Product.
+     */
+    private BigDecimal price;
 }

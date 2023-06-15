@@ -16,7 +16,8 @@ public class Database {
             connection = DriverManager.getConnection(url, username, password);
             stmt = connection.createStatement();
             stmt.execute(ProductTableOperations.CREATE_TABLE_SQL);
-            LOGGER.logSuccessfulOperation("Connection to the MySQL database and creation of the 'products' table");
+            stmt.execute(RecipeTableOperations.CREATE_TABLE_SQL);
+            LOGGER.logSuccessfulOperation("Connection to the MySQL database and creation of the 'products' and 'recipes' tables");
         } catch (SQLException e) {
             LOGGER.logDatabaseConnectionError(e);
         }

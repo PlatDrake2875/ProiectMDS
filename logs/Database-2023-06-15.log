@@ -1,0 +1,2 @@
+Jun 15, 2023 4:11:17 AM Proiect.MDS.web.database.logging.DatabaseLogger logSuccessfulOperation
+INFO: Successfully executed database operation: Connection to the MySQL database and creation of the 'products' table

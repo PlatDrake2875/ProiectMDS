@@ -1,0 +1,1596 @@
+Jun 15, 2023 4:11:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Painea brutarului cu maia Auchan, feliata, 400 g
+Jun 15, 2023 4:11:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paine toast integral Auchan, 600 g
+Jun 15, 2023 4:11:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paine toast clasica Auchan, 600 g
+Jun 15, 2023 4:11:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Croissant cu ciocolata si alune Auchan, 85 g
+Jun 15, 2023 4:11:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac Boromir cu crema de ciocolata si rom, 450 g
+Jun 15, 2023 4:11:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac cu crema de cacao si rahat Boromir, 500g
+Jun 15, 2023 4:11:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac Boromir cu crema de lapte si frisca, 450 g
+Jun 15, 2023 4:11:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac cu crema de nuca si cacao Boromir, 450g
+Jun 15, 2023 4:11:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Zahar pachet hartie Coronita Agrana, 1 kg
+Jun 15, 2023 4:11:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ulei de floarea soarelui Auchan, 1 l
+Jun 15, 2023 4:12:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea macinata Jacobs Kronung Alintaroma, 500 g
+Jun 15, 2023 4:12:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ulei de floarea soarelui Bunica, 1 l
+Jun 15, 2023 4:12:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea solubila Fortuna Rendez-Vous, 50 g
+Jun 15, 2023 4:12:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pufuleti simpli Gusto, 85 g
+Jun 15, 2023 4:12:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pufuleti simpli Gusto, 45 g
+Jun 15, 2023 4:12:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata cu arahide Africana, 90 g
+Jun 15, 2023 4:12:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Auchan, 1.5% grasime, 1 l
+Jun 15, 2023 4:12:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Auchan, 3.5% grasime, 1 l
+Jun 15, 2023 4:12:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Laptaria cu caimac, 3.8 - 4.1% grasime, 1 l
+Jun 15, 2023 4:12:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte integral UHT Auchan, 3.5% grasime, 1 l
+Jun 15, 2023 4:12:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum ZuZu, 3.5% grasime, 1.8 l
+Jun 15, 2023 4:12:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Oua de gaina ECO Filiera Auchan, marime M, cod 0, 10 bucati
+Jun 15, 2023 4:12:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Iaurt grecesc Olympus, 10% grasime, 150 g
+Jun 15, 2023 4:13:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ridichi rosii, pret pe legatura
+Jun 15, 2023 4:13:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lamai netratate dupa recoltare, 4 bucati
+Jun 15, 2023 4:13:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lamai Auchan, 1 kg
+Jun 15, 2023 4:13:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Bors Olympia, 1L
+Jun 15, 2023 4:13:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de salata Energia Auchan, 200g
+Jun 15, 2023 4:13:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de salata Auchan Curcubeu, 160g
+Jun 15, 2023 4:13:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de salata Auchan Suprema, 260g
+Jun 15, 2023 4:13:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Portocale, 1.5 kg
+Jun 15, 2023 4:13:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Painea brutarului cu maia Auchan, feliata, 400 g
+Jun 15, 2023 4:13:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paine toast integral Auchan, 600 g
+Jun 15, 2023 4:13:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paine toast clasica Auchan, 600 g
+Jun 15, 2023 4:13:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Croissant cu ciocolata si alune Auchan, 85 g
+Jun 15, 2023 4:13:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac Boromir cu crema de ciocolata si rom, 450 g
+Jun 15, 2023 4:13:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac cu crema de cacao si rahat Boromir, 500g
+Jun 15, 2023 4:13:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac Boromir cu crema de lapte si frisca, 450 g
+Jun 15, 2023 4:13:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cozonac cu crema de nuca si cacao Boromir, 450g
+Jun 15, 2023 4:13:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Zahar pachet hartie Coronita Agrana, 1 kg
+Jun 15, 2023 4:13:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ulei de floarea soarelui Auchan, 1 l
+Jun 15, 2023 4:13:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea macinata Jacobs Kronung Alintaroma, 500 g
+Jun 15, 2023 4:13:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ulei de floarea soarelui Bunica, 1 l
+Jun 15, 2023 4:13:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea solubila Fortuna Rendez-Vous, 50 g
+Jun 15, 2023 4:13:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pufuleti simpli Gusto, 85 g
+Jun 15, 2023 4:13:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pufuleti simpli Gusto, 45 g
+Jun 15, 2023 4:13:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata cu arahide Africana, 90 g
+Jun 15, 2023 4:13:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Auchan, 1.5% grasime, 1 l
+Jun 15, 2023 4:13:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Auchan, 3.5% grasime, 1 l
+Jun 15, 2023 4:13:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Laptaria cu caimac, 3.8 - 4.1% grasime, 1 l
+Jun 15, 2023 4:13:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte integral UHT Auchan, 3.5% grasime, 1 l
+Jun 15, 2023 4:13:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum ZuZu, 3.5% grasime, 1.8 l
+Jun 15, 2023 4:13:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Oua de gaina ECO Filiera Auchan, marime M, cod 0, 10 bucati
+Jun 15, 2023 4:13:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Iaurt grecesc Olympus, 10% grasime, 150 g
+Jun 15, 2023 4:13:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ridichi rosii, pret pe legatura
+Jun 15, 2023 4:13:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lamai netratate dupa recoltare, 4 bucati
+Jun 15, 2023 4:13:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lamai Auchan, 1 kg
+Jun 15, 2023 4:13:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Bors Olympia, 1L
+Jun 15, 2023 4:13:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de salata Energia Auchan, 200g
+Jun 15, 2023 4:13:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de salata Auchan Curcubeu, 160g
+Jun 15, 2023 4:13:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de salata Auchan Suprema, 260g
+Jun 15, 2023 4:13:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Portocale, 1.5 kg
+Jun 15, 2023 4:14:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mazare verde boabe Bonduelle, dulce, 400 g
+Jun 15, 2023 4:14:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Conserva cu carne de porc Scandia Sibiu, 300g
+Jun 15, 2023 4:14:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Fasole alba boabe Bonduelle, 400 g
+Jun 15, 2023 4:14:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate integral de porc Scandia Sibiu, 120g
+Jun 15, 2023 4:14:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate de porc Bucegi, 200g
+Jun 15, 2023 4:14:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pasta vegetala tartinabila Bucegi, 200 g
+Jun 15, 2023 4:15:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate integral de rata Scandia Sibiu, 120g
+Jun 15, 2023 4:15:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate cu ficat de gasca Scandia Sibiu, 120g
+Jun 15, 2023 4:15:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciorba de burta cu smantana Scandia Sibiu, 400g
+Jun 15, 2023 4:15:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Fasole rosie boabe Bonduelle, 800 g
+Jun 15, 2023 4:15:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate de pasare Bucegi, 200g
+Jun 15, 2023 4:15:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate integral de pui Scandia Sibiu, 200g
+Jun 15, 2023 4:15:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate integral de pui Scandia Sibiu, 120g
+Jun 15, 2023 4:15:48 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciorba de vacuta cu verdeata Scandia Sibiu, 400g
+Jun 15, 2023 4:15:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pate integral de porc Scandia Sibiu, 200g
+Jun 15, 2023 4:15:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Conserva cu carne de vita Scandia Sibiu, 300g
+Jun 15, 2023 4:15:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sarmalute cu carne de porc Scandia Sibiu traditii, 400gr
+Jun 15, 2023 4:16:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti cu cacao Picnic RoStar, 75 g
+Jun 15, 2023 4:16:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti Petit Beurre RoStar, 460 g
+Jun 15, 2023 4:16:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti cu vanilie Picnic RoStar, 75 g
+Jun 15, 2023 4:16:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Zahar pudra Diamant, 500 g
+Jun 15, 2023 4:16:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Zahar cubic Diamant, 500 g
+Jun 15, 2023 4:16:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti Petit Beurre RoStar, 140 g
+Jun 15, 2023 4:16:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper negru boabe Cosmin 17 g
+Jun 15, 2023 4:17:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Scortisoara macinata Cosmin 15g
+Jun 15, 2023 4:17:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Foi de dafin Cosmin, 4g
+Jun 15, 2023 4:17:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper negru macinat Fuchs 20 g
+Jun 15, 2023 4:17:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cimbru Cosmin, 8g
+Jun 15, 2023 4:17:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Scortisoara batoane Fuchs 20 g
+Jun 15, 2023 4:17:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper alb macinat Fuchs 20 g
+Jun 15, 2023 4:17:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper alb macinat Cosmin 17 g
+Jun 15, 2023 4:17:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix condiment pentru porc Cosmin 20 g
+Jun 15, 2023 4:17:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix condiment pentru pui Cosmin 20 g
+Jun 15, 2023 4:17:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Usturoi granulat Cosmin 15 g
+Jun 15, 2023 4:17:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru drob, 20 g
+Jun 15, 2023 4:17:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Condiment pentru gratar Cosmin 20 g
+Jun 15, 2023 4:17:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Patrunjel Cosmin, 8g
+Jun 15, 2023 4:17:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru pui 25 g
+Jun 15, 2023 4:17:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Marar Cosmin 8 g
+Jun 15, 2023 4:17:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix condimente pentru gratar Fuchs 20 g
+Jun 15, 2023 4:17:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru oaie/miel, 20 g
+Jun 15, 2023 4:17:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru friptura 25 g
+Jun 15, 2023 4:17:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru chiftele 25g
+Jun 15, 2023 4:18:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Boia ardei iute Cosmin, 17g
+Jun 15, 2023 4:18:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte integral ZuZu, 3.5% grasime, 1 l
+Jun 15, 2023 4:18:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sare condimentata Cosmin pentru cartofi prajiti 20 g
+Jun 15, 2023 4:18:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru mititei 25 g
+Jun 15, 2023 4:18:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente pentru salata Fuchs 10 g
+Jun 15, 2023 4:18:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Busuioc Cosmin, 8g
+Jun 15, 2023 4:18:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Condiment pentru peste Cosmin 20 g
+Jun 15, 2023 4:18:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix de condimente Fuchs pentru peste 25 g
+Jun 15, 2023 4:18:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Smantana de consum Albalact, 12% grasime, 900 g
+Jun 15, 2023 4:18:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Boia ardei dulce Cosmin, 17g
+Jun 15, 2023 4:18:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper negru macinat Cosmin 17 g
+Jun 15, 2023 4:18:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mustar boabe Cosmin 20 g
+Jun 15, 2023 4:18:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Oregano Cosmin, 8g
+Jun 15, 2023 4:18:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ienibahar macinat Cosmin, 12g
+Jun 15, 2023 4:18:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Maghiran Cosmin 8 g
+Jun 15, 2023 4:19:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sare iodata Ilida 400 g
+Jun 15, 2023 4:20:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sare iodata Ilida 200 g
+Jun 15, 2023 4:20:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sare de mare iodata Xion grunjoasa 1 Kg
+Jun 15, 2023 4:23:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte praf Malita 130 g
+Jun 15, 2023 4:23:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Seminte de dovleac Nutline, 200 g
+Jun 15, 2023 4:23:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ananas cuburi Goody`s 560 g
+Jun 15, 2023 4:23:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Seminte pestrite de floarea soarelui cu sare Nutline, 200 g
+Jun 15, 2023 4:23:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti cu vanilie si crema de cacao Big Fox RoStar, 30g
+Jun 15, 2023 4:25:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti Alka glazurati cu vanilie, 180 g
+Jun 15, 2023 4:27:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Baza pentru mancare Maggi cu gust de gaina, 200g
+Jun 15, 2023 4:27:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Capuccino La Festa cu alune 125 g
+Jun 15, 2023 4:27:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix pentru paste milanese Maggi Ideea Zilei, 55g
+Jun 15, 2023 4:28:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cub Maggi cu gust de gaina 60 g
+Jun 15, 2023 4:28:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Capuccino La Festa cu rom 125 g
+Jun 15, 2023 4:28:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Crema pudra Coffeeta pentru cafea, 200g
+Jun 15, 2023 4:28:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale Cini Minis Nestle, 250 g
+Jun 15, 2023 4:28:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea instant Nescafe Brasero, 100g
+Jun 15, 2023 4:28:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale pentru micul dejun Corn Flakes Nestle, 500 g
+Jun 15, 2023 4:28:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Supa de pui cu fidea Maggi, 48g
+Jun 15, 2023 4:28:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Baton Lion cu ciocolata 42 g
+Jun 15, 2023 4:28:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bors cu legume Maggi 70 g
+Jun 15, 2023 4:28:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Baton de cereale pentru micul dejun Chocapic Nestle, 25 g
+Jun 15, 2023 4:28:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale Honey Cheerios Nestle, 250 g
+Jun 15, 2023 4:28:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cacao instant cu vitamine Nestle Nesquik, 200g
+Jun 15, 2023 4:28:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cacao instant cu vitamine Nestle Nesquik, 400 g
+Jun 15, 2023 4:28:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Baza pentru mancare Maggi cu gust de gaina, 75g
+Jun 15, 2023 4:28:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mix pentru paste bolognese Maggi Ideea Zilei, 60g
+Jun 15, 2023 4:29:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum UHT Fulga, 1.5% grasime, 1 l
+Jun 15, 2023 4:29:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea instant Nescafe Brasero, 200g
+Jun 15, 2023 4:29:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale Chocapic Nestle, 250 g
+Jun 15, 2023 4:29:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Unt de masa, Albalact, 65% grasime, 200 g
+Jun 15, 2023 4:29:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Masline verzi Defne, umplute cu gogosari, 720 ml
+Jun 15, 2023 4:29:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Masline negre dietetice Defne, 400 g
+Jun 15, 2023 4:30:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Gogosari in otet Defne, 650 g
+Jun 15, 2023 4:30:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Masline negre Defne, 250 g
+Jun 15, 2023 4:30:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ardei kapia copt Defne, 690 g
+Jun 15, 2023 4:30:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Masline negre Defne, in saramura, 500 g
+Jun 15, 2023 4:30:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea macinata si prajita Lavazza Qualita Oro, 250 g
+Jun 15, 2023 4:30:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea macinata decafeinizata Lavazza, 250 g
+Jun 15, 2023 4:30:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Zahar Cristal Margaritar, 1 kg
+Jun 15, 2023 4:30:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea macinata si prajita Lavazza Crema Gusto, 250 g
+Jun 15, 2023 4:30:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cafea macinata si prajita Lavazza Qualita Rossa, 250 g
+Jun 15, 2023 4:30:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Crema de branza natur Exquisa, 200 g
+Jun 15, 2023 4:30:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Budinca Zott Liegeois cu ciocolata si frisca 175 g
+Jun 15, 2023 4:30:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Iaurt cu fructe Zott, 150 g
+Jun 15, 2023 4:30:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Branza cu mucegai albastru Bergarder Gran Bavarese, 100 g
+Jun 15, 2023 4:30:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cascaval Delaco Sofia, 450 g
+Jun 15, 2023 4:30:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Oua de gaina, Rikado, marime L, cod 2, 10 bucati
+Jun 15, 2023 4:30:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Oua de gaina, Qualisimo, marime M, cod 3, 30 bucati
+Jun 15, 2023 4:31:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Branza rotita Bergader Bavaria Blu, 150 g
+Jun 15, 2023 4:31:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup dulce La Minut, 480 g
+Jun 15, 2023 4:31:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Dots Natur display, 30 g
+Jun 15, 2023 4:31:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Spanac ECO Auchan, 600g
+Jun 15, 2023 4:31:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup picant La Minut, 480 g
+Jun 15, 2023 4:31:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup dulce Tomi, 500 g
+Jun 15, 2023 4:31:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Foietaj Auchan cu legume, 400 g
+Jun 15, 2023 4:31:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup dulce Tomi, 350 g
+Jun 15, 2023 4:31:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup picant Tomi, 500 g
+Jun 15, 2023 4:32:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup picant Tomi, 350 g
+Jun 15, 2023 4:32:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Linte rosie Solarie, 500g
+Jun 15, 2023 4:32:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mustar Clasic La Minut 300 g
+Jun 15, 2023 4:33:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pastrama de pui Caroli, +/- 300 g
+Jun 15, 2023 4:34:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata Primola Papi cu crema de lapte 26.8 g
+Jun 15, 2023 4:34:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale pentru micul dejun Nesquik Nestle, 250 g
+Jun 15, 2023 4:34:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Supa cu galuste Maggi, 52g
+Jun 15, 2023 4:34:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Carnati de bere Caroli, 400 g
+Jun 15, 2023 4:35:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Gaufre miere Bio All Green 175 g
+Jun 15, 2023 4:35:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piept de pui vidat Caroli, +/- 300 g
+Jun 15, 2023 4:35:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Foi de dafin Fuchs 7.5g
+Jun 15, 2023 4:35:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sirop de artar Bio All Green 250 g
+Jun 15, 2023 4:35:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Baton de ciocolata Fagaras 30 g
+Jun 15, 2023 4:35:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata cu crema de capsuni Laura, 95 g
+Jun 15, 2023 4:35:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cub Maggi cu gust de legume 60 g
+Jun 15, 2023 4:35:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata cu lapte Laura, 95 g
+Jun 15, 2023 4:35:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata cu crema de visine Laura, 95 g
+Jun 15, 2023 4:35:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Baton ciocolata Rom autentic 30 g
+Jun 15, 2023 4:35:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciocolata Primola Papi cu capsuni 26.8 g
+Jun 15, 2023 4:35:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum ZuZu, 1.5% grasime, 1 l
+Jun 15, 2023 4:36:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Sos tomate Regal 540 g
+Jun 15, 2023 4:36:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale cu glazura de cacao Rollo, 100 g
+Jun 15, 2023 4:36:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale Viva Cocoa Balls, 250 g
+Jun 15, 2023 4:36:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cereale Viva Cacao Flakes, 250 g
+Jun 15, 2023 4:36:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Branza topita cu sunca Therezia, 125 g
+Jun 15, 2023 4:37:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pernite cu cacao Viva, 200 g
+Jun 15, 2023 4:37:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Snacks alunite cu vanilie Olla, 200 g
+Jun 15, 2023 4:37:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pernite cu cacao Viva, 100 g
+Jun 15, 2023 4:37:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mazare fina Edenia, 1Kg
+Jun 15, 2023 4:37:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Snacks alunite cu cacao Olla, 200 g
+Jun 15, 2023 4:37:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Spanac congelat Edenia, 1Kg
+Jun 15, 2023 4:37:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cartofi wedges in coaja Farm Frites , 600g
+Jun 15, 2023 4:37:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Varza de Bruxelles Dujardin, 450g
+Jun 15, 2023 4:37:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Amestec hawaii Edenia, 450g
+Jun 15, 2023 4:37:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ketchup dulce Regal, 450 g
+Jun 15, 2023 4:37:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de vaca Napolact, 1.5% grasime, 1 l
+Jun 15, 2023 4:37:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cartofi pai congelati 10mm Fantasy, 1Kg
+Jun 15, 2023 4:38:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Crema de branza cu verdeata Philadelphia, 125 g
+Jun 15, 2023 4:38:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Smantana de gatit LaDorna, 32% grasime, 1 l
+Jun 15, 2023 4:38:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Fasole verde pastai congelata Edenia, 1Kg
+Jun 15, 2023 4:38:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cartofi congelati, pentru cuptor Farm Frites, 450g
+Jun 15, 2023 4:38:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Unt de masa Napolact, 65% grasime, 200 g
+Jun 15, 2023 4:38:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Otet Regal 1L
+Jun 15, 2023 4:38:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cartofi pai congelati 10mm Fantasy , 2.5Kg
+Jun 15, 2023 4:39:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Foi placinta Linco 400g
+Jun 15, 2023 4:39:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum Napolact, 3.5% grasime, 1 l
+Jun 15, 2023 4:39:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Faina alba de grau 000 Grania Pambac, 1 kg
+Jun 15, 2023 4:39:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de vaca LaDorna, 3.5% grasime, 1 l
+Jun 15, 2023 4:39:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Conopida Edenia, 450g
+Jun 15, 2023 4:39:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ciuperci taiate Edenia, 450g
+Jun 15, 2023 4:39:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Morcovi baby Edenia, 450g
+Jun 15, 2023 4:39:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Amestec cu conopida Edenia, 450g
+Jun 15, 2023 4:39:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Smantana de gatit LaDorna, 15% grasime, 1 l
+Jun 15, 2023 4:39:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Lapte de consum UHT LaDorna, 1.5% grasime, 1 l
+Jun 15, 2023 4:39:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Branza camembert President, 250 g
+Jun 15, 2023 4:40:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza light Philadelphia, 125 g
+Jun 15, 2023 4:40:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Aluat foietaj Linco, 800g
+Jun 15, 2023 4:40:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Crema de branza Philadelphia Original, 125 g
+Jun 15, 2023 4:40:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Unt nesarat President, 250 g
+Jun 15, 2023 4:40:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Branza brie President, 200 g
+Jun 15, 2023 4:40:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Biscuiti cu scortisoara Digesta, 90 g
+Jun 15, 2023 4:40:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Faina alba superioara 000 Dobrogea, 1 kg
+Jun 15, 2023 4:40:57 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Malai extra grisat Dobrogea, 1 kg
+Jun 15, 2023 4:41:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Caise deshidratate Orlandos 200g
+Jun 15, 2023 4:41:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Pesmet Baneasa, 500 g
+Jun 15, 2023 4:41:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Spaghetti Pambac, 500 g
+Jun 15, 2023 4:42:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Chimen seminte Cosmin 20 g
+Jun 15, 2023 4:42:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Fusilli Baneasa 400g
+Jun 15, 2023 4:42:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Boia iute Orlandos 100 g
+Jun 15, 2023 4:42:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Stafide brune din struguri fara samburi Orlandos Maestro, 250g
+Jun 15, 2023 4:42:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Taitei cuiburi Baneasa 200g
+Jun 15, 2023 4:42:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Stafide brune din struguri fara samburi Orlando'S, 100g
+Jun 15, 2023 4:42:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Stafide galbene Orlando's, 100 g
+Jun 15, 2023 4:42:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Stafide galbene 250 g
+Jun 15, 2023 4:42:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Penne rigate Baneasa 400 g
+Jun 15, 2023 4:42:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam Victoria Cris-Tim, 400 g
+Jun 15, 2023 4:42:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Faina alba 650 Baneasa, 1 kg
+Jun 15, 2023 4:42:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam Sinaia Cris-Tim, 100 g
+Jun 15, 2023 4:43:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam de vara Cris-Tim, 300 g
+Jun 15, 2023 4:43:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam Sasesc Cris-Tim, 650 g
+Jun 15, 2023 4:43:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mazare verde boabe, dulce, vapeur Bonduelle, 400g
+Jun 15, 2023 4:43:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Spaghetti Baneasa 500g
+Jun 15, 2023 4:43:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Amestec de legume, 4 anotimpuri Bonduelle, 400g
+Jun 15, 2023 4:43:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam de sunca taranesca Cris-Tim, 450 g
+Jun 15, 2023 4:43:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Baneasa pene cu ou 400g
+Jun 15, 2023 4:43:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Tort de inghetata Alpin, 2 l
+Jun 15, 2023 4:43:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Faina extra Baneasa tip 000, 1 kg
+Jun 15, 2023 4:43:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Tagliatelle Baneasa 200g
+Jun 15, 2023 4:43:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam Chorizo Cris-Tim, 330 g
+Jun 15, 2023 4:43:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Maccaroni Baneasa 500g
+Jun 15, 2023 4:43:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase Conchiglie Baneasa 400g
+Jun 15, 2023 4:43:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Nuci caju crude Orlando's, 250 g
+Jun 15, 2023 4:44:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Malai Extra Baneasa, 1 kg
+Jun 15, 2023 4:44:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam Victoria Extra Caroli, 400 g
+Jun 15, 2023 4:44:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase cu ou Baneasa 400g
+Jun 15, 2023 4:44:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Fidea cuiburi Baneasa 200g
+Jun 15, 2023 4:44:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cartofi prajiti Aviko Zig-Zag, 750g
+Jun 15, 2023 4:44:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Gris Baneasa, 500 g
+Jun 15, 2023 4:44:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Paste fainoase cornetti rigate Baneasa 400g
+Jun 15, 2023 4:45:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mini salam Sasesc Cris Tim, 350 g
+Jun 15, 2023 4:45:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Salam ardelenesc Cris-Tim, 500 g
+Jun 15, 2023 4:45:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Mini Parizer cu pui Cris-Tim 500 g
+Jun 15, 2023 4:46:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Inghetata dietetica cu vanilie Elion Diet, 1 l
+Jun 15, 2023 4:46:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper Orlandos negru macinat 100 g
+Jun 15, 2023 4:46:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Piper Orlandos macinat 250 g
+Jun 15, 2023 4:46:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Inghetata dietetica cu cacao Elion Diet, 1 l
+Jun 15, 2023 4:46:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ulei de masline extravirgin Pietro Coricelli, 1 l
+Jun 15, 2023 4:46:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Cimbru Orlandos 100 g
+Jun 15, 2023 4:46:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere de tei Fagurele Auriu 400 g
+Jun 15, 2023 4:46:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere poliflora Fagurele Auriu 500 g
+Jun 15, 2023 4:46:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere de tei Fagurele Auriu 950 g
+Jun 15, 2023 4:46:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere de salcam Fagurele Auriu 500 g
+Jun 15, 2023 4:47:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Boia dulce Orlandos 100 g
+Jun 15, 2023 4:47:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Smochine deshidratate Orlandos, 500 g
+Jun 15, 2023 4:47:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Curmale deshidratate Orlandos, 500 g
+Jun 15, 2023 4:47:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere poliflora Fagurele Auriu 950 g
+Jun 15, 2023 4:47:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere poliflora Fagurele Auriu 400 g
+Jun 15, 2023 4:47:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Miere de tei Fagurele Auriu 500 g
+Jun 15, 2023 4:47:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Crenvursti cu piept de pui Meda, 250 g
+Jun 15, 2023 4:47:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata cu alune Heidi grandor, 100 g
+Jun 15, 2023 4:48:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata cu lapte si alune Heidi grandor, 100 g
+Jun 15, 2023 4:48:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Parizel vegetal Fito-Fitt 350 g
+Jun 15, 2023 4:48:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Carnati sticks picanti Aldis, 200 g
+Jun 15, 2023 4:48:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Carnati de plesoi Aldis 450 g
+Jun 15, 2023 4:48:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muschi file Aldis, 400 g
+Jun 15, 2023 4:48:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti cu unt Leibniz, 100 g
+Jun 15, 2023 4:48:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Napolitana Knoppers cu lapte si alune de padure, 25 g
+Jun 15, 2023 4:48:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti light cu unt Leibniz, 200 g
+Jun 15, 2023 4:48:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Zahar pudra vanilie Alex, 5 g
+Jun 15, 2023 4:48:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praline Toffifee 125g
+Jun 15, 2023 4:48:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane Toffifee Sarbatori, 400g
+Jun 15, 2023 4:48:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane gumate Mamba 106g
+Jun 15, 2023 4:49:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti Leibniz choco cu glazura de ciocolata 125g
+Jun 15, 2023 4:49:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam de vara extra Fox, 400 g
+Jun 15, 2023 4:49:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta cu ficat de pui Campofrio 150g
+Jun 15, 2023 4:50:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata asortata Merci, 400g
+Jun 15, 2023 4:50:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata asortata Merci Albastru, 250g
+Jun 15, 2023 4:50:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata asortata Merci Rosu, 250g
+Jun 15, 2023 4:50:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane gumate Haribo Goldbaren 200g
+Jun 15, 2023 4:50:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane gumate Haribo Kinder Schnuller 100g
+Jun 15, 2023 4:50:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane gumate Haribo Berries 100g
+Jun 15, 2023 4:50:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane gumate Haribo Happy Cola 100g
+Jun 15, 2023 4:50:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Jeleuri Haribo Goldbaren 100g
+Jun 15, 2023 4:50:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane gumate Haribo Primavera 100g
+Jun 15, 2023 4:50:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sardine baltice in sos tomat King Oscar 110g
+Jun 15, 2023 4:51:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Batoane afumate din soia in saramura Inedit, 350 g
+Jun 15, 2023 4:51:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bautura din soia Inedit, 0.75 l
+Jun 15, 2023 4:51:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bautura din soia cu aroma de vanilie Inedit, 0.75 l
+Jun 15, 2023 4:51:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Somon file afumat Ocean Fish, 150 g
+Jun 15, 2023 4:52:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Thai Lapte Cocos Blue Dragon, 400 ml
+Jun 15, 2023 4:52:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Smantana de gatit LaDorna, 15% grasime, 200 ml
+Jun 15, 2023 4:52:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Smantana de gatit LaDorna, 32% grasime, 200 ml
+Jun 15, 2023 4:52:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Unt superior Covalact, 80% grasime, 200 g
+Jun 15, 2023 4:52:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Unt Covalact, 65% grasime, 200 g
+Jun 15, 2023 4:52:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de alune cu cacao Nutella, 400 g
+Jun 15, 2023 4:53:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Kinder Delice, 39g
+Jun 15, 2023 4:53:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Prajitura Kinder Felie de lapte 28 g
+Jun 15, 2023 4:53:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Desert Kinder Pingui 30 g
+Jun 15, 2023 4:53:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata lapte si cacao Kinder, 4 bucati, 50g
+Jun 15, 2023 4:53:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baton napolitana Kinder Bueno, 43g
+Jun 15, 2023 4:53:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata Kinder Country 24g
+Jun 15, 2023 4:53:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ou de ciocolata cu surprize Kinder Joy 20g
+Jun 15, 2023 4:53:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praline de ciocolata Mon Cheri cu umplutura de cirese 158g
+Jun 15, 2023 4:53:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praline de ciocolata Ferrero Rocher, 300g
+Jun 15, 2023 4:53:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane Ferrero Rocher, 200 g
+Jun 15, 2023 4:53:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane Raffaello, 150 g
+Jun 15, 2023 4:53:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane Raffaello, 4 bucati, 40g
+Jun 15, 2023 4:53:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata Kinder 8 bucati, 100 g
+Jun 15, 2023 4:53:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Matias hering file Gourmet, 200 g
+Jun 15, 2023 4:54:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de vanilie pentru prajituri Dr.Oetker 55 g
+Jun 15, 2023 4:54:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf pentru desert Dr. Oetker Creme Ole cu capsuni 75g
+Jun 15, 2023 4:54:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de rom Dr. Oetker 4 x 2 ml
+Jun 15, 2023 4:54:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de migdale Dr. Oetker, 38 ml
+Jun 15, 2023 4:54:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de spuma Dr. Oetker pentru deserturi cu gust de frisca 48 g
+Jun 15, 2023 4:55:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Intaritor de frisca Dr. Oetker, 8 g
+Jun 15, 2023 4:55:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli crocant cu fructe Dr. Oetker Vitalis 300 g
+Jun 15, 2023 4:55:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de budinca Dr. Oetker cu gust de ciocolata, 50 g
+Jun 15, 2023 4:55:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de copt Dr. Oetker, 10 g
+Jun 15, 2023 4:56:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de lamaie pentru prajituri Dr. Oetker, 55 g
+Jun 15, 2023 4:56:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Drojdie uscata Dr. Oetker, 7 g
+Jun 15, 2023 4:56:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de rom Dr. Oetker, 38 ml
+Jun 15, 2023 4:56:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Glazura cu gust de ciocolata Dr. Oetker, 100 g
+Jun 15, 2023 4:56:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli crocant cu banane si ciocolata Dr. Oetker Vitalis 300 g
+Jun 15, 2023 4:57:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de budinca Dr. Oetker cu gust de caramel, 40 g
+Jun 15, 2023 4:57:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de ciocolata, rom si trufe pentru prajituri Dr.Oetker 55 g
+Jun 15, 2023 4:57:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli clasic cu bucatele de ciocolata Dr. Oetker Vitalis 300g
+Jun 15, 2023 4:57:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli crocant cu miere Dr. Oetker Vitalis 300 g
+Jun 15, 2023 4:57:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli crocant cu fructe uscate Dr. Oetker Vitalis 300 g
+Jun 15, 2023 4:57:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de budinca Dr. Oetker cu gust de frisca, 40 g
+Jun 15, 2023 4:57:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix pentru chec cu fulgi de ciocolata Dr. Oetker 380 g
+Jun 15, 2023 4:57:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema pentru Tiramisu Dr. Oetker 60 g
+Jun 15, 2023 4:57:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf pentru desert Dr. Oetker Crème Ole cu ciocolata 84 g
+Jun 15, 2023 4:57:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de vanilie Dr. Oetker 4 x 2 ml
+Jun 15, 2023 4:57:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de lamaie Dr.Oetker 38 ml
+Jun 15, 2023 4:57:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gelatina Dr. Oetker 10g
+Jun 15, 2023 4:58:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de spuma Dr. Oetker pentru deserturi cu gust de frisca light 45 g
+Jun 15, 2023 4:58:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gelfix Dr.Oetker 2:1, 25 g
+Jun 15, 2023 4:58:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf de budinca Dr. Oetker cu gust de vanilie 40 g
+Jun 15, 2023 4:58:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix Dr.Oetker pentru prajitura Musuroi de Cartita, 350g
+Jun 15, 2023 4:58:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Matias hering file afumat Ocean Fish, 200 g
+Jun 15, 2023 4:58:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de ciocolata pentru prajituri Dr.Oetker 55 g
+Jun 15, 2023 4:58:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Somon file marinat Ocean Fish, 150 g
+Jun 15, 2023 4:58:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praf pentru desert Dr. Oetker Creme Ole cu vanilie 80 g
+Jun 15, 2023 4:58:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de lamaie Dr. Oetker 4 x 2 ml
+Jun 15, 2023 4:58:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de vanilie Dr.Oetker 38 ml
+Jun 15, 2023 4:58:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Glazura cu gust de caramel Dr. Oetker 100 g
+Jun 15, 2023 4:58:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Conservant Dr.Oetker 7 g
+Jun 15, 2023 4:58:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema pentru tarte cu fructe Dr. Oetker 55 g
+Jun 15, 2023 4:58:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cacao Dr. Oetker 50 g
+Jun 15, 2023 4:59:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Budinca Dr. Oetker cu gust de capsuni 40 g
+Jun 15, 2023 4:59:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Amoniu Dr. Oetker pentru prajituri 7 g
+Jun 15, 2023 4:59:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bicarbonat de sodiu alimentar Dr. Oetker 50 g
+Jun 15, 2023 4:59:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Inghetata cu fructe de padure Aloma, 900 ml
+Jun 15, 2023 4:59:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Inghetata Profiterol Aloma, 900 ml
+Jun 15, 2023 5:01:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez Bob cu Bob mare Riso Scotti, 1 kg
+Jun 15, 2023 5:01:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez Bob cu Bob rotund Riso Scotti, 1 kg
+Jun 15, 2023 5:01:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bautura Ecologica Riso Scotti Chiccolat Orez 1 l
+Jun 15, 2023 5:01:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez Bob cu Bob colosal Riso Scotti, 1 kg
+Jun 15, 2023 5:01:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ulei de orez Riso Scotti 750 ml
+Jun 15, 2023 5:02:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt natural, ZuZu Fit, 2% grasime, 150 g
+Jun 15, 2023 5:02:48 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Smantana cremoasa Muller, 20% grasime, 375 g
+Jun 15, 2023 5:03:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza felii Ile de France Montaver, 150 g
+Jun 15, 2023 5:03:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza felii Ile de France Charmidor, 150 g
+Jun 15, 2023 5:05:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Unt pentru prajituri Unirea Original 2 x 250 g + Creme 2 x 250 g
+Jun 15, 2023 5:05:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam Victoria feliat Fox, 125 g
+Jun 15, 2023 5:05:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Jumari Elit, 200 g
+Jun 15, 2023 5:06:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar cu hrean Auchan, 300 g
+Jun 15, 2023 5:06:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza gouda ECO Andechser Natur, 150 g
+Jun 15, 2023 5:06:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea macinata Julius Meinl Jubilaum, 250 g
+Jun 15, 2023 5:06:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea macinata Julius Meinl Prasident, 250 g
+Jun 15, 2023 5:06:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez camolino Deroni, 1 kg
+Jun 15, 2023 5:06:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea boabe Julius Meinl Prasident, 500g
+Jun 15, 2023 5:06:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea macinata Julius Meinl Prasident, 500 g
+Jun 15, 2023 5:06:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Drop de ciuperci Fito-Fitt 200 g
+Jun 15, 2023 5:07:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita cu sunca Hochland, 140 g
+Jun 15, 2023 5:07:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Oua de gaina, Agricola, marime M, cod 3, 30 bucati
+Jun 15, 2023 5:07:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita cu sumantana Hochland, 140 g
+Jun 15, 2023 5:07:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza Tofu Fito-Fitt cu masline, 250 g
+Jun 15, 2023 5:07:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Caltab de ciuperci Fito-Fitt 200 g
+Jun 15, 2023 5:07:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cascaval afumat Hochland, 600 g
+Jun 15, 2023 5:07:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salan vegetal Fito-Fitt 350 g
+Jun 15, 2023 5:07:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza cu smantana Almette, proaspata, 150 g
+Jun 15, 2023 5:08:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Capanos vegetal Fito-Fitt 240 g
+Jun 15, 2023 5:08:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Lapte pentru cafea Meggle, 10% grasime, 10 x 10 g
+Jun 15, 2023 5:08:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita Hochland, mix formaggi, 140 g
+Jun 15, 2023 5:08:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita feliata Hochland, pentru cheesburger, 140 g
+Jun 15, 2023 5:08:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares cu fructe de padure 40 g / 20 de plicuri
+Jun 15, 2023 5:08:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cascaval afumat feliat Hochland, 150 g
+Jun 15, 2023 5:08:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares cu capsuni si fragi 40 g / 20 de plicuri
+Jun 15, 2023 5:08:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cascaval clasic Hochland, 600 g
+Jun 15, 2023 5:08:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza cu verdeata Hochland, 200 g
+Jun 15, 2023 5:08:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares cu lamaie 40 g / 20 de plicuri
+Jun 15, 2023 5:08:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza cu iaurt Almette, proaspata, 150 g
+Jun 15, 2023 5:08:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita cu smantana Hochland, feliata, 140 g
+Jun 15, 2023 5:08:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita Hochland, mix de branza, 140 g
+Jun 15, 2023 5:09:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Prajitura cu umplutura de cacao 7Days, 32g
+Jun 15, 2023 5:09:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza cu verdeata Almette, 150 g
+Jun 15, 2023 5:09:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Prajitura cu umplutura de fructe de padure si aroma de vanilie 7Days, 32g
+Jun 15, 2023 5:09:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Prajitura cu glazura de cacao si umplutura de cacao 7Days, 32g
+Jun 15, 2023 5:09:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Prajitura cu glazura de cacao si aroma de vanilie 7Days, 32g
+Jun 15, 2023 5:09:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Jeleuri forma dinozaur Haribo, 100g
+Jun 15, 2023 5:09:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane Skittles cu aroma de fructe si iaurt, 38g
+Jun 15, 2023 5:09:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboaone Gumate cu aroma de fructe si iaurt Skittles, 174g
+Jun 15, 2023 5:09:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita cu sunca Hochland, feliata, 140 g
+Jun 15, 2023 5:09:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam banatean mini Banat Bun, 200 g
+Jun 15, 2023 5:10:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cascaval clasic felii Hochland, 150 g
+Jun 15, 2023 5:10:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza Hochland Clasic, 200 g
+Jun 15, 2023 5:10:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Margarina Linco Neata, 500 g
+Jun 15, 2023 5:11:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Frisca lichida UHT Creme Patisserie, 1 l
+Jun 15, 2023 5:11:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Margarina Unirea Original, 250 g
+Jun 15, 2023 5:11:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Branza topita cu cascaval Hochland, felii, 140 g
+Jun 15, 2023 5:11:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Babycalm Mami si bebe, pentru bebelusi
+Jun 15, 2023 5:11:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Miez de floarea soarelui Mogyi, 100 g
+Jun 15, 2023 5:11:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bors Danila, 1.25L
+Jun 15, 2023 5:11:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cascaval Dobrogea Five Continents, +/- 1 kg
+Jun 15, 2023 5:11:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares de musetel 20 g / 20 de plicuri
+Jun 15, 2023 5:11:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares de sunatoare 20 g / 20 de plicuri
+Jun 15, 2023 5:11:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares de tei 20 g / 20 de plicuri
+Jun 15, 2023 5:11:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai natural Fares pentru o silueta perfecta 30 g / 20 de plicuri
+Jun 15, 2023 5:11:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai natural Fares Somn Linistit 30 g / 20 de plicuri
+Jun 15, 2023 5:11:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares de galbenele 20 g / 20 de plicuri
+Jun 15, 2023 5:11:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Fares de menta 20 g / 20 de plicuri
+Jun 15, 2023 5:12:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai natural Fares pentru digestie usoara 30 g / 20 de plicuri
+Jun 15, 2023 5:12:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai natural Fares antistres 30 g / 20 de plicuri
+Jun 15, 2023 5:12:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea solubila Amigo 50 g
+Jun 15, 2023 5:12:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea instant Amigo, 100g
+Jun 15, 2023 5:13:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paste fainoase cu ou Penne Monte Banato 400 g
+Jun 15, 2023 5:13:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Winterfresh Original 14 g
+Jun 15, 2023 5:13:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paine cu faina de secara Vel Pitar, feliata 600 g
+Jun 15, 2023 5:13:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Macaroane Monte Banato 300 g
+Jun 15, 2023 5:13:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Spirale Monte Banato 400 g
+Jun 15, 2023 5:13:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paine din faina alba de grau Vel Pitar, feliata 600 g
+Jun 15, 2023 5:13:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Scoici Monte Banato 400 g
+Jun 15, 2023 5:13:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Taitei lati Monte Banato 200 g
+Jun 15, 2023 5:13:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fidea scurta Monte Banato 400 g
+Jun 15, 2023 5:13:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu visine Danone Delicios, 400 g
+Jun 15, 2023 5:13:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Spaghetti cu ou Monte Banato 400 g
+Jun 15, 2023 5:14:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Melci spiralati Monte Banato 400 g
+Jun 15, 2023 5:14:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt de baut Actimel, cu aroma de capsuni, 4 x 100 g
+Jun 15, 2023 5:14:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Orbit Winterfrost Pellets 14 g
+Jun 15, 2023 5:14:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez cu porumb si legume asortate Uncle Statis, 450g
+Jun 15, 2023 5:14:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Airwaves Menthol si Eucalyptus Pelle 10 drajeuri
+Jun 15, 2023 5:14:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paine cu faina graham Vel Pitar, feliata 600 g
+Jun 15, 2023 5:14:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Airwaves Cool Cassis 14 g
+Jun 15, 2023 5:14:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fidea Monte Banato 200 g
+Jun 15, 2023 5:14:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez mexican Uncle Statis, 450g
+Jun 15, 2023 5:14:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu musli si capsuni Activia, 125 g
+Jun 15, 2023 5:14:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Taitei lungi Monte Banato 200 g
+Jun 15, 2023 5:14:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu musli Activia, 125 g
+Jun 15, 2023 5:14:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Desert cu aroma de vanilie Danette 125 g
+Jun 15, 2023 5:14:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Orbit Watermelon Pellets 14 g
+Jun 15, 2023 5:15:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu musli si piersici Activia, 125 g
+Jun 15, 2023 5:15:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt de baut Actimel, multifructe, 4 x 100 g
+Jun 15, 2023 5:15:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu caise Danone Delicios, 400 g
+Jun 15, 2023 5:15:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu capsuni Danone Delicios, 400 g
+Jun 15, 2023 5:15:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Orbit Peppermint Pellets 14 g
+Jun 15, 2023 5:15:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat Orbit Spearmint Pellets 14 g
+Jun 15, 2023 5:15:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Iaurt cu caise Casa Buna, 100 g
+Jun 15, 2023 5:15:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pate vegetal Mandy original 120 g
+Jun 15, 2023 5:16:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Tocana de legume Mandy 300 g
+Jun 15, 2023 5:16:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole cu costita afumata Mandy, 300g
+Jun 15, 2023 5:16:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pate vegetal Mandy cu ciuperci 120 g
+Jun 15, 2023 5:16:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Zacusca Mandy cu vinete coapte pe flacara 300 g
+Jun 15, 2023 5:17:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cappuccino Dolce Vita Kruger fara zahar, 150 g
+Jun 15, 2023 5:17:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti populari Tecsa, 1 kg
+Jun 15, 2023 5:17:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Desert de ciocolata Danette 125 g
+Jun 15, 2023 5:18:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Smantana Casa Buna, 20% grasime, 370 g
+Jun 15, 2023 5:18:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Smantana Casa Buna, 20% grasime, 850 g
+Jun 15, 2023 5:19:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat fara zahar cu arome de menta si mentol Orbit Spearmint, 7 bucati, 15.6 g
+Jun 15, 2023 5:19:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Guma de mestecat fara zahar cu arome de menta intensa si mentol Orbit Peppermint, 15.6 g
+Jun 15, 2023 5:19:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Arahide in pastai coapte si sarate Orlandos, 1 kg
+Jun 15, 2023 5:19:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Migdale crude Olam Nuts, 1 kg
+Jun 15, 2023 5:19:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dropsuri Bucuria, 190g
+Jun 15, 2023 5:19:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dropsuri cu aroma de fructe, 190g
+Jun 15, 2023 5:19:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix pentru Cozonac Dr.Oetker, 677g
+Jun 15, 2023 5:23:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam crud uscat, fin feliat din carne de porc si curcan Marten, 80 g
+Jun 15, 2023 5:23:48 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam crud uscat, fin feliat din carne de porc si branza Marten, 80 g
+Jun 15, 2023 5:24:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Urechi crocante porc Integra atm, +/- 500 g
+Jun 15, 2023 5:24:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Napolitana cu cacao Tecsa, 750g
+Jun 15, 2023 5:26:57 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Napolitane cu crema de vanilie Gullon, 60 g
+Jun 15, 2023 5:27:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pufuleti cu sare Pombar, 75 g
+Jun 15, 2023 5:27:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pufuleti Pom-Bar cu gust de cascaval, 70 g
+Jun 15, 2023 5:27:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata Ritter Sport, 81% cacao, 100 g
+Jun 15, 2023 5:27:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Seminte susan Orlandos, 250g
+Jun 15, 2023 5:27:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Seminte de in Orlandos, 100g
+Jun 15, 2023 5:27:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Jeleuri cu arome de fructe Roshen Jelly, 200g
+Jun 15, 2023 5:27:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Caramele cu lapte Roshen Korivka, 205 g
+Jun 15, 2023 5:27:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Caramele Roshen Creamy Toffee, 150g
+Jun 15, 2023 5:27:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dropsuri cu aroma de fructe Bim Bom, 200g
+Jun 15, 2023 5:27:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Stafide brune Orlandos, 500g
+Jun 15, 2023 5:27:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Stafide aurii Orlandos, 500g
+Jun 15, 2023 5:27:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Seminte de mac Orlandos, 250g
+Jun 15, 2023 5:27:57 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dropsuri cu lapte si cafea Coffee Like, 1kg
+Jun 15, 2023 5:27:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baton de ciocolata Kandia, cu brandy si portocala, 46g
+Jun 15, 2023 5:28:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baton de ciocolata Kandia, cu crema de cafea, 47g
+Jun 15, 2023 5:28:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Covrigei Chio Mini Brezli, 80 g
+Jun 15, 2023 5:28:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Seminte de dovleac Nutline, 100 g
+Jun 15, 2023 5:28:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fistic Nutline, 150 g
+Jun 15, 2023 5:28:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Seminte floarea soarelui Nutline, 100 g
+Jun 15, 2023 5:28:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sos tagine chiftelute marocane Al'Fez, 450 g
+Jun 15, 2023 5:28:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sos tagine caise si coriandru Al'Fez, 450 g
+Jun 15, 2023 5:28:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Couscous condimentat in stil marocan Al'Fez, 200 g
+Jun 15, 2023 5:28:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta tahini Al'Fez, 160 g
+Jun 15, 2023 5:28:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta hot chilli Al'Fez pentru mix, uns sau marinat si gatit, 95 g
+Jun 15, 2023 5:28:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix falafel libanese Al'Fez, 150 g
+Jun 15, 2023 5:28:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paine din grau dur Auchan, 400 g
+Jun 15, 2023 5:28:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Snacks Chio Party Mix covrigei si biscuiti, 200 g
+Jun 15, 2023 5:28:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salata de ton Dardanel cu fasole, 185 g
+Jun 15, 2023 5:29:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salata de ton Dardanel cu porumb, 185 g
+Jun 15, 2023 5:29:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gustare de ovaz cu mar si scortisoara Vitalis, 50g
+Jun 15, 2023 5:29:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gustare de ovaz cu ciocolata Vitalis, 60g
+Jun 15, 2023 5:29:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gustare de ovaz cu ciocolata alba si capsuni Vitalis, 56g
+Jun 15, 2023 5:29:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix mexican de legume congelate, 350g
+Jun 15, 2023 5:29:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole galbena taiata, 350g
+Jun 15, 2023 5:31:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Linte rosie Orlandos Natural, 500 g
+Jun 15, 2023 5:31:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole alba Orlandos Maestro, 900 g
+Jun 15, 2023 5:31:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ardei gras in 3 culori, 350g
+Jun 15, 2023 5:31:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte Clasic, 200 g
+Jun 15, 2023 5:31:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte si chimen, 200 g
+Jun 15, 2023 5:31:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte si rozmarin, 200 g
+Jun 15, 2023 5:31:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte si chilly, 200 g
+Jun 15, 2023 5:31:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte Mediteraneeni, 200 g
+Jun 15, 2023 5:31:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte si ceapa, 200 g
+Jun 15, 2023 5:32:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte si scortisoara, 200 g
+Jun 15, 2023 5:32:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Keta Crackers cu seminte Maxx, cu 60% seminte, 200 g
+Jun 15, 2023 5:32:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez camolino Atifco, 1 kg
+Jun 15, 2023 5:32:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez bob lung Atifco, 1 kg
+Jun 15, 2023 5:32:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Orez bob mare Atifco, 1 kg
+Jun 15, 2023 5:32:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole bob mic Atifco, 900 g
+Jun 15, 2023 5:32:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Malai Kukoricadara Atifco, 500 g
+Jun 15, 2023 5:32:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Toba de ciolan de porc CsArdas, 300g
+Jun 15, 2023 5:33:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Slanina fiarta si afumata cu usturoi, +/- 300 g
+Jun 15, 2023 5:33:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Soocitzi Sare de mare si miere, 200 g
+Jun 15, 2023 5:33:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Soocitzi rosii si chimen, 200 g
+Jun 15, 2023 5:33:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Soocitzi ceapa caramelizata, 200 g
+Jun 15, 2023 5:34:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Hribi uscati eco Dry Fruits Transilvania, 20g
+Jun 15, 2023 5:34:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Miez de nuca eco Dry Fruits Transilvania, 200g
+Jun 15, 2023 5:34:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Miez de nuca macinat eco Dry Fruits Transilvania, 250g
+Jun 15, 2023 5:35:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Carnati oltestesti, 80% carne Caroli, 280g
+Jun 15, 2023 5:35:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Carnati afumati Mangalita Szekely Falat, 250g
+Jun 15, 2023 5:35:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crenvursti cu carne de vita Meda, +/- 1 kg
+Jun 15, 2023 5:35:48 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Supa de linte cu quinoa, Legurme
+Jun 15, 2023 5:35:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Supa de linte rosi cu bulgur, 250g
+Jun 15, 2023 5:35:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Supa de rosii, Legurme
+Jun 15, 2023 5:35:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole rosie in sos mexican, Legurme
+Jun 15, 2023 5:36:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paste cu sos arrabiata ready to eat, Legurme
+Jun 15, 2023 5:36:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paste cu sos arrabiata, Legurme
+Jun 15, 2023 5:36:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pilaf bulgur cu ciuperci, Legurme
+Jun 15, 2023 5:36:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pilaf bulgur cu quinoa, Legurme
+Jun 15, 2023 5:43:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule intenso Kimbo Napoli Nespresso, 10 capsule
+Jun 15, 2023 5:45:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar Hrean Knorr 270 g
+Jun 15, 2023 5:45:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muschi tiganesc feliat Meda, 100 g
+Jun 15, 2023 5:45:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam Victoria feliat Meda, 100 g
+Jun 15, 2023 5:45:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sunca de pui feliata Meda, 100 g
+Jun 15, 2023 5:45:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muschi file afumat feliat Meda, 100 g
+Jun 15, 2023 5:45:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar Dulce Knorr 270 g
+Jun 15, 2023 5:45:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar clasic Kamis 185g
+Jun 15, 2023 5:45:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Zahar brut din trestie de zahar Sano Vita, 500 g
+Jun 15, 2023 5:46:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Felii texturate din soia Sano Vita, 100 g
+Jun 15, 2023 5:47:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baza Mancare Delikat, cu gust de legume 75 g
+Jun 15, 2023 5:47:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dulceata de merisoare Camara Motului, 370g
+Jun 15, 2023 5:47:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dulceata de gutui Camara Motului, 370g
+Jun 15, 2023 5:47:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dulceata de muguri de brad Camara Motului, 370g
+Jun 15, 2023 5:47:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Zacusca de pastrav Camara Motului, 370g
+Jun 15, 2023 5:47:57 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Piper negru boabe Kamis 20g
+Jun 15, 2023 5:47:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Piper alb macinat Kamis, 20 g
+Jun 15, 2023 5:48:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Boia de ardei dulce Kamis 20 g
+Jun 15, 2023 5:48:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paste Bucatini no.9 Barilla, 500g
+Jun 15, 2023 5:48:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cimbru Galeo 10g
+Jun 15, 2023 5:48:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix condimente pentru carnati Kamis 25 g
+Jun 15, 2023 5:48:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix Knorr friptura pui cu usturoi 28 g
+Jun 15, 2023 5:48:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Rasnita Kamis: Condimente pentru carne 48g
+Jun 15, 2023 5:48:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Punga cu condimente pentru fiptura de pui picant Knorr, 28g
+Jun 15, 2023 5:48:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix Knorr friptura de porc cu usturoi si afumatura 30 g
+Jun 15, 2023 5:48:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Somon file cu piele DaySeady, 4 x 125 g
+Jun 15, 2023 5:48:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bors Magic Delikat, 20g
+Jun 15, 2023 5:48:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cub Knorr 3l, cu gust de vita 54 g
+Jun 15, 2023 5:48:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Usturoi granulat Kamis 25g
+Jun 15, 2023 5:48:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cub Knorr 3l, cu gust de pui 54 g
+Jun 15, 2023 5:48:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Oregano Kamis, 10 g
+Jun 15, 2023 5:49:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Busuioc Kamis 10g
+Jun 15, 2023 5:49:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix de condimente pentru cartofi prajiti Galeo 20g
+Jun 15, 2023 5:49:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cub Knorr 3l, cu gust de legume 54 g
+Jun 15, 2023 5:49:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cimbru Kamis 10g
+Jun 15, 2023 5:49:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Foi de dafin Kamis 5g
+Jun 15, 2023 5:49:28 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baza pentru mancare Delikat cu gust de legume, 1kg
+Jun 15, 2023 5:49:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar Knorr clasic 500 g
+Jun 15, 2023 5:49:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar Clasic Knorr, 270g
+Jun 15, 2023 5:49:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fulgi de ovaz Fortin, 500 g
+Jun 15, 2023 5:49:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar frantuzesc Kamis 185gr
+Jun 15, 2023 5:49:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Supa Knorr cu gust de vita si taitei 59 g
+Jun 15, 2023 5:49:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli exotic Sano Vita 250 g
+Jun 15, 2023 5:49:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baza Mancare Delikat, cu gust de gaina 75 g
+Jun 15, 2023 5:49:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix de condimente pentru cartofi prajiti Kamis 20g
+Jun 15, 2023 5:49:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli excelent cu fructe Sano Vita instant 500 g
+Jun 15, 2023 5:49:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli cu fructe Sano Vita 500 g
+Jun 15, 2023 5:50:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Musli cu fructe Sano Vita 1 Kg
+Jun 15, 2023 5:50:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Condimente pentru carne de porc Kamis 25g
+Jun 15, 2023 5:50:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix de condimentepentru gratar Kamis 25g
+Jun 15, 2023 5:50:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix de condimente pentru pui Kamis 30g
+Jun 15, 2023 5:50:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Painea brutarului cu maia Auchan, 400 g
+Jun 15, 2023 5:50:43 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Paine cu maia si faina neagra Auchan, 400 g
+Jun 15, 2023 5:50:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bagheta frantuzeasca cu maia Auchan, 300 g
+Jun 15, 2023 5:50:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cuisoare Kamis 10g
+Jun 15, 2023 5:50:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Chifla alba cu maia Auchan, 100 g
+Jun 15, 2023 5:50:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Chifla cu maia si ceapa Auchan, 100 g
+Jun 15, 2023 5:50:57 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Chifla alba cu maia Auchan, 4 x 100 g
+Jun 15, 2023 5:51:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Scortisoara macinata Kamis 15 g
+Jun 15, 2023 5:51:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Rulada elvetiana 7 Days cu umplutura de cacao 200 g
+Jun 15, 2023 5:51:10 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Croissant cu umplutura de cacao 7 Days, 65 g
+Jun 15, 2023 5:51:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Tentacule de caracatita DaySeady, 200 g
+Jun 15, 2023 5:51:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Scoici in cochilie DaySeady, 1 kg
+Jun 15, 2023 5:51:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Croissant cu umplutura de cacao Chipicao, 60 g
+Jun 15, 2023 5:51:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cocktail fructe de mare fara surimi DaySeady
+Jun 15, 2023 5:51:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mini croissante cu umplutura de aroma de vin spumant 7 Days, 185 g
+Jun 15, 2023 5:51:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pastrav eviscerat DaySeady, +/- 500 g
+Jun 15, 2023 5:51:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mini croissante cu umplutura de cacao 7 Days, 185 g
+Jun 15, 2023 5:52:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Corn cu marmelada Auchan, 150 g
+Jun 15, 2023 5:52:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cozonac cu nuca si cacao, 700g
+Jun 15, 2023 5:52:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Poale-n brau Auchan, 150 g
+Jun 15, 2023 5:52:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cozonac cu nuca, rahat, stafide si cacao 700g, Auchan
+Jun 15, 2023 5:52:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Saratele cu branza Auchan, +/- 500g
+Jun 15, 2023 5:52:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pandispan cu visine, +/- 1 kg
+Jun 15, 2023 5:52:31 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baigli cu nuca Auchan, +/- 1 kg
+Jun 15, 2023 5:52:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cozonac cu umplutura de nuca, rahat, stafide si cacao, +/- 1 kg
+Jun 15, 2023 5:52:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Placinta cu mere, +/- 1kg
+Jun 15, 2023 5:52:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pandispan cu branza, piersici si zmeura
+Jun 15, 2023 5:52:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Placinta cu dovleac, +/- 1kg
+Jun 15, 2023 5:52:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Coaste de porc marinate Edenia, 600 g
+Jun 15, 2023 5:52:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ecler cu umplutura de ciocolata La Strada, 4 x 60 g
+Jun 15, 2023 5:52:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ecler cu umplutura de cafea La Strada, 4 x 60 g
+Jun 15, 2023 5:52:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Prajitura Lava cake cu ciocolata La Strada, 2 x 100 g
+Jun 15, 2023 5:53:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceafa presata feliata Meda, 100 g
+Jun 15, 2023 5:54:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Chifle hamburger Auchan, 2 x 80 g
+Jun 15, 2023 5:54:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pizza Vegana Mexicana Naturali, 350g
+Jun 15, 2023 5:54:19 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pizza Vegana Capricciosa Naturli, 350g
+Jun 15, 2023 5:54:50 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bomboane Toffifee, 200g
+Jun 15, 2023 5:54:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata asortata Merci Mousse, 210g
+Jun 15, 2023 5:54:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praline umplute cu lichior Roshen, 150g
+Jun 15, 2023 5:55:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praline de ciocolata neagra Roshen Assortment 145g
+Jun 15, 2023 5:55:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata cu lapte si alune Milka, 270 g
+Jun 15, 2023 5:55:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ciocolata cu lapte Milka, 270 g
+Jun 15, 2023 5:55:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Faina alba 000 Boromir, 1 kg
+Jun 15, 2023 5:55:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta de tomate Sultan, concentratie 24%, 720 g
+Jun 15, 2023 5:55:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta de tomate Sultan, concentratie 24%, 70 g
+Jun 15, 2023 5:55:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta de tomate Sultan, concentratie 24%, 800 g
+Jun 15, 2023 5:55:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Foi Boromir de cremsnit, 380 g
+Jun 15, 2023 5:55:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Amestec mexican D'aucy, 300 g
+Jun 15, 2023 5:55:42 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mazare verde D'aucy, 800 g
+Jun 15, 2023 5:55:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Spanac D'aucy, 765 g
+Jun 15, 2023 5:55:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: L-Carnitin Instant, plic 15 g
+Jun 15, 2023 5:55:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti cu vanilie Tecsa, 70 g
+Jun 15, 2023 5:55:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bautura energizanta Instant Energy Drink, plic 15 g
+Jun 15, 2023 5:55:53 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti cu cacao Tecsa, 70 g
+Jun 15, 2023 5:56:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baton Protein-R 60g
+Jun 15, 2023 5:56:02 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de migdale Coseli, 25ml
+Jun 15, 2023 5:56:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de rom Coseli, 25ml
+Jun 15, 2023 5:56:07 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Porumb dulce D'aucy, 150 g
+Jun 15, 2023 5:56:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Esenta de vanilie Coseli, 25ml
+Jun 15, 2023 5:56:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Piscoturi Savoiardi Boromir, 400 g
+Jun 15, 2023 5:56:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Drajeuri gumate mentolate Mentos Mint 38 g
+Jun 15, 2023 5:56:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Piscoturi Savoiardi Boromir, 200 g
+Jun 15, 2023 5:56:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Drajeuri gumate mentolate Mentos Fruit 38 g
+Jun 15, 2023 5:56:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Blat de tort Boromir simplu, 400 g
+Jun 15, 2023 5:56:33 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti Kremali cu crema cacao, 80 g
+Jun 15, 2023 5:56:35 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sare iodata gema marunta Salrom 1 kg
+Jun 15, 2023 5:56:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin de fructe de padure 40 g
+Jun 15, 2023 5:56:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin menta 80 plicuri 104 g
+Jun 15, 2023 5:56:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin musetel 80 x1.3 g
+Jun 15, 2023 5:56:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin de sunatoare 80 x 1.3 g
+Jun 15, 2023 5:56:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin verde 40 g
+Jun 15, 2023 5:56:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin de galbenele 18 plicuri 18 g
+Jun 15, 2023 5:57:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin de sunatoare 20 de plicuri, 36 g
+Jun 15, 2023 5:57:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai de menta Belin, 20 plicuri, 36 g
+Jun 15, 2023 5:57:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ceai Belin de fucte de padure 100 x2 g
+Jun 15, 2023 5:57:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole verde D'aucy, 400 g
+Jun 15, 2023 5:58:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Felie de lapte Kinder Delice Cocos, 37g
+Jun 15, 2023 5:58:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema tartinabila Nutella, 700g
+Jun 15, 2023 5:58:39 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Napolitana cu lapte si alune de padure Duplo
+Jun 15, 2023 5:58:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Napolitane cu ciocolata Kinder Happy Hippo, 103.5 g
+Jun 15, 2023 5:58:46 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Chifla cu maia si seminte Auchan, 100 g
+Jun 15, 2023 5:59:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Carne tocata de porc, +/- 600 g
+Jun 15, 2023 6:00:04 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cozonac cu mac, 700g
+Jun 15, 2023 6:02:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Rosii prunisoare, +/- 1 kg
+Jun 15, 2023 6:04:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule espresso roast Starbucks Dolce Gusto, 12 capsule
+Jun 15, 2023 6:04:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule espresso Columbia Starbucks Dolce Gusto, 12 capsule
+Jun 15, 2023 6:04:52 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule americano blend Starbucks Dolce Gusto, 12 capsule
+Jun 15, 2023 6:04:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule latte macchiato Starbucks Dolce Gusto, 6 capsule x 6 lapte
+Jun 15, 2023 6:05:06 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea macinata Lavazza Mattino, 250 g
+Jun 15, 2023 6:05:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cappuccino capsule Starbucks Dolce Gusto, 6 capsule x 6 lapte
+Jun 15, 2023 6:05:12 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule latte macchiato caramel Starbucks Dolce Gusto, 6 capsule x 6 lapte
+Jun 15, 2023 6:05:15 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule house blend Starbucks Nespresso, 10 capsule
+Jun 15, 2023 6:05:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule caffe verona Starbucks Nespresso, 10 capsule
+Jun 15, 2023 6:05:17 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule Columbia Starbucks Nespresso, 10 capsule
+Jun 15, 2023 6:05:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule pike place lungo Starbucks Nespresso, 10 capsule
+Jun 15, 2023 6:05:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule espresso roast Starbucks Nespresso, 10 capsule
+Jun 15, 2023 6:05:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule espresso blond roast Nespresso, 10 capsule
+Jun 15, 2023 6:09:34 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Praline de ciocolata Roshen Shooters cu lichior de rom 150g
+Jun 15, 2023 6:09:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Tarhon Galeo 8g
+Jun 15, 2023 6:11:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti digestivi clasic Gullon, 400 g
+Jun 15, 2023 6:11:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Biscuiti Gullon simpli, 170 g
+Jun 15, 2023 6:11:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix de condimente pentru sarmale Galeo 20g
+Jun 15, 2023 6:11:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Foi de dafin Galeo 4g
+Jun 15, 2023 6:12:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule decafeinizata Auchan Nespresso, 10 capsule
+Jun 15, 2023 6:12:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea capsule arabica Auchan Nespresso, 10 capsule
+Jun 15, 2023 6:13:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mix de condimente pentru carne la gratar Galeo 20g
+Jun 15, 2023 6:14:03 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mustar Clasic Olympia la borcan, 300 g
+Jun 15, 2023 6:14:05 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Rasnita Kamis cu piper mozaic boabe 36g
+Jun 15, 2023 6:14:08 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mazare boabe Olympia, 680 g
+Jun 15, 2023 6:14:56 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mini chec fara zahar Bravo, 30 g
+Jun 15, 2023 6:15:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pate vegetal Hame cu ardei rosu 75 g
+Jun 15, 2023 6:16:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sare Iodata Olympia 500 g
+Jun 15, 2023 6:16:14 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mini briose Delasheras cu aroma de cacao si vanilie 180 g
+Jun 15, 2023 6:17:27 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Compot de piersici Olympia 365 g
+Jun 15, 2023 6:17:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta de tomate Sultan, concentratie 24%, 400 g
+Jun 15, 2023 6:18:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pasta de tomate Olympia 580 ml
+Jun 15, 2023 6:18:21 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Somon file afumat Ocean Fish, 200 g
+Jun 15, 2023 6:18:32 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pulpe de pui intregi Coco Rico, +/- 1 kg
+Jun 15, 2023 6:18:37 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muschiulet de pui Coco Rico, caserola +/- 1Kg
+Jun 15, 2023 6:18:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mazare verde Casa Taraneasca, 400g
+Jun 15, 2023 6:18:57 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Piept de pui dezosat fara piele Coco Rico, caserola, +/- 1.2 kg
+Jun 15, 2023 6:19:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole galbena pastai Casa Taraneasca, 400g
+Jun 15, 2023 6:19:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Vinete coapte si tocate Casa Taraneasca, 400g
+Jun 15, 2023 6:19:24 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Fasole verde Casa Taraneasca, 400g
+Jun 15, 2023 6:19:29 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Legume pentru bors Casa Taraneasca, 400g
+Jun 15, 2023 6:19:38 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam Victoria Extra Caroli cu porc, +/- 1 kg
+Jun 15, 2023 6:19:40 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muschi file Aldis, +/- 250g
+Jun 15, 2023 6:20:01 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gem de capsuni Arovit 360 g
+Jun 15, 2023 6:20:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Carnati afumati Maestro, +/- 1Kg
+Jun 15, 2023 6:20:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Mini eclere asortate Auchan, +/- 1Kg
+Jun 15, 2023 6:20:18 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gem de caise Arovit 360 g
+Jun 15, 2023 6:20:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Dulceata de visine Arovit 335 g
+Jun 15, 2023 6:20:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Gem de visine Arovit 360 g
+Jun 15, 2023 6:20:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pastrav eviscerat, +/- 1 kg
+Jun 15, 2023 6:20:49 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Tort Amandina Auchan, +/- 1 kg
+Jun 15, 2023 6:20:51 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Tort duo cafea si ciocolata Auchan, +/- 1 kg
+Jun 15, 2023 6:20:55 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Bezele asortate Auchan, +/- kg
+Jun 15, 2023 6:21:45 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam de caprioara feliat Auchan, 80 g
+Jun 15, 2023 6:21:47 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam de caprioara Auchan, 200 g
+Jun 15, 2023 6:21:54 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam ecologic cu piper negru Auchan, 70 g
+Jun 15, 2023 6:21:59 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salam ecologic cu boia dulce Auchan, 70 g
+Jun 15, 2023 6:22:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Somon file Filiera Auchan, +/- 1 kg
+Jun 15, 2023 6:22:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Somon medalion Filiera Auchan, +/- 1 kg
+Jun 15, 2023 6:22:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muffin duo ciocolata Auchan, 70g
+Jun 15, 2023 6:22:23 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Muffin cu biscuiti Auchan, 80g
+Jun 15, 2023 6:22:36 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cafea instant Nescafe Crema, 100g
+Jun 15, 2023 6:23:13 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salata icre de crap cu ceapa Auchan, 135 g
+Jun 15, 2023 6:23:16 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Salata icre de hering cu ceapa Auchan, 135 g
+Jun 15, 2023 6:23:26 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Ardei capia copt si decojit in otet Auchan, 690 g
+Jun 15, 2023 6:24:20 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Hering marinat cu lamaie Bonito, 270 g
+Jun 15, 2023 6:24:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Telina Apio, la bucata
+Jun 15, 2023 6:25:44 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductNotEligibleForUpdate
+INFO: Product not eligible for update: Ulei de floarea soarelui Bunica, 1 l
+Jun 15, 2023 6:25:58 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Cascaval dalia, +/- 1 kg
+Jun 15, 2023 6:26:00 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sunca Praga Caroli, +/- 250 g
+Jun 15, 2023 6:26:09 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Baton ciocolata si cocos Bounty dublu, 57g
+Jun 15, 2023 6:26:11 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Polonezi Meda din carne de porc, +/- 1Kg
+Jun 15, 2023 6:26:22 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Malai extra Arpis degerminat 1 Kg
+Jun 15, 2023 6:26:25 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Sunca de porc Vascar, 300 g
+Jun 15, 2023 6:26:30 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Pate de pui Moldova 100 g
+Jun 15, 2023 6:26:41 AM Proiect.MDS.web.shopScraping.LogProductDetails logProductInsertion
+INFO: Product inserted into database: Crema de branza cu verdeata Almette, 250 g

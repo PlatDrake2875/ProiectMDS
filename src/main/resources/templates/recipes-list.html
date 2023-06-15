@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Recipe App</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Bootstrap icons-->
@@ -18,7 +18,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand" href="index.html">Recipe App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
@@ -26,26 +26,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                            <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-                            <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                            <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
-                            <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log in</a></li>
                 </ul>
             </div>
         </div>
@@ -54,23 +36,24 @@
     <section class="py-5">
         <div class="container px-5 my-5">
             <div class="text-center mb-5">
-                <h1 class="fw-bolder">Our Work</h1>
-                <p class="lead fw-normal text-muted mb-0">Company portfolio</p>
+                <h1 class="fw-bolder">Glosar de retete</h1>
             </div>
             <div class="row gx-5">
-                <div th:each="recipe : ${recipes}" class="col-lg-6">
-                    <div class="position-relative mb-5">
-                        <img class="img-fluid rounded-3 mb-3" th:src="${recipe.photoURL}" alt="..."/>
-                        <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Recipe</a>
+                <div th:each="recipe :${recipes}" class="col-lg-6">
+                    <div class="d-flex position-relative mb-5">
+                        <div class="col-4">
+                            <img class="img-fluid rounded-3 mb-3" th:src="${recipe.photoURL}" alt="Recipe Image" style="object-fit: cover; width: 500px; height: 200px;" />
+                        </div>
+                        <div class="col-8 ms-4">
+                            <h3 class="fw-bolder" th:text="${recipe.recipeName}"></h3>
+                            <p th:text="${recipe.portionSize} + ' portii'"></p>
+                            <p th:text="${recipe.estimatedCookingTime} + ' minute'"></p>
+                            <p th:text="${recipe.estimatedPreparationTime} + ' minute'"></p>
+                            <a th:href="@{'/recipe/' + ${recipe.id}}" class="btn btn-primary">Vezi mai mult</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="py-5 bg-light">
-        <div class="container px-5 my-5">
-            <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-            <a class="btn btn-lg btn-primary" href="#!">Contact us</a>
         </div>
     </section>
 </main>
@@ -79,7 +62,7 @@
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
             <div class="col-auto">
-                <div class="small m-0 text-white">Copyright &copy; Your Website 2023</div>
+                <div class="small m-0 text-white">Copyright &copy; Recipe App 2023</div>
             </div>
             <div class="col-auto">
                 <a class="link-light small" href="#!">Privacy</a>

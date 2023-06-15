@@ -35,13 +35,13 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product getProductById(int id) {
-        ProductTableOperations pto = new ProductTableOperations(new Database("jdbc:mysql://localhost/dbProducts", "root", "root"));
+        ProductTableOperations pto = new ProductTableOperations(new Database("jdbc:mysql://localhost/dbProducts", "ioana", "ioana7"));
         return pto.getProductByColumnValue("id", Integer.toString(id));
     }
 
     @Override
     public List<ProductDto> getAllProducts() {
-        ProductTableOperations pto = new ProductTableOperations(new Database("jdbc:mysql://localhost/dbProducts", "root", "root"));
+        ProductTableOperations pto = new ProductTableOperations(new Database("jdbc:mysql://localhost/dbProducts", "ioana", "ioana7"));
         List<Product> products = pto.getAllProducts();
         return products.stream().map((product) -> ProductToDto(product)).collect(Collectors.toList());
 

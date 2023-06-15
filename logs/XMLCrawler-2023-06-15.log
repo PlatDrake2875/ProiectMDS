@@ -1,0 +1,8 @@
+Jun 15, 2023 5:10:32 AM Proiect.MDS.web.shopScraping.XMLCrawler handleException
+SEVERE: An error occurred while trying to process a URL or XML file: HTTP error fetching URL. Status=500, URL=[https://www.auchan.ro/crema-de-branza-cu-hrean-almette-proaspata-150-g/p]
+Jun 15, 2023 5:15:35 AM Proiect.MDS.web.shopScraping.XMLCrawler handleException
+SEVERE: An error occurred while trying to process a URL or XML file: Read timed out
+Jun 15, 2023 5:24:40 AM Proiect.MDS.web.shopScraping.XMLCrawler handleException
+SEVERE: An error occurred while trying to process a URL or XML file: HTTP error fetching URL. Status=500, URL=[https://www.auchan.ro/notebook-a5-auchan-90-file/p]
+Jun 15, 2023 6:24:40 AM Proiect.MDS.web.shopScraping.XMLCrawler handleException
+SEVERE: An error occurred while trying to process a URL or XML file: Read timed out

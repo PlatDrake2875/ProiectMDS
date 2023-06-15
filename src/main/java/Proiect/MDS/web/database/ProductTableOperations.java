@@ -199,7 +199,7 @@ public class ProductTableOperations {
      *
      * @return A list of all products in the products table.
      */
-    List<Product> getAllProducts() {
+    public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
         String query = "SELECT * FROM products";
 

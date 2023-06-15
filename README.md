@@ -15,7 +15,7 @@
 
 
 
-## Recipe App [Demo](https://youtu.be/9i6kbwM2uY0)
+## Recipe App ([Demo](https://youtu.be/9i6kbwM2uY0))
 Project for the Software Development course. 
 
 ### Description

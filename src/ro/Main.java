@@ -4,10 +4,10 @@ import database.Database;
 import database.ProductJsonOperations;
 import database.ProductTableOperations;
 import org.jsoup.nodes.Document;
-import shopScraping.ProductCrawler;
-import shopScraping.ProductScraper;
-import shopScraping.ShopScraper;
-import shopScraping.XMLCrawler;
+import shopScraping.crawl.ProductCrawler;
+import shopScraping.scrape.ProductScraper;
+import shopScraping.scrape.ShopScraper;
+import shopScraping.crawl.XMLCrawler;
 
 import java.io.IOException;
 
@@ -17,7 +17,8 @@ public class Main {
         ProductScraper auchan = new ProductScraper();
         Database db = new Database("jdbc:mysql://localhost/dbProducts", "root", "2875");
 
-        demo(shop, auchan, db);
+        //demo(shop, auchan, db);'
+
     }
 
     public static void demo(ShopScraper shop, ProductScraper auchan, Database db) throws IOException {

@@ -1,7 +1,7 @@
 package database.logging;
 
 import DataModel.Product;
-import shopScraping.AppLogger;
+import shopScraping.log.AppLogger;
 
 import java.sql.SQLException;
 import java.util.logging.Level;

@@ -1,10 +1,14 @@
-package shopScraping;
+package shopScraping.crawl;
 
 import DataModel.Product;
 import database.ProductTableOperations;
 import org.javatuples.Pair;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import shopScraping.scrape.ProductScraper;
+import shopScraping.scrape.ShopScraper;
+import shopScraping.log.AppLogger;
+import shopScraping.log.LogProductDetails;
 
 import java.io.IOException;
 import java.time.Duration;

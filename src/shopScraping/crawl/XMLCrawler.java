@@ -1,4 +1,4 @@
-package shopScraping;
+package shopScraping.crawl;
 
 import database.ProductTableOperations;
 import org.jsoup.nodes.Document;
@@ -6,6 +6,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import shopScraping.scrape.ProductScraper;
+import shopScraping.scrape.ShopScraper;
+import shopScraping.log.AppLogger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -17,7 +20,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 

@@ -1,17 +1,17 @@
-package shopScraping;
+package shopScraping.scrape;
 
 import DataModel.Product;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import shopScraping.log.AppLogger;
 
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,11 +58,10 @@ public class ProductScraper {
      * @param scraper    the ShopScraper used to connect to the URL and retrieve the HTML document
      * @param urlProduct the URL of the product to scrape details from
      * @return a Product containing the product's details
-     * @throws IOException if an error occurs during connection
      */
     public Optional<Product> getProductDetails(ShopScraper scraper, String urlProduct) {
         try {
-            Document doc = scraper.connectToURL(urlProduct);
+            Document doc = ShopScraper.connectToURL(urlProduct);
             Elements category = ShopScraper.getAuchanProductCategory(doc);
             Elements name = ShopScraper.getAuchanProductName(doc);
             String priceString = ShopScraper.getAuchanProductPriceToString(ShopScraper.getAuchanProductPrice(doc));

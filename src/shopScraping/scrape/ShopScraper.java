@@ -1,4 +1,4 @@
-package shopScraping;
+package shopScraping.scrape;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,9 +8,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -53,7 +51,7 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's category
      */
-    static Elements getAuchanProductCategory(Document doc) {
+    public static Elements getAuchanProductCategory(Document doc) {
         // use the category selector to extract the category from the document
         return doc.select(AUCHAN_PRODUCT_CATEGORY_SELECTOR);
     }
@@ -64,7 +62,7 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's name
      */
-    static Elements getAuchanProductName(Document doc) {
+    public static Elements getAuchanProductName(Document doc) {
         // Somehow the select doesn't work if I use constants.
         return doc.select(".vtex-store-components-3-x-productBrand--productPage").select("span");
     }
@@ -109,7 +107,7 @@ public class ShopScraper {
      * @param doc the HTML document of the product page
      * @return the product's properties
      */
-    static Elements getAuchanProductProperties(Document doc) {
+    public static Elements getAuchanProductProperties(Document doc) {
         // use the properties selector to extract the product properties from the document
         return doc.select(AUCHAN_PRODUCT_PROPERTIES_SELECTOR);
     }
@@ -149,7 +147,11 @@ public class ShopScraper {
      * @throws IOException if an error occurs during connection
      */
     public static Document connectToURL(String urlProduct) throws IOException {
+        if (urlProduct == null || urlProduct.isEmpty()) {
+            throw new IllegalArgumentException("urlProduct is null or empty");
+        }
         // connect to the url and retrieve the document
         return Jsoup.connect(urlProduct).get();
     }
+
 }

@@ -2,6 +2,7 @@
 
 * [User stories](#user-stories)
 * [UML diagrams](#uml-diagrams)
+* [Using and AI tool in the development process](#AI-tool)
 
 
 
@@ -58,3 +59,10 @@
 
 
 ![png 5](https://user-images.githubusercontent.com/101597846/234022638-9d2ba48c-49bc-40f6-9403-0a03b587c289.png)
+
+
+## AI tool
+We have used ChatGPT to generate some user stories ideas, which we later elaborated on.
+
+![image](https://github.com/PlatDrake2875/ProiectMDS/assets/101597846/1d2c75b8-2c09-41f5-a8f8-92e6cc242fbd)
+

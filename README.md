@@ -12,11 +12,11 @@
 * [Refactored Code](#wrench-refactored-code)
 * [Design Patterns](#jigsaw-design-patterns)
 
-[App Demo](https://youtu.be/9i6kbwM2uY0)
 
 
-## Recipe App
-Project for the Software Development course.
+
+## Recipe App [Demo](https://youtu.be/9i6kbwM2uY0)
+Project for the Software Development course. 
 
 ### Description
 We have created a recipe web application using the Spring Boot and Thymeleaf frameworks in Java. The main purpose of the application is to display recipes and calculate the minimum price of a basket of ingredients required to prepare each recipe. We have implemented web scraping to gather ingredient data from an online market and mapped them into our database.
